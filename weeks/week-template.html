@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.csss">
+</head>
+<body class="week-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+  <a class="site-title" href="/">MMP 240</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/weeks/" aria-current="page">Weeks</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/topics/">Topics</a></li>
+        <li><a href="/help/">Help</a></li>
+      </ul>
+    </nav>
+    <button class="search-button" type="button" aria-label="Search">Search</button>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <h1>Week [week#]: [week Date]</h1>
+    <section class="week-outline">
+        <h2>Outline for the Week</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#section-1">Another section title</a></li>
+            <li><a href="#section-2">Yet another section</a></li>
+            <li><a href="#assignment">Assignment for the week</a></li>
+        </ul>
+    </section>
+    <div class="week-content">
+        <section class="intro" id="intro">
+            <h2>Introduction</h2>
+            <p>Week intro content here</p>
+        </section>
+        <section id="section-1">
+            <h2>Another section title</h2>
+            <div class="videoWrapper ratio-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="section-2">
+            <h2>Yet Another section</h2>
+        </section>
+        <section class="assignment" id="assignment">
+            <h2>Assignment(s) for the week</h2>
+        </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 MMP 240 Web Design</p>
+  </footer>
+
+
+<script src="js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+  <script src="js/search.js" defer></script>
+</body>
+</html>

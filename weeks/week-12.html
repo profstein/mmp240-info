@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12: 11/10-11/16</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="week-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+  <a class="site-title" href="/">MMP 240</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/weeks/" aria-current="page">Weeks</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/topics/">Topics</a></li>
+        <li><a href="/help/">Help</a></li>
+      </ul>
+    </nav>
+    <button class="search-button" type="button" aria-label="Search">Search</button>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <h1>Week 12: 11/10-11/16</h1>
+    <section class="week-outline">
+        <h2>Outline for the Week</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#markdown">0. What is Markdown?</a></li>
+            <li><a href="#landmark-pages">1. Create the Remaining Landmark Pages</a></li>
+            <li><a href="#navigation">2. Navigation</a></li>
+            <li><a href="#finishing-touches">3. Finishing Touches</a></li>
+            <li><a href="#assignment">Assignment</a></li>
+        </ul>
+    </section>
+    <div class="week-content">
+    <section class="intro" id="intro">
+        <h2>Intro</h2>
+        <p>This week we are going to finish Project 3.</p>
+        <blockquote>
+            <p><strong>NOTE:</strong> If you did not create the landmark page as part of the Wireframes to HTML exercise, then do that first. You'll need it for this week.</p>
+        </blockquote>
+        <p><strong>Here is what we have left to do:</strong></p>
+        <ul>
+            <li>Create the remaining landmark pages</li>
+            <li>Add in Navigation in the header</li>
+            <li>Add Finishing Touches</li>
+        </ul>
+    </section>
+
+    <section id="markdown">
+        <h2>0. What is Markdown?</h2>
+        <p>Markdown is a simplified language for writing HTML. It doesn't have all of the overhead of tags and instead uses some simple marks for basic html. It doesn't cover all of html just some of the most important ones. It is great for content not so much for structuring pages. Below you will see a video that explains what marked down is and a cheat sheet that shows you basic markdown that you can use. Watch this before moving on.</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-sOR7ap9h9A?si=wTYN78Z7mfXGuVat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h3>WRITING MARKDOWN IN VS CODE</h3>
+        <p>You technically won't have to do this for our project, but it's good to know how to write it in VS Code.</p>
+        <ol>
+            <li>Make a file and add .md at the end of the name</li>
+            <li>Open the Markdown Preview window (comes with VS CODE)
+                <ol>
+                    <li>Open the Command Palette (Shift+CMD+P on macos; Shift+CTRL+P on Windows)</li>
+                    <li>Type Markdown Open</li>
+                    <li>Select Markdown: Open Preview to the Side</li>
+                </ol>
+            </li>
+        </ol>
+
+        <figure>
+            <img src="/images/markdown-open-side.png" alt="screenshot VS Code command pallet with 'markdown open' typed in and Markdown: Open Preview to the Side highlighted">
+            <figcaption>VS Code command palette showing Markdown preview option</figcaption>
+        </figure>
+
+        <h3>MARKDOWN VIDEO</h3>
+        <p>This video by <a href="https://www.youtube.com/channel/UCQ5RT521VUmQw061WNKrYtA" target="_blank" rel="noopener noreferrer">Kristan Smout</a> explains markdown in about 5 minutes.</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-sOR7ap9h9A?si=wTYN78Z7mfXGuVat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h3>MARKDOWN Quick Reference</h3>
+        <p><a href="https://www.markdownguide.org/cheat-sheet/" target="_blank" rel="noopener noreferrer">Markdown Cheatsheet</a> web page</p>
+        <p><strong>60 second Youtube Video</strong> by <a href="https://www.youtube.com/@code" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> team</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4z0l5Kl2Q6E?si=m0q6zYWAYhUMMbLm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="landmark-pages">
+        <h2>1. Create the Remaining Landmark Pages</h2>
+        <p>To do this I have provided you with the content in Markdown files. See landmarks-markdown-content.zip file</p>
+        <p>In the video below, I walk through using Copilot in VS Code to do the following in a prompt:</p>
+        <ul>
+            <li>put the existing landmark-wonder.html page in context</li>
+            <li>put the 5 markdown files in chat context</li>
+            <li>generate the HTML for all five files</li>
+            <li>Add in the hero image for each page</li>
+            <li>Add in the correct next and previous links on each page</li>
+        </ul>
+
+        <h3>VIDEO WALKTHROUGH</h3>
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/s7PVzMwilhc?si=nppfQ9cIZ_4mrjuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h3>STEPS</h3>
+        <ol>
+            <li>Download <a href="/files/landmarks-markdown-content.zip" download>landmarks-markdown-content.zip</a></li>
+            <li>Unzip it and add the five markdown files to your project folder</li>
+            <li>Open Copilot</li>
+            <li>Make sure the landmark-wonder.html file you created is in content and the five markdown files.</li>
+            <li>Make sure Copilot is in agent mode</li>
+            <li>Tell it to make the files using your existing landmark-wonder.html page as a template. You can also ask it to update the next and previous links so all pages are linked together and update the hero image to use the existing images for each landmark.</li>
+            <li>Let it go to work</li>
+            <li>Check that it did what you asked. If so, click Keep, If not undo and try again.</li>
+        </ol>
+
+        <h3>Alternate Methods</h3>
+        <p>This video shows some other ways you can do this. They take some more time to complete.</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3iM9dQQI9mk?si=MkJzauf9n-fmUdj1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p><strong>Landmark Pages Converting Markdown to HTML: Alternatives to Copilot</strong></p>
+    </section>
+
+    <section id="navigation">
+        <h2>2. Navigation</h2>
+        <p>Navigation can range from simple to very complex. We jump into it this week starting with some basics of how to create a navigation and then moving on to show responsive navigation that you can use in your projects.</p>
+        <p>Most of the time when you're just starting in web design, you will copy someone else's navigation and then adjust it to suit your project. For this reason there are a number of videos and code pens so you can both see how things work and have some HTML/CSS/JS to copy.</p>
+        <p>Note that we use JavaScript for the first time this week. We do not get into all of the basics of writing code, but instead see how the JS for the navigation does its work and how you could make simple modifications to it.</p>
+
+        <h3>Nav 1: Basic Navigation Styling</h3>
+        <p>These videos show the basic styles needed to create a header with navigation from an unordered list. They do not cover responsive navigation that changes between small and larger screens.</p>
+
+        <h4>HTML &amp; CSS for Absolute Beginners: A simple navigation</h4>
+        <p>In this video <a href="https://www.youtube.com/@KevinPowell" target="_blank" rel="noopener noreferrer">Kevin Powell</a> goes over the HTML and CSS of creating a simple navigation.</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bRp5_YSFXGc?si=A6GJaSP-mnDP8pJJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h4>Prof Stein's Basic Nav Styling Video</h4>
+        <p>In this video I also explain nav basics. This is very similar to the Kevin Powell video above. It's longer and a little less polished, but there is a Codepen that you can follow along. Feel free to only watch the above video if you're short on time.</p>
+        <p><strong>Start from this CodePen</strong>: <a href="https://codepen.io/profstein/pen/GgZJxJZ/c596e0082b9d600c2256f0b6a6967ecb" target="_blank" rel="noopener noreferrer">Unstyled Nav</a></p>
+
+        <h3>Nav 2: Hamburger Menu Navigation for Small Screens</h3>
+        <p>In this video I explain how to create and style a hamburger menu that has a "hamburger" style button that expands when you click it.</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qkBajFe2VdE?si=bEjEIML98wYbRLYy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <p>CodePen Used in the Video</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="YPqXeoK" data-pen-title="Hamburger Menu" data-user="profstein" data-token="5022d1d74a09be5f0a1a1c13935b61d3" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/profstein/pen/YPqXeoK/5022d1d74a09be5f0a1a1c13935b61d3">Hamburger Menu</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+        <h3>Nav 3: Responsive Navigation with Hamburger Menu</h3>
+        <p>In this video media queries are added to change the navigation style on larger screens. Because we styled the navigation for small screens first and then use media queries for the larger screens, this is an example of <strong>mobile-first</strong> responsive design.</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qkBajFe2VdE?si=_bZheo9D9eMP3sX1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <p>CodePen Used in the Video</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="gbrpvNP" data-pen-title="Hamburger Menu" data-user="profstein" data-token="17dc545d273ac5e1dd9a5986f0f18f46" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/profstein/pen/gbrpvNP/17dc545d273ac5e1dd9a5986f0f18f46">Hamburger Menu</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+        <h3>Nav 4: Responsive Navigation with Text instead of Hamburger Menu</h3>
+        <p>This navigation is mostly the same as the previous responsive navigation but instead of a hamburger menu the word <strong>Menu</strong> is used. When the nav is open the word changes to <strong>Close</strong>. This all happens through CSS (the JavaScript is the same) and uses a technique you might not have seen before where text can be added to the screen using ::before or ::after pseudo selectors.</p>
+
+        <div class="videoWrapper ratio-16-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <p>CodePen in the Video</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ByKNYXL" data-pen-title="Hamburger Menu Responsive" data-user="profstein" data-token="4d6e264654f5d4e4f387795b6fd49cf0" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/profstein/pen/ByKNYXL/4d6e264654f5d4e4f387795b6fd49cf0">Hamburger Menu Responsive</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+        <h3>Add Responsive Navigation to Your Project</h3>
+        <p>You can use my examples above or one from another author who is making code available on CodePen or their site. Unless you have a very strong grasp of the concepts, I do not recommend making it up on your own from scratch.</p>
+
+        <h4>Responsive Nav Checklist</h4>
+        <p>Your navigation should:</p>
+        <ul>
+            <li>work on both mobile and desktop size screens</li>
+            <li>be visually the same on every page</li>
+            <li>link to home and all of your landmark pages.</li>
+            <li>set the current to the current page. Copilot in VS Code can help make sure this happens. Try asking it. Here is what that looks like in a nav link (if you're on the wonder page):
+                <ul>
+                    <li><code>&lt;li&gt;&lt;a href="landmark-wonder.html" aria-current="page"&gt;Wonder Wheel&lt;/a&gt;&lt;/li&gt;</code></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="finishing-touches">
+        <h2>3. Finishing Touches</h2>
+        <p>Before submitting your project, look over the following and ensure it is finished and polished.</p>
+        <ul>
+            <li><strong>Typography:</strong> Use the lessons we have learned so far to
+                <ul>
+                    <li>use CSS variables to help control typography</li>
+                    <li>Style headings differently from page text</li>
+                    <li>create a typographic hierarchy</li>
+                </ul>
+            </li>
+            <li><strong>Color:</strong>
+                <ul>
+                    <li>Colors work together in a harmonious way</li>
+                    <li>colors support the "mood" or "vibe" you intend the site to have</li>
+                </ul>
+            </li>
+            <li><strong>Accessibility:</strong>
+                <ul>
+                    <li>all images have descriptive alt tag</li>
+                    <li>text and background colors have sufficient contrast</li>
+                </ul>
+            </li>
+            <li><strong>Layout:</strong>
+                <ul>
+                    <li>The page is set up so people can see the different groups of content with enough spacing</li>
+                    <li>Gestalt principles are used to help identify page sections, UI elements (like cards)</li>
+                </ul>
+            </li>
+            <li><strong>Responsive</strong>
+                <ul>
+                    <li><strong>Fluid Grid:</strong> use fr units for CSS Grid and flexible units (like %) anywhere else you need to set width for layout.</li>
+                    <li><strong>Flexible Media:</strong> make sure the base responsive img styling is there. Also include the CSS to allow responsive video embeds</li>
+                    <li><strong>Media Queries:</strong> You have used media queries to make the layout adjust appropriately for small to large screens.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="assignment" id="assignment">
+        <h2>Assignment for the Week</h2>
+        <p>This week the assignment is to finish your Project 3. Make sure to commit your work as you go along and push your changes to your GitHub repository.</p>
+        <p>Your GitHub repository should be published in GitHub Pages.</p>
+        <p>It's OK to use the same repository from Project 2.</p>
+        <h3>Bonus</h3>
+        <p>You can get bonus points for</p>
+        <ul>
+            <li>Forking your Project 2 to create a separate Project 3</li>
+            <li>Publishing your site with <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>. Remember to sign up with your GitHub account because Netlify will be able to link to your GitHub and publish directly from your main branch of the GitHub repo.</li>
+        </ul>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 MMP 240 Web Design</p>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+  <script src="/js/search.js" defer></script>
+</body>
+</html>

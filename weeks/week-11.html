@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11: 11/3-11/9: Wireframes to HTML and Media Queries</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="week-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+  <a class="site-title" href="/">MMP 240</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/weeks/" aria-current="page">Weeks</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/topics/">Topics</a></li>
+        <li><a href="/help/">Help</a></li>
+      </ul>
+    </nav>
+    <button class="search-button" type="button" aria-label="Search">Search</button>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <h1>Week 11: 11/3-11/9: Wireframes to HTML and Media Queries</h1>
+
+    <section class="week-outline">
+        <h2>Outline for the Week</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#wireframes-to-html">Wireframes to HTML</a></li>
+            <li><a href="#css-variables">Create CSS Variables for Responsive Spacing</a></li>
+            <li><a href="#media-queries">Adding Media Queries for Layout</a></li>
+            <li><a href="#applying-css">Applying CSS Variables and Media Queries to the Landmark Page</a></li>
+            <li><a href="#assignment">Assignment for the week</a></li>
+        </ul>
+    </section>
+
+    <div class="week-content">
+        <section class="intro" id="intro">
+            <h2>Intro</h2>
+            <p>This week we are going to take our wire frame designs, and bring them to life. We will do it in three phases.</p>
+            <ol>
+                <li>Convert wire frames to html.</li>
+                <li>Use CSS variables to add responsive spacing.</li>
+                <li>Add media queries to enable a responsive layout.</li>
+            </ol>
+            <p>Each of those phases has a sub module below with its own video.</p>
+            <p>Remember to complete week 9 first if you haven't done that yet. Week 9: 10/21-10/26</p>
+        </section>
+
+        <section id="wireframes-to-html">
+            <h2>Wireframes to HTML</h2>
+            <p>The video tutorial below walks through how to think about and then write HTML to start the move from Wireframes to HTML/CSS.</p>
+            <div class="videoWrapper ratio-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s7PVzMwilhc?si=nppfQ9cIZ_4mrjuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <h3>Step 1: Identify Page Sections</h3>
+            <p>The base page has three main sections that are already defined with HTML elements:</p>
+            <ol>
+                <li>header (site title and navigation)</li>
+                <li>main (page title and page content)</li>
+                <li>footer (copyright, credits, secondary nav)</li>
+            </ol>
+
+            <h3>Step 2: Add HTML to represent the sections</h3>
+            <ol>
+                <li>Start by copying the index.html page you made</li>
+                <li>Then delete the content inside of &lt;main&gt; and change the &lt;title&gt; element in the head.</li>
+                <li>Then add in the sections as outlined below.</li>
+            </ol>
+
+            <p>For each of the sections identified above, add an html section. Remember:</p>
+            <ul>
+                <li>most of the time you will use one of the three content sections shown above or a div</li>
+                <li>give each section a class or id (id's should be unique, you can put both on an element).</li>
+            </ul>
+
+            <h3>Step 3: add in the HTML content inside of each section</h3>
+            <ol>
+                <li>Go to this pen Wonder Wheel Page Content CodePen</li>
+                <li>Copy the content from the page and paste it into the sections you defined</li>
+                <li>[Optional] Download <a href="/files/wonder-wheel-images.zip">wonder-wheel-images.zip</a>, unzip it and add the images to your images folder</li>
+            </ol>
+
+            <p>You now have the page content ready to style. For the other landmark pages (next week) you will reuse sections and classes across pages to keep things consistent.</p>
+        </section>
+
+        <section id="css-variables">
+            <h2>Create CSS Variables for Responsive Spacing</h2>
+            <p>I've added in a sub module in CSS resources for CSS variables for responsive spacing. You can find that here: Resources &gt; CSS Resources &gt; CSS Variables &gt; Responsive Spacing with CSS Variables</p>
+            <p>The video below I walk through what they are and how to set them up.</p>
+            <div class="videoWrapper ratio-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SAc_2CcO-8s?si=_NEGLV3mTqwrBtlR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="media-queries">
+            <h2>Adding Media Queries for Layout</h2>
+            <p>I've also added the CSS resource for media queries.</p>
+            <p>In Brightspace it's here <a href="https://brightspace.cuny.edu/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&type=content&rcode=553F80D6-3EB2-4A0C-B321-7D8FDFC0E4FA-8211226">Resources &gt; CSS Resources &gt; Media Queries</a></p>
+            <p>In the video we look at that resource.</p>
+            <div class="videoWrapper ratio-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5T7EEoleZdw?si=gNPKnmXWG056ZyNh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="applying-css">
+            <h2>Applying CSS Variables and Media Queries to the Landmark Page</h2>
+            <p>Now that we've learned more about Media Queries and CSS Variables, we can apply them to a landmark page.</p>
+            <div class="videoWrapper ratio-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xhwohbPglRo?si=KHzQcfH0v4CmKBPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="assignment" id="assignment">
+            <h2>Assignment for the week</h2>
+            <p>By the end of the week you should have the following:</p>
+            <ul>
+                <li>landmark-wonder.html page that was created when you converted your wireframes to HTML</li>
+                <li>Updated CSS file that includes
+                    <ul>
+                        <li>CSS Variables for responsive spacing</li>
+                        <li>Media Queries for layout</li>
+                        <li>These styles should be applied to the home page and the landmark page</li>
+                    </ul>
+                </li>
+                <li>All changes committed and pushed to your GitHub repository</li>
+            </ul>
+        </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 MMP 240 Web Design</p>
+  </footer>
+
+
+<script src="/js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+  <script src="/js/search.js" defer></script>
+</body>
+</html>
