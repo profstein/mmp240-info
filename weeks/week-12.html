@@ -12,14 +12,30 @@
   <header class="site-header">
   <a class="site-title" href="/">MMP 240</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary">
-      <ul>
-        <li><a href="/weeks/" aria-current="page">Weeks</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/topics/">Topics</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-    </nav>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/" aria-current="page">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+                    </ul>
+                </li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
     <button class="search-button" type="button" aria-label="Search">Search</button>
   </header>
   <main id="main-content" tabindex="-1">
@@ -55,7 +71,7 @@
         <p>Markdown is a simplified language for writing HTML. It doesn't have all of the overhead of tags and instead uses some simple marks for basic html. It doesn't cover all of html just some of the most important ones. It is great for content not so much for structuring pages. Below you will see a video that explains what marked down is and a cheat sheet that shows you basic markdown that you can use. Watch this before moving on.</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-sOR7ap9h9A?si=wTYN78Z7mfXGuVat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-sOR7ap9h9A?si=wTYN78Z7mfXGuVat" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <h3>WRITING MARKDOWN IN VS CODE</h3>
@@ -80,7 +96,7 @@
         <p>This video by <a href="https://www.youtube.com/channel/UCQ5RT521VUmQw061WNKrYtA" target="_blank" rel="noopener noreferrer">Kristan Smout</a> explains markdown in about 5 minutes.</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-sOR7ap9h9A?si=wTYN78Z7mfXGuVat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-sOR7ap9h9A?si=wTYN78Z7mfXGuVat" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <h3>MARKDOWN Quick Reference</h3>
@@ -88,7 +104,7 @@
         <p><strong>60 second Youtube Video</strong> by <a href="https://www.youtube.com/@code" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> team</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/4z0l5Kl2Q6E?si=m0q6zYWAYhUMMbLm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4z0l5Kl2Q6E?si=m0q6zYWAYhUMMbLm" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -106,7 +122,7 @@
 
         <h3>VIDEO WALKTHROUGH</h3>
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/s7PVzMwilhc?si=nppfQ9cIZ_4mrjuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/s7PVzMwilhc?si=nppfQ9cIZ_4mrjuK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <h3>STEPS</h3>
@@ -125,7 +141,7 @@
         <p>This video shows some other ways you can do this. They take some more time to complete.</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3iM9dQQI9mk?si=MkJzauf9n-fmUdj1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3iM9dQQI9mk?si=MkJzauf9n-fmUdj1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <p><strong>Landmark Pages Converting Markdown to HTML: Alternatives to Copilot</strong></p>
     </section>
@@ -143,7 +159,7 @@
         <p>In this video <a href="https://www.youtube.com/@KevinPowell" target="_blank" rel="noopener noreferrer">Kevin Powell</a> goes over the HTML and CSS of creating a simple navigation.</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/bRp5_YSFXGc?si=A6GJaSP-mnDP8pJJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bRp5_YSFXGc?si=A6GJaSP-mnDP8pJJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <h4>Prof Stein's Basic Nav Styling Video</h4>
@@ -154,11 +170,11 @@
         <p>In this video I explain how to create and style a hamburger menu that has a "hamburger" style button that expands when you click it.</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qkBajFe2VdE?si=bEjEIML98wYbRLYy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qkBajFe2VdE?si=bEjEIML98wYbRLYy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <p>CodePen Used in the Video</p>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="YPqXeoK" data-pen-title="Hamburger Menu" data-user="profstein" data-token="5022d1d74a09be5f0a1a1c13935b61d3" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="YPqXeoK" data-pen-title="Hamburger Menu" data-user="profstein" data-token="5022d1d74a09be5f0a1a1c13935b61d3">
             <span>See the Pen <a href="https://codepen.io/profstein/pen/YPqXeoK/5022d1d74a09be5f0a1a1c13935b61d3">Hamburger Menu</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>) on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
         <script async src="https://public.codepenassets.com/embed/index.js"></script>
@@ -167,11 +183,11 @@
         <p>In this video media queries are added to change the navigation style on larger screens. Because we styled the navigation for small screens first and then use media queries for the larger screens, this is an example of <strong>mobile-first</strong> responsive design.</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qkBajFe2VdE?si=_bZheo9D9eMP3sX1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qkBajFe2VdE?si=_bZheo9D9eMP3sX1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <p>CodePen Used in the Video</p>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="gbrpvNP" data-pen-title="Hamburger Menu" data-user="profstein" data-token="17dc545d273ac5e1dd9a5986f0f18f46" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="gbrpvNP" data-pen-title="Hamburger Menu" data-user="profstein" data-token="17dc545d273ac5e1dd9a5986f0f18f46">
             <span>See the Pen <a href="https://codepen.io/profstein/pen/gbrpvNP/17dc545d273ac5e1dd9a5986f0f18f46">Hamburger Menu</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>) on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
         <script async src="https://public.codepenassets.com/embed/index.js"></script>
@@ -180,11 +196,11 @@
         <p>This navigation is mostly the same as the previous responsive navigation but instead of a hamburger menu the word <strong>Menu</strong> is used. When the nav is open the word changes to <strong>Close</strong>. This all happens through CSS (the JavaScript is the same) and uses a technique you might not have seen before where text can be added to the screen using ::before or ::after pseudo selectors.</p>
 
         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <p>CodePen in the Video</p>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ByKNYXL" data-pen-title="Hamburger Menu Responsive" data-user="profstein" data-token="4d6e264654f5d4e4f387795b6fd49cf0" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ByKNYXL" data-pen-title="Hamburger Menu Responsive" data-user="profstein" data-token="4d6e264654f5d4e4f387795b6fd49cf0">
             <span>See the Pen <a href="https://codepen.io/profstein/pen/ByKNYXL/4d6e264654f5d4e4f387795b6fd49cf0">Hamburger Menu Responsive</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>) on <a href="https://codepen.io">CodePen</a>.</span>
         </p>
         <script async src="https://public.codepenassets.com/embed/index.js"></script>

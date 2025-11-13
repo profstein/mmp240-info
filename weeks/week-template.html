@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/styles.csss">
+    <title>Weeks</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body class="week-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -14,9 +14,25 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Primary">
       <ul>
-        <li><a href="/weeks/" aria-current="page">Weeks</a></li>
+        <li class="nav-weeks">
+          <a href="/weeks/" aria-current="page">Weeks</a>
+          <ul class="weeks-dropdown">
+            <li><a href="/weeks/week-9.html">Week 9</a></li>
+            <li><a href="/weeks/week-11.html">Week 11</a></li>
+            <li><a href="/weeks/week-12.html">Week 12</a></li>
+          </ul>
+        </li>
+        <li class="nav-topics">
+          <a href="/topics/">Topics</a>
+          <ul class="topics-dropdown">
+            <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+            <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+            <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+            <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+            <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+          </ul>
+        </li>
         <li><a href="/projects/">Projects</a></li>
-        <li><a href="/topics/">Topics</a></li>
         <li><a href="/help/">Help</a></li>
       </ul>
     </nav>
@@ -41,7 +57,7 @@
         <section id="section-1">
             <h2>Another section title</h2>
             <div class="videoWrapper ratio-16-9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
         <section id="section-2">

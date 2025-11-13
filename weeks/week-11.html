@@ -12,14 +12,30 @@
   <header class="site-header">
   <a class="site-title" href="/">MMP 240</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary">
-      <ul>
-        <li><a href="/weeks/" aria-current="page">Weeks</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/topics/">Topics</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-    </nav>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/" aria-current="page">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+                    </ul>
+                </li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
     <button class="search-button" type="button" aria-label="Search">Search</button>
   </header>
   <main id="main-content" tabindex="-1">
@@ -54,7 +70,7 @@
             <h2>Wireframes to HTML</h2>
             <p>The video tutorial below walks through how to think about and then write HTML to start the move from Wireframes to HTML/CSS.</p>
             <div class="videoWrapper ratio-16-9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/s7PVzMwilhc?si=nppfQ9cIZ_4mrjuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s7PVzMwilhc?si=nppfQ9cIZ_4mrjuK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
             <h3>Step 1: Identify Page Sections</h3>
@@ -93,7 +109,7 @@
             <p>I've added in a sub module in CSS resources for CSS variables for responsive spacing. You can find that here: Resources &gt; CSS Resources &gt; CSS Variables &gt; Responsive Spacing with CSS Variables</p>
             <p>The video below I walk through what they are and how to set them up.</p>
             <div class="videoWrapper ratio-16-9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/SAc_2CcO-8s?si=_NEGLV3mTqwrBtlR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SAc_2CcO-8s?si=_NEGLV3mTqwrBtlR" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -103,7 +119,7 @@
             <p>In Brightspace it's here <a href="https://brightspace.cuny.edu/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&type=content&rcode=553F80D6-3EB2-4A0C-B321-7D8FDFC0E4FA-8211226">Resources &gt; CSS Resources &gt; Media Queries</a></p>
             <p>In the video we look at that resource.</p>
             <div class="videoWrapper ratio-16-9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/5T7EEoleZdw?si=gNPKnmXWG056ZyNh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5T7EEoleZdw?si=gNPKnmXWG056ZyNh" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -111,7 +127,7 @@
             <h2>Applying CSS Variables and Media Queries to the Landmark Page</h2>
             <p>Now that we've learned more about Media Queries and CSS Variables, we can apply them to a landmark page.</p>
             <div class="videoWrapper ratio-16-9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xhwohbPglRo?si=KHzQcfH0v4CmKBPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xhwohbPglRo?si=KHzQcfH0v4CmKBPS" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
