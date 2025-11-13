@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Montagu+Slab:wght@400;600;700&display=swap');
+
+:root {
+  /* Base Font Size */
+  --base-font-size: 16px;
+
+  /* Font Sizes */
+  --text-size-xs: 0.69rem;
+  --text-size-sm: 0.83rem;
+  --text-size-md: 1rem;
+  --text-size-lg: 1.2rem;
+  --text-size-xl: 1.44rem;
+  --text-size-2xl: 1.73rem;
+  --text-size-3xl: 2.07rem;
+  --text-size-4xl: 2.49rem;
+  --text-size-5xl: 2.99rem;
+  
+  /* Line Heights */
+    --line-height-base:1.65;
+  --line-height-headings: 1.15;
+  
+  /*   Font Families */
+  --ff-headings: "Montagu Slab", Georgia, "Times New Roman", Times, serif;
+  --ff-base: "Lexend", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ff-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Spacings */
+  --space-unit: 1rem;
+	--space-xs: calc(var(--space-unit) * 0.25);
+	--space-sm: calc(var(--space-unit) * 0.5);
+	--space-md: calc(var(--space-unit) * 1);
+	--space-lg: calc(var(--space-unit) * 1.5);
+	--space-xl: calc(var(--space-unit) * 2);
+	--space-xxl: calc(var(--space-unit) * 3);
+  
+/*   Max width of content with text */
+  --text-width: 30rem;
+
+      /* -------- Color styles ------- */
+ --clr-primary-txt: #222222; /* base text color */
+  --clr-primary-bg: #eeeeee; /* base background color */
+  
+  --clr-secondary-txt: #222222; /* secondary text color */
+--clr-secondary-bg: #ece6ce; /* secondary background color */
+  
+  --clr-highlight-txt: #ffffff; /* highlight text color */
+--clr-highlight-bg: #3c5a3b; /* highlight background color */
+  
+  --clr-action: #992727; /* link and button color */
+  --clr-action-hover: #062b4f; /* link hover color */
+  --clr-action-visited: #5b21b6; /* link visited color */
+
+  --clr-nav: #992727;       /* base nav color */
+  --clr-nav-hover: #ece6ce;         /* color on hover */
+  --clr-nav-hover-bg: #992727; /* background color on hover */
+
+  
+ 
+
+
+}
+/* END CSS VARIABLES---------------------- */
+
+
+/*   RESPONSIVE SIZE CHANGES */
+@media (min-width: 640px){
+  :root {
+  --base-font-size: 19px;/* increase Base Font Size */
+    --space-unit: 1.15rem;/* increase spacing */
+    --text-width: 35rem;/* increase measure */
+  }
+} /* end @media */
+
+@media (min-width: 1200px){
+  :root {
+    --base-font-size: 24px;/* increase Base Font Size */
+    --space-unit: 1.25rem;/* increase spacing */
+    --text-width:40rem;/* increase measure */
+  }
+} /* end @media */
+
+/* ----------------- Responsive media ------------------- */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove margins from Figure */
+figure {
+  margin: 0;
+}
+figure img {
+  vertical-align: middle;
+  /* remove gap below image */
+}
+
+/* -----Responsive Embedded video ------- */
+.videoWrapper {
+  position: relative;
+  padding-top: 25px;
+  height: 0;
+  clear: both;
+}
+
+/* 16:9 aspect ratio wrapper */
+.videoWrapper.ratio-16-9 {
+  padding-bottom: 56.25%;
+  /* 9 ÷ 16 = .5625 which is 56.25% */
+}
+
+/* 4:3 aspect ratio wrapper */
+.videoWrapper.ratio-4-3 {
+  padding-bottom: 75%;
+  /* 3 ÷ 4 = .75 which is 75% */
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------- TYPOGRAPHY ----------------------  */
+html{
+  font-size: var(--base-font-size);
+}
+
+body{
+  font-family: var(--ff-base);
+  line-height: var(--line-height-base);
+  color: var(--clr-primary-txt);
+  background-color: var(--clr-primary-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-headings);
+  font-weight: 700;
+  line-height: var(--line-height-headings);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm)
+}
+
+/* Individual sizes (adjust as needed) */
+h1 { font-size: var(--text-size-4xl); }  
+h2 { font-size: var(--text-size-3xl); }    
+h3 { font-size: var(--text-size-2xl); }  
+h4 { font-size: var(--text-size-xl); }  
+h5 { font-size: var(--text-size-lg); font-weight: 600; } 
+h6 {  font-size: calc(var(--text-size-lg) - 0.125rem) } 
+
+p, li{
+  margin-top: 0;
+  margin-bottom: var(--space-md)
+}
+.caption, figcaption{ font-size: var(--text-size-sm)}
+
+/* LINKS */
+a { color: var(--clr-action); }
+a:visited { color: var(--clr-action-visited); }
+a:hover { color: var(--clr-action-hover); }
