@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body class="week-page">
+<body class="topics-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="site-title" href="../index.html">MMP 240</a>
@@ -33,9 +33,16 @@
             <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
             <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
             <li><a href="/topics/rwd-resources.html" aria-current="page">Responsive Web Design Resources</a></li>
+            <li><a href="/topics/netlify.html">Netlify</a></li>
           </ul>
         </li>
-        <li><a href="/projects/">Projects</a></li>
+        <li class="nav-projects">
+          <a href="/projects/">Projects</a>
+          <ul class="projects-dropdown">
+            <li><a href="/projects/project-2.html">Project 2</a></li>
+            <li><a href="/projects/project-3.html">Project 3</a></li>
+          </ul>
+        </li>
         <li><a href="/help/">Help</a></li>
       </ul>
     </nav>
@@ -45,56 +52,60 @@
     <h1>Responsive Web Design Resources</h1>
     <div class="topic-content">
       <section id="what-is-rwd">
-        <h2>What is Responsive Web Design?</h2>
+        <h2>What Is Responsive Web Design</h2>
         <ul>
-          <li><a rel="noopener" href="https://alistapart.com/article/responsive-web-design/" target="_blank">Ethan Marcotte, “Responsive Web Design.”</a></li>
+          <li>Ethan Marcotte, "Responsive Web Design." <a rel="noopener" href="https://alistapart.com/article/responsive-web-design/">A List Apart</a></li>
         </ul>
-        <p>The original article that introduced fluid grids, flexible images, and media queries.</p>
+        <p>The original 2010 article that introduced RWD and the ideas of fluid grids, flexible images, and media queries.</p>
         <ul>
-          <li><a rel="noopener" href="https://web.dev/learn/design/intro" target="_blank">Introduction to Responsive Design</a></li>
+          <li>Introduction to Responsive Design. <a rel="noopener" href="https://web.dev/learn/design/intro">web.dev/learn/design/intro</a></li>
         </ul>
-        <p>An overview of RWD history, principles, and why it matters for users today.</p>
+        <p>Overview of responsive design history, principles, and why it matters for users.</p>
         <ul>
-          <li><a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank">Responsive Design — MDN Web Docs</a></li>
+          <li>Responsive Design — MDN Web Docs. <a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">developer.mozilla.org</a></li>
         </ul>
-        <p>A foundational Mozilla tutorial covering layout techniques, viewport meta tags, and best practices.</p>
+        <p>A foundational tutorial from Mozilla covering layout techniques, viewport meta tags, and responsive best practices.</p>
+        <p></p>
       </section>
       <section id="fluid-grid-layouts">
         <h2>Fluid Grid Layouts</h2>
         <ul>
-          <li><a rel="noopener" href="https://web.dev/learn/design/macro-layouts" target="_blank">Macro Layouts</a></li>
+          <li>Macro Layouts. <a rel="noopener" href="https://web.dev/learn/design/macro-layouts">web.dev/learn/design/macro-layouts</a></li>
         </ul>
-        <p>Explains large-scale page structure using flexible grid systems and fractional units.</p>
+        <p>Explains large-scale page structure using flexible grid systems and fractional (fr) units.</p>
         <ul>
-          <li><a rel="noopener" href="https://web.dev/learn/design/micro-layouts" target="_blank">Micro Layouts</a></li>
+          <li>Micro Layouts. <a rel="noopener" href="https://web.dev/learn/design/micro-layouts">web.dev/learn/design/micro-layouts</a></li>
         </ul>
-        <p>Focuses on smaller layout details such as cards and component alignment within a flexible grid.</p>
+        <p>Focuses on smaller-scale layout details such as cards and component alignment inside a flexible grid.</p>
+        <p></p>
       </section>
       <section id="flexible-media">
         <h2>Flexible Media</h2>
         <ul>
-          <li><a rel="noopener" href="https://codepen.io/profstein/pen/mqMBoV" target="_blank">Responsive Image Example (CodePen)</a></li>
+          <li>Responsive Image Example (CodePen). <a rel="noopener" href="https://codepen.io/profstein/pen/mqMBoV">codepen.io/profstein/pen/mqMBoV</a></li>
         </ul>
-        <p>Demonstrates how <code>img</code> elements scale inside their containers.</p>
+        <p>Demonstrates how to make &lt;img&gt; elements scale within their containers.</p>
         <ul>
-          <li><a rel="noopener" href="https://codepen.io/profstein/pen/JoGLoKX??editors=1010" target="_blank">Responsive Video Embed Example (CodePen)</a></li>
+          <li>Responsive Video Embed Example (CodePen). <a rel="noopener" href="https://codepen.io/profstein/pen/JoGLoKX??editors=1010">codepen.io/profstein/pen/JoGLoKX</a></li>
         </ul>
-        <p>Shows the wrapping container method for responsive YouTube or Vimeo embeds.</p>
+        <p>Shows the "wrapping container" method for embedding responsive YouTube or Vimeo videos.</p>
+        <p></p>
       </section>
       <section id="media-queries">
         <h2>Media Queries and Breakpoints</h2>
         <ul>
-          <li><a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries" target="_blank">Media Queries — MDN Web Docs</a></li>
+          <li>Media Queries — MDN Web Docs. <a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries" target="_blank">developer.mozilla.org</a></li>
         </ul>
-        <p>An introduction to the <code>@media</code> rule and syntax for targeting screen sizes and features.</p>
+        <p>Introduces the @media rule and syntax for targeting different screen sizes and device features.</p>
         <ul>
-          <li><a rel="noopener" href="https://web.dev/learn/design/media-queries" target="_blank">Media Queries Guide</a></li>
+          <li>Media Queries Guide. <a rel="noopener" href="https://web.dev/learn/design/media-queries" target="_blank">web.dev/learn/design/media-queries</a></li>
         </ul>
-        <p>Discusses the mobile-first approach and the performance side of responsive CSS.</p>
+        <p>Covers the mobile-first approach and performance considerations for responsive CSS.</p>
         <ul>
-          <li><a rel="noopener" href="https://www.freecodecamp.org/news/breakpoints-for-responsive-web-design" target="_blank">Choosing Breakpoints in Responsive Design</a></li>
+          <li>Choosing Breakpoints in Responsive Design. <a rel="noopener" href="https://www.freecodecamp.org/news/breakpoints-for-responsive-web-design" target="_blank">freeCodeCamp.org</a></li>
         </ul>
-        <p>Explains common breakpoint ranges and how to choose meaningful ones for your layout.</p>
+        <p>Explains common breakpoint ranges and how to select meaningful ones for your layout.</p>
+        <p><br></p>
       </section>
     </div>
   </main>

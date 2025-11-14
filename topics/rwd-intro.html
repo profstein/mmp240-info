@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body class="week-page">
+<body class="topics-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="site-title" href="../index.html">MMP 240</a>
@@ -33,9 +33,16 @@
             <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
             <li><a href="/topics/rwd-intro.html" aria-current="page">Introduction to Responsive Web Design</a></li>
             <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+            <li><a href="/topics/netlify.html">Netlify</a></li>
           </ul>
         </li>
-        <li><a href="/projects/">Projects</a></li>
+        <li class="nav-projects">
+          <a href="/projects/">Projects</a>
+          <ul class="projects-dropdown">
+            <li><a href="/projects/project-2.html">Project 2</a></li>
+            <li><a href="/projects/project-3.html">Project 3</a></li>
+          </ul>
+        </li>
         <li><a href="/help/">Help</a></li>
       </ul>
     </nav>
@@ -45,81 +52,91 @@
     <h1>Introduction to Responsive Web Design</h1>
     <div class="topic-content">
       <section class="intro">
+        <p></p>
         <h2>Introduction to Responsive Web Design</h2>
-        <p>The idea of responsive web design (RWD) was introduced by Ethan Marcotte in 2010 in his article <a rel="noopener" href="https://alistapart.com/article/responsive-web-design/" target="_blank">“Responsive Web Design” on A List Apart</a>. He proposed thinking about layouts that adapt gracefully to different screen sizes.</p>
-        <p>Before RWD, most websites were fixed-width and optimized for a desktop monitor (~960px). When smartphones launched, users had to zoom and scroll just to read a line of text. Designers often created separate mobile versions, which doubled maintenance and fractured the experience.</p>
-        <p>Instead, Marcotte suggested building one flexible system that responds to the viewport. The same site adjusts itself based on the device.</p>
+        <p>The idea of Responsive Web Design (RWD) was first introduced by Ethan Marcotte in his landmark 2010 article, <a rel="noopener" href="https://alistapart.com/article/responsive-web-design/" target="_blank">"Responsive Web Design" on A List Apart</a>. Marcotte proposed a new way of thinking about layouts—one that would allow websites to adapt gracefully to the device or screen size being used.</p>
+        <p>Before RWD, most websites were fixed-width—built to look good on a desktop monitor, typically around 960 pixels wide. When the iPhone and other smartphones appeared in 2007, web design got more complicated to accomodate them. At first users had to zoom and scroll sideways just to read a line of text. Designers often created separate "mobile" versions of sites, which doubled maintenance work and fractured the user experience.</p>
+        <p>Marcotte's insight was simple but changed how we approach web design: rather than designing for a single screen size, designers should create flexible systems that respond to the screen (the viewport) itself. There is only one web site and it adapts itself to each screen.</p>
       </section>
       <section id="core-principles">
-        <h2>The Three Core Principles of RWD</h2>
-        <p>We have already covered the first two principles, and we will learn the third in Project 3.</p>
+        <h3>The Three Core Principles of RWD</h3>
+        <p>These are the three key principles of RWD. We have already learned the first two:</p>
         <ol>
-          <li>Fluid Layouts (already covered)</li>
-          <li>Flexible Media (already covered)</li>
-          <li>Media Queries (coming next)</li>
+          <li>Fluid Layouts (we learned some of this already)</li>
+          <li>Flexible Media (we learned some of this already)</li>
+          <li>Media Queries (we will learn in Project 3)</li>
         </ol>
+        <p></p>
       </section>
       <section id="fluid-layouts">
-        <h3>Fluid Layouts</h3>
-        <p>Layout containers should use flexible units instead of fixed pixels.</p>
-        <ul>
-          <li>Use fractional (<code>fr</code>) units in CSS Grid or percentages in other contexts.</li>
-          <li>This keeps layout elements proportional as the viewport width changes.</li>
-        </ul>
-        <p>Example using <code>fr</code> units in grid:</p>
+        <h4>1. Fluid Layouts</h4>
+        <p>Layout containers should use flexible units rather than fixed pixels.</p>
+        <ol>
+          <li>
+            <ul>
+              <li>Use fractional () units in CSS Grid or percentages () in other contexts.</li>
+              <li>This keeps layout elements proportional as the viewport changes width.</li>
+            </ul>
+          </li>
+        </ol>
+        <p>Example using fr units with grid:</p>
         <pre class="line-numbers d2l-code"><code class="language-css">.container {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }</code></pre>
-        <p>Example using percentages (centered with margins):</p>
-        <pre class="line-numbers d2l-code"><code class="language-css">.container {
+        <p>Example using percentage units with a layout element (margin settings center it on the page):</p>
+        <pre class="line-numbers d2l-code"><code class="language-css">.container{
   width: 85%;
   margin: 0 auto;
 }</code></pre>
+        <p></p>
       </section>
       <section id="flexible-media">
-        <h3>Flexible Media</h3>
+        <h4>2. Flexible Media</h4>
         <p>Images and videos must resize within their containers.</p>
+        <ol>
+          <li>
+            <ul>
+              <li>Use the base responsive image rule for img and video elements</li>
+            </ul>
+          </li>
+        </ol>
+        <pre class="line-numbers d2l-code"><code class="language-css">img, video { max-width: 100%; height: auto; }</code></pre>
+        <p><strong>Responsive Image Example (CodePen).</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/mqMBoV">codepen.io/profstein/pen/mqMBoV</a></p>
         <ul>
-          <li>Use the base responsive media rule for <code>img</code> and <code>video</code> elements.</li>
+          <li>For more control, use the &lt;picture&gt; element or srcset for art direction, serving different crops or resolutions to different devices.&nbsp;
+            <p><strong>Responsive Picture Element -Art Direction Example (CodePen).</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/JoGLoKX??editors=1010" target="_blank">codepen.io/profstein/pen/JoGLoKX</a></p>
+          </li>
+          <li>For embedded video (like YouTube), wrap it in a container that preserves aspect ratio.
+            <p><strong>Responsive Video Embed Example (CodePen).</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/mrMLRj" target="_blank">https://codepen.io/profstein/pen/mrMLRj</a></p>
+          </li>
         </ul>
-        <pre class="line-numbers d2l-code"><code class="language-css">img, video {
-  max-width: 100%;
-  height: auto;
-}</code></pre>
-        <p><strong>Responsive Image Example (CodePen):</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/mqMBoV" target="_blank">https://codepen.io/profstein/pen/mqMBoV</a></p>
-        <ul>
-          <li>For art direction, use the <code>&lt;picture&gt;</code> element or <code>srcset</code> to serve different crops or resolutions.</li>
-        </ul>
-        <p><strong>Responsive Picture Element - Art Direction Example (CodePen):</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/JoGLoKX" target="_blank">https://codepen.io/profstein/pen/JoGLoKX</a></p>
-        <ul>
-          <li>For embedded video, wrap the player in a wrapper that preserves aspect ratio.</li>
-        </ul>
-        <p><strong>Responsive Video Embed Example (CodePen):</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/mrMLRj" target="_blank">https://codepen.io/profstein/pen/mrMLRj</a></p>
+        <p></p>
       </section>
       <section id="media-queries">
-        <h3>Media Queries</h3>
-        <p>We will learn media queries for Project 3.</p>
-        <ul>
-          <li>Media queries apply different CSS rules based on device or viewport features.</li>
-          <li>This class uses a mobile-first approach: start with small-screen styles, then layer on <code>@media (min-width: ...)</code>.</li>
-        </ul>
+        <h4>3. Media Queries</h4>
+        <p>We will learn these for Project 3.</p>
+        <ol>
+          <li>
+            <ul>
+              <li>Media queries let you apply different CSS rules depending on device or viewport size.</li>
+              <li>In this class we follow a mobile-first approach—start with the small-screen styles, then add queries using min-width.</li>
+            </ul>
+          </li>
+        </ol>
         <p>Example:</p>
-        <pre class="line-numbers d2l-code"><code class="language-css">main {
-  display: grid;
-  grid-template-columns: 1fr;
-}
+        <pre class="line-numbers d2l-code"><code class="language-css">main { display: grid; grid-template-columns: 1fr; }
 
 @media (min-width: 600px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
+
+main { grid-template-columns: 2fr 1fr; }
+
 }</code></pre>
-        <p><strong>Media Queries in action on CodePen:</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/wBKVvNE" target="_blank">https://codepen.io/profstein/pen/wBKVvNE</a></p>
+        <p>Media Queries in action on CodePen: <a rel="noopener" href="https://codepen.io/profstein/pen/wBKVvNE" target="_blank">https://codepen.io/profstein/pen/wBKVvNE</a></p>
       </section>
       <section id="summary">
-        <h3>Summary</h3>
-        <p>Responsive Web Design shifted us from fixed layouts and multiple sites to flexible systems that adapt to every screen. By applying fluid layouts, flexible media, and smart media queries, we build pages that look great and function well on any device.</p>
+        <h3>Summary:</h3>
+        <p>Responsive Web Design changed how we build for the web—moving from fixed layouts and device-specific sites to flexible, unified designs that adapt to any screen. By using RWD techniques, we can create pages that are both functional and look good across the full range of devices used to visit websites today.</p>
       </section>
     </div>
   </main>
