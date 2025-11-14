@@ -214,6 +214,14 @@ main {
   margin: 0 auto;
 }
 
+pre {
+  font-family: var(--ff-mono);
+  background: #e4efff;
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 20, 84, 0.08);
+  overflow: auto;
+}
 @media (min-width: 800px) {
   main {
     padding: var(--space-xl) 0;
@@ -232,32 +240,7 @@ main h1 {
   text-align: center;
 }
 
-.topics-grid {
-  display: grid;
-  gap: var(--space-lg);
-  margin-top: var(--space-lg);
-}
 
-.topics-grid article {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: var(--space-md);
-  background: var(--clr-secondary-bg);
-}
-
-.topics-grid h2 {
-  margin-bottom: var(--space-sm);
-}
-
-.topics-grid a {
-  color: var(--clr-action);
-  text-decoration: none;
-}
-
-.topics-grid a:hover,
-.topics-grid a:focus-visible {
-  text-decoration: underline;
-}
 
 .codepen {
   display: flex;
@@ -461,6 +444,64 @@ main h1 {
   margin: -1px
 }
 
+/* ----------------General Text Styles ----------------- */
+/* styles that can be used on any page */
+
+.highlight{
+  color: var(--clr-highlight-txt);
+  background-color: var(--clr-highlight-bg);
+  padding: var(--space-xs)
+}
+
+.date{
+  font-size: var(--text-size-sm);
+  font-family: var(--ff-mono);
+}
+
+.article-grid {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.article-grid article {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  background: var(--clr-secondary-bg);
+}
+
+.article-grid h2 {
+  margin: var(--space-sm) 0;
+  font-size: var(--text-size-lg) ;
+}
+.article-grid h3 {
+  margin: var(--space-sm) 0;
+  font-size: var(--text-size-lg) ;
+}
+
+.article-grid p {
+  font-size: var(--text-size-md);
+  text-align: justify;
+}
+
+.article-grid a {
+  color: var(--clr-action);
+  text-decoration: none;
+}
+
+.article-grid a:hover,
+.article-grid a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ----------------Home Page Styles ----------------- */
+.home-page main{
+  max-width: calc(var(--text-width) * 1.3)
+}
+
+
 /* ----------------Week Page Styles ----------------- */
 /* Week pages use a grid layout with fixed sidebar on wider screens */
 
@@ -538,6 +579,38 @@ main h1 {
     grid-area: content;
   }
 }
+
+/* --------------- Topics Page Styles ------------------ */
+
+#concept-summary table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#concept-summary table thead{border-bottom: 1px solid #666;}
+#concept-summary table tr{
+  text-align: left;
+  padding: var(--space-md) 0;
+}
+#concept-summary table tr:nth-child(even) {
+  background: #f7f7f7;
+}
+#concept-summary table td{
+  padding: var(--space-sm) var(--space-xs);
+  word-wrap: break-word;
+}
+
+/* ----------------Project Pages Styles ----------------- */
+
+.project-page li{
+  margin-bottom: var(--space-sm)
+}
+#requirements li{
+  margin-bottom: var(--space-xs);
+}
+/* #requirements h2{ font-size:var(--text-size-lg);} */
+#requirements h3{ font-size:var(--text-size-md);}
+
 
 /* ----------------Accessibility Styles ----------------- */
 

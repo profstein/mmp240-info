@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Montagu+Slab:wght@400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Lexend:wght@100..900&display=swap');
 :root {
   /* Base Font Size */
   --base-font-size: 16px;
@@ -21,6 +21,7 @@
   
   /*   Font Families */
   --ff-headings: "Montagu Slab", Georgia, "Times New Roman", Times, serif;
+  --ff-headings: "Bricolage Grotesque", sans-serif;
   --ff-base: "Lexend", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --ff-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
@@ -54,10 +55,6 @@
   --clr-nav-hover: #ece6ce;         /* color on hover */
   --clr-nav-hover-bg: #992727; /* background color on hover */
 
-  
- 
-
-
 }
 /* END CSS VARIABLES---------------------- */
 
@@ -65,7 +62,7 @@
 /*   RESPONSIVE SIZE CHANGES */
 @media (min-width: 640px){
   :root {
-  --base-font-size: 19px;/* increase Base Font Size */
+  --base-font-size: 18px;/* increase Base Font Size */
     --space-unit: 1.15rem;/* increase spacing */
     --text-width: 35rem;/* increase measure */
   }
@@ -73,7 +70,7 @@
 
 @media (min-width: 1200px){
   :root {
-    --base-font-size: 24px;/* increase Base Font Size */
+    --base-font-size: 20px;/* increase Base Font Size */
     --space-unit: 1.25rem;/* increase spacing */
     --text-width:40rem;/* increase measure */
   }
@@ -101,6 +98,7 @@ figure img {
   padding-top: 25px;
   height: 0;
   clear: both;
+  margin-bottom: var(--space-md);
 }
 
 /* 16:9 aspect ratio wrapper */
