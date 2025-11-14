@@ -22,10 +22,26 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Primary">
       <ul>
-        <li><a href="weeks/">Weeks</a></li>
-        <li><a href="projects/">Projects</a></li>
-        <li><a href="topics/">Topics</a></li>
-        <li><a href="help/">Help</a></li>
+        <li class="nav-weeks">
+          <a href="/weeks/">Weeks</a>
+          <ul class="weeks-dropdown">
+            <li><a href="/weeks/week-9.html">Week 9</a></li>
+            <li><a href="/weeks/week-11.html">Week 11</a></li>
+            <li><a href="/weeks/week-12.html">Week 12</a></li>
+          </ul>
+        </li>
+        <li class="nav-topics">
+          <a href="/topics/">Topics</a>
+          <ul class="topics-dropdown">
+            <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+            <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+            <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+            <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+            <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/help/">Help</a></li>
       </ul>
     </nav>
     <button class="search-button" type="button" aria-label="Search">Search</button>
