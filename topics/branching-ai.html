@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Topics | MMP 240</title>
-  <meta name="description" content="Topics for MMP 240 Web Design">
+  <title>Example: Combining AI and Branching | MMP 240 Topics</title>
+  <meta name="description" content="Branching example that combines Git workflows with GitHub Copilot assistance.">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+
+<body class="week-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="site-title" href="../index.html">MMP 240</a>
@@ -24,10 +26,10 @@
           </ul>
         </li>
         <li class="nav-topics">
-          <a href="/topics/" aria-current="page">Topics</a>
+          <a href="/topics/">Topics</a>
           <ul class="topics-dropdown">
             <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
-            <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+            <li><a href="/topics/branching-ai.html" aria-current="page">Example: Combining AI and Branching</a></li>
             <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
             <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
             <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
@@ -40,29 +42,20 @@
     <button class="search-button" type="button" aria-label="Search">Search</button>
   </header>
   <main id="main-content" tabindex="-1">
-    <h1>Topics</h1>
-    <p>Explore short topic pages that walk through branching workflows, Copilot setup, and responsive design best practices.</p>
-    <div class="topics-grid">
-      <article>
-        <h2><a href="branching.html">Branching in Git and GitHub</a></h2>
-        <p>Step-by-step videos and terminal commands show how to create branches, push them to GitHub, and merge back into <strong>main</strong>.</p>
-      </article>
-      <article>
-        <h2><a href="branching-ai.html">Example: Combining AI and Branching</a></h2>
-        <p>Watch Copilot assist with wrapping <code>&lt;figure&gt;</code> elements, commit the suggested changes, and merge the finished feature branch.</p>
-      </article>
-      <article>
-        <h2><a href="copilot-setup.html">Copilot Setup to use AI in VS Code</a></h2>
-        <p>Detailed signup instructions, videos, and extra links help you activate GitHub Copilot with your education benefits.</p>
-      </article>
-      <article>
-        <h2><a href="rwd-intro.html">Introduction to Responsive Web Design</a></h2>
-        <p>A concise overview of fluid layouts, flexible media, and the media queries you'll build in Project 3.</p>
-      </article>
-      <article>
-        <h2><a href="rwd-resources.html">Responsive Web Design Resources</a></h2>
-        <p>Curated articles, tutorials, and CodePens that reinforce the foundational ideas behind responsive layouts.</p>
-      </article>
+    <h1>Example: Combining AI and Branching</h1>
+    <div class="topic-content">
+      <section class="intro" id="intro">
+        <h2>Intro</h2>
+        <p>The video below shows an example of creating a new branch, using Copilot to assist with code changes, and then pushing and merging the branch back into main.</p>
+        <p>If you are behind on Project 2, note that the example demonstrates wrapping <code>&lt;figure&gt;</code> elements in containers and adding <code>&lt;h3&gt;</code> headings driven by the <code>alt</code> text. Watch the segment titled <strong>Turning Landmarks into Cards</strong> before you start working.</p>
+      </section>
+      <section id="workflow">
+        <h2>Video Walkthrough</h2>
+        <div class="videoWrapper ratio-16-9">
+          <iframe src="/d2l/wcs/mp/mediaplayer.d2l?ou=6606&entryId=5d2a07e9-30a7-46d8-a8c9-6ada79dee2ce&captionsEdit=False" title="Workflow with Git Branching and Copilot Gen AI" allowfullscreen></iframe>
+        </div>
+        <p>The narrator shows how to: create and switch to a branch, use Copilot to generate the HTML structure, review the AI suggestions, stage and commit the updates, and finally merge the branch back into <strong>main</strong>.</p>
+      </section>
     </div>
   </main>
   <footer class="site-footer">
@@ -72,4 +65,5 @@
   <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
   <script src="../js/search.js" defer></script>
 </body>
+
 </html>

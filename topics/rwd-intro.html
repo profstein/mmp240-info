@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Introduction to Responsive Web Design | MMP 240 Topics</title>
+  <meta name="description" content="Overview of responsive web design principles for MMP 240 students.">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="week-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="site-title" href="../index.html">MMP 240</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li class="nav-weeks">
+          <a href="/weeks/">Weeks</a>
+          <ul class="weeks-dropdown">
+            <li><a href="/weeks/week-9.html">Week 9</a></li>
+            <li><a href="/weeks/week-11.html">Week 11</a></li>
+            <li><a href="/weeks/week-12.html">Week 12</a></li>
+          </ul>
+        </li>
+        <li class="nav-topics">
+          <a href="/topics/">Topics</a>
+          <ul class="topics-dropdown">
+            <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+            <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+            <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+            <li><a href="/topics/rwd-intro.html" aria-current="page">Introduction to Responsive Web Design</a></li>
+            <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/help/">Help</a></li>
+      </ul>
+    </nav>
+    <button class="search-button" type="button" aria-label="Search">Search</button>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <h1>Introduction to Responsive Web Design</h1>
+    <div class="topic-content">
+      <section class="intro">
+        <h2>Introduction to Responsive Web Design</h2>
+        <p>The idea of responsive web design (RWD) was introduced by Ethan Marcotte in 2010 in his article <a rel="noopener" href="https://alistapart.com/article/responsive-web-design/" target="_blank">“Responsive Web Design” on A List Apart</a>. He proposed thinking about layouts that adapt gracefully to different screen sizes.</p>
+        <p>Before RWD, most websites were fixed-width and optimized for a desktop monitor (~960px). When smartphones launched, users had to zoom and scroll just to read a line of text. Designers often created separate mobile versions, which doubled maintenance and fractured the experience.</p>
+        <p>Instead, Marcotte suggested building one flexible system that responds to the viewport. The same site adjusts itself based on the device.</p>
+      </section>
+      <section id="core-principles">
+        <h2>The Three Core Principles of RWD</h2>
+        <p>We have already covered the first two principles, and we will learn the third in Project 3.</p>
+        <ol>
+          <li>Fluid Layouts (already covered)</li>
+          <li>Flexible Media (already covered)</li>
+          <li>Media Queries (coming next)</li>
+        </ol>
+      </section>
+      <section id="fluid-layouts">
+        <h3>Fluid Layouts</h3>
+        <p>Layout containers should use flexible units instead of fixed pixels.</p>
+        <ul>
+          <li>Use fractional (<code>fr</code>) units in CSS Grid or percentages in other contexts.</li>
+          <li>This keeps layout elements proportional as the viewport width changes.</li>
+        </ul>
+        <p>Example using <code>fr</code> units in grid:</p>
+        <pre class="line-numbers d2l-code"><code class="language-css">.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}</code></pre>
+        <p>Example using percentages (centered with margins):</p>
+        <pre class="line-numbers d2l-code"><code class="language-css">.container {
+  width: 85%;
+  margin: 0 auto;
+}</code></pre>
+      </section>
+      <section id="flexible-media">
+        <h3>Flexible Media</h3>
+        <p>Images and videos must resize within their containers.</p>
+        <ul>
+          <li>Use the base responsive media rule for <code>img</code> and <code>video</code> elements.</li>
+        </ul>
+        <pre class="line-numbers d2l-code"><code class="language-css">img, video {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+        <p><strong>Responsive Image Example (CodePen):</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/mqMBoV" target="_blank">https://codepen.io/profstein/pen/mqMBoV</a></p>
+        <ul>
+          <li>For art direction, use the <code>&lt;picture&gt;</code> element or <code>srcset</code> to serve different crops or resolutions.</li>
+        </ul>
+        <p><strong>Responsive Picture Element - Art Direction Example (CodePen):</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/JoGLoKX" target="_blank">https://codepen.io/profstein/pen/JoGLoKX</a></p>
+        <ul>
+          <li>For embedded video, wrap the player in a wrapper that preserves aspect ratio.</li>
+        </ul>
+        <p><strong>Responsive Video Embed Example (CodePen):</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/mrMLRj" target="_blank">https://codepen.io/profstein/pen/mrMLRj</a></p>
+      </section>
+      <section id="media-queries">
+        <h3>Media Queries</h3>
+        <p>We will learn media queries for Project 3.</p>
+        <ul>
+          <li>Media queries apply different CSS rules based on device or viewport features.</li>
+          <li>This class uses a mobile-first approach: start with small-screen styles, then layer on <code>@media (min-width: ...)</code>.</li>
+        </ul>
+        <p>Example:</p>
+        <pre class="line-numbers d2l-code"><code class="language-css">main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+}</code></pre>
+        <p><strong>Media Queries in action on CodePen:</strong> <a rel="noopener" href="https://codepen.io/profstein/pen/wBKVvNE" target="_blank">https://codepen.io/profstein/pen/wBKVvNE</a></p>
+      </section>
+      <section id="summary">
+        <h3>Summary</h3>
+        <p>Responsive Web Design shifted us from fixed layouts and multiple sites to flexible systems that adapt to every screen. By applying fluid layouts, flexible media, and smart media queries, we build pages that look great and function well on any device.</p>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 MMP 240 Web Design</p>
+  </footer>
+  <script src="../js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+  <script src="../js/search.js" defer></script>
+</body>
+
+</html>

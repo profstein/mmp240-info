@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Branching in Git and GitHub | MMP 240 Topics</title>
+  <meta name="description" content="Guided walkthrough of branching workflows in Git and GitHub for MMP 240.">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="week-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="site-title" href="../index.html">MMP 240</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li class="nav-weeks">
+          <a href="/weeks/">Weeks</a>
+          <ul class="weeks-dropdown">
+            <li><a href="/weeks/week-9.html">Week 9</a></li>
+            <li><a href="/weeks/week-11.html">Week 11</a></li>
+            <li><a href="/weeks/week-12.html">Week 12</a></li>
+          </ul>
+        </li>
+        <li class="nav-topics">
+          <a href="/topics/">Topics</a>
+          <ul class="topics-dropdown">
+            <li><a href="/topics/branching.html" aria-current="page">Branching in Git and GitHub</a></li>
+            <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+            <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+            <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+            <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+          </ul>
+        </li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/help/">Help</a></li>
+      </ul>
+    </nav>
+    <button class="search-button" type="button" aria-label="Search">Search</button>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <h1>Branching in Git and GitHub</h1>
+    <div class="topic-content">
+      <section class="intro" id="intro">
+        <h2>Intro</h2>
+        <p>For this project we are going to learn to use branching in Git.</p>
+      </section>
+      <section id="branching-overview">
+        <h2>Branching Intro and Overview</h2>
+        <div class="videoWrapper ratio-16-9">
+          <iframe src="/d2l/wcs/mp/mediaplayer.d2l?ou=6606&entryId=8b51a939-5746-4b89-be5c-c953e628c734&captionsEdit=False" title="Intro to Git Branching." allowfullscreen></iframe>
+        </div>
+        <h3>Git Branching Instructions</h3>
+        <h4>Video Walkthrough</h4>
+        <p>Keep this page open as you view the video so you can copy and paste Git commands while watching.</p>
+        <div class="videoWrapper ratio-16-9">
+          <iframe src="/d2l/wcs/mp/mediaplayer.d2l?ou=6606&entryId=363fbea9-7746-4212-9d26-4508b6078ac9&captionsEdit=False" title="Git Branching Workflow" allowfullscreen></iframe>
+        </div>
+        <h4>Pushing Changes from your computer to GitHub and Merging Changes back to the main Branch</h4>
+        <p>After you have made all of your changes for your branch and committed them, you can push that to GitHub and merge the branch into the main branch.</p>
+        <div class="videoWrapper ratio-16-9">
+          <iframe src="/d2l/wcs/mp/mediaplayer.d2l?ou=6606&entryId=c48a25ba-efc2-4fb2-ae1e-8371eeb8b7db&captionsEdit=False" title="Git Push Branch to GitHub and Merge New branch into the Main Branch." allowfullscreen></iframe>
+        </div>
+        <h4>Opening the Terminal in VS Code</h4>
+        <p class="text">All of the code below is terminal commands. You already have access to the terminal in VS Code; here is how to open it:</p>
+        <ol>
+          <li>
+            <p>With a project open, look at the bottom of the VS Code window. If you see a panel with the tabs <strong>Problems</strong> | <strong>Output</strong> | <strong>Debug Console</strong> | <strong>Terminal</strong>, click <strong>Terminal</strong>.</p>
+            <ol>
+              <li>If you do not see that panel, click the toggle panel button (or press <kbd>⌘</kbd> + <kbd>J</kbd>), then click <strong>Terminal</strong>:</li>
+            </ol>
+          </li>
+          <li>
+            <p>If the terminal already has something running (like Live Server), open a new shell. Click the caret next to the <strong>+</strong> icon and choose <strong>Bash</strong>.</p>
+            <ol>
+              <li><img src="/content/enforced/915532-BMC01_MMP_240_1259_1_31551/Activities/SCR-20251022-exol-2.png" alt="Screenshot showing how to open a new bash shell"></li>
+            </ol>
+          </li>
+        </ol>
+        <h4><strong>Now you should be ready to enter commands in the terminal.</strong></h4>
+        <h4>1. Check Your Current Branch</h4>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git status
+git branch</code></pre>
+        <ul>
+          <li><p><strong>git status</strong> shows what is happening in your working directory.</p></li>
+          <li><p><strong>git branch</strong> lists all local branches.</p></li>
+          <li><p>The branch with an asterisk (*) is the one you are currently on—usually <strong>main</strong>.</p></li>
+        </ul>
+        <h4>2. Create a New Branch</h4>
+        <p>This creates a new branch called <code>feature-images</code> based on your current branch (often main).</p>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git branch feature-images</code></pre>
+        <p><em>Tip: use descriptive names such as <code>fix-navbar</code>, <code>add-gallery</code>, or <code>update-css-layout</code>.</em></p>
+        <h4>3. Switch to That Branch</h4>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git switch feature-images</code></pre>
+        <p>You can also use the older command <code>git checkout feature-images</code>.</p>
+        <p>Now you are working in the new branch—anything you commit stays isolated from <strong>main</strong>.</p>
+        <p>You can combine steps 2 and 3 by adding the <code>-c</code> flag: </p>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git switch -c feature-images</code></pre>
+        <h4>4. Make Changes and Commit</h4>
+        <p>Edit files and then run:</p>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git add .</code></pre>
+        <p>This stages your edits.</p>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git commit -m &quot;Added responsive image section&quot;</code></pre>
+        <h4>5. Push the Branch to GitHub</h4>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git push -u origin feature-images</code></pre>
+        <p>The <code>-u</code> flag connects your local branch to the same branch on GitHub.</p>
+        <h3>Merging a Branch into Main</h3>
+        <h4>1. Switch Back to Main</h4>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git switch main</code></pre>
+        <p>This is the code you always use to return to the main branch.</p>
+        <h4>2. Merge the Branch into Main</h4>
+        <pre class="line-numbers d2l-code"><code class="language-bash">git merge feature-images</code></pre>
+      </section>
+      <section id="concept-summary">
+        <h2>Concept Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th><strong>Command</strong></th>
+              <th><strong>Purpose</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>git branch</td>
+              <td>List or create branches</td>
+            </tr>
+            <tr>
+              <td>git switch</td>
+              <td>Move between branches</td>
+            </tr>
+            <tr>
+              <td>git merge</td>
+              <td>Combine branch changes</td>
+            </tr>
+            <tr>
+              <td>git add</td>
+              <td>Adds changes to staging</td>
+            </tr>
+            <tr>
+              <td>git commit</td>
+              <td>Commits your changes</td>
+            </tr>
+            <tr>
+              <td>git push / pull</td>
+              <td>Sync local and remote branches</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 MMP 240 Web Design</p>
+  </footer>
+  <script src="../js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+  <script src="../js/search.js" defer></script>
+</body>
+
+</html>
