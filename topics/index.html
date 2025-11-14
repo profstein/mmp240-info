@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="topics-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="site-title" href="../index.html">MMP 240</a>
@@ -31,9 +31,16 @@
             <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
             <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
             <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+            <li><a href="/topics/netlify.html">Netlify</a></li>
           </ul>
         </li>
-        <li><a href="/projects/">Projects</a></li>
+        <li class="nav-projects">
+          <a href="/projects/">Projects</a>
+          <ul class="projects-dropdown">
+            <li><a href="/projects/project-2.html">Project 2</a></li>
+            <li><a href="/projects/project-3.html">Project 3</a></li>
+          </ul>
+        </li>
         <li><a href="/help/">Help</a></li>
       </ul>
     </nav>
@@ -42,7 +49,7 @@
   <main id="main-content" tabindex="-1">
     <h1>Topics</h1>
     <p>Explore short topic pages that walk through branching workflows, Copilot setup, and responsive design best practices.</p>
-    <div class="topics-grid">
+    <div class="article-grid">
       <article>
         <h2><a href="branching.html">Branching in Git and GitHub</a></h2>
         <p>Step-by-step videos and terminal commands show how to create branches, push them to GitHub, and merge back into <strong>main</strong>.</p>

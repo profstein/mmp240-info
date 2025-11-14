@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="project-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
   <a class="site-title" href="../index.html">MMP 240</a>
@@ -31,9 +31,16 @@
             <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
             <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
             <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+            <li><a href="/topics/netlify.html">Netlify</a></li>
           </ul>
         </li>
-        <li><a href="/projects/" aria-current="page">Projects</a></li>
+        <li class="nav-projects">
+          <a href="/projects/" aria-current="page">Projects</a>
+          <ul class="projects-dropdown">
+            <li><a href="/projects/project-2.html">Project 2</a></li>
+            <li><a href="/projects/project-3.html">Project 3</a></li>
+          </ul>
+        </li>
         <li><a href="/help/">Help</a></li>
       </ul>
     </nav>
@@ -41,7 +48,16 @@
   </header>
   <main id="main-content" tabindex="-1">
     <h1>Projects</h1>
-    <p>Placeholder: project list will go here.</p>
+    <div class="article-grid">
+      <article>
+        <h2><a href="project-2.html">Project 2: Responsive Media Page</a></h2>
+        <p>Build a fluid grid with responsive images and video, applying flexible media techniques and visual design principles.</p>
+      </article>
+      <article>
+        <h2><a href="project-3.html">Project 3: Responsive Web Site</a></h2>
+        <p>Expand your project into a multi-page responsive site with navigation, media queries, and individual landmark pages.</p>
+      </article>
+    </div>
   </main>
   <footer class="site-footer">
     <p>&copy; 2025 MMP 240 Web Design</p>
