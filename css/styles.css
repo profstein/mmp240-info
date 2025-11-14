@@ -122,6 +122,88 @@ body {
   font-weight: 600;
 }
 
+/* ---------------- Navigation dropdowns ----------------- */
+.site-nav ul li { position: relative; }
+.site-nav > ul > li { display: inline-flex; align-items: center; }
+.site-nav ul li ul {
+  /* default hidden state uses transform so we can animate scaling on desktop */
+  display: block; /* keep in flow for accessibility, visibility controlled via transform/opacity */
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: var(--clr-primary-bg);
+  border: 1px solid var(--border);
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 180px;
+  z-index: 1000;
+  transform-origin: top center;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform .22s ease, opacity .18s ease;
+}
+.site-nav ul li.open > ul {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.site-nav ul li ul li a {
+  padding: var(--space-sm) var(--space-md);
+  display: block;
+}
+
+.subnav-toggle {
+  background: transparent;
+  border: none;
+  padding: 0 var(--space-sm);
+  margin-left: 0;
+  cursor: pointer;
+  color: var(--clr-nav);
+  font-size: 1.25rem;
+}
+.subnav-toggle:focus-visible {
+  outline: 3px solid var(--clr-action);
+  outline-offset: 2px;
+}
+.subnav-toggle span {
+  display: inline-block;
+  transition: transform .18s ease;
+}
+.subnav-toggle[aria-expanded="true"] span { transform: rotate(180deg); }
+
+/* Top-level label button for items with submenus */
+.site-nav .subnav-label {
+  background: transparent;
+  border: none;
+  color: var(--clr-nav);
+  font: inherit;
+  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  border-radius: var(--radius);
+}
+.site-nav .subnav-label:hover,
+.site-nav .subnav-label:focus-visible {
+  background: var(--clr-nav-hover-bg);
+  color: var(--clr-nav-hover);
+}
+.site-nav .subnav-label .subnav-caret {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+/* first link inside submenu that points to the parent page */
+.site-nav .submenu-parent-link {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  color: var(--clr-nav);
+}
+.site-nav .submenu-parent-link:hover,
+.site-nav ul li ul li a:hover { background: var(--clr-nav-hover-bg); color: var(--clr-nav-hover); }
+
 
 
 /* ----------------Base Layout ----------------- */
@@ -148,6 +230,44 @@ main h1 {
   background: var(--clr-secondary-bg);
   font-size: var(--text-size-sm);
   text-align: center;
+}
+
+.topics-grid {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.topics-grid article {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  background: var(--clr-secondary-bg);
+}
+
+.topics-grid h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.topics-grid a {
+  color: var(--clr-action);
+  text-decoration: none;
+}
+
+.topics-grid a:hover,
+.topics-grid a:focus-visible {
+  text-decoration: underline;
+}
+
+.codepen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border);
+  padding: var(--space-md);
+  margin: var(--space-lg) 0;
+  min-height: 300px;
+  box-sizing: border-box;
 }
 
 /* Responsive */
@@ -179,6 +299,63 @@ main h1 {
     overflow: hidden;
   }
 
+  /* Mobile: nested submenus behave like accordion */
+  .site-nav ul li ul {
+    position: static;
+    box-shadow: none;
+    border: none;
+  }
+  .site-nav ul li.open > ul { display: block; }
+  .site-nav ul li ul { display: none; }
+  .site-nav ul li .subnav-toggle { margin-left: auto; }
+
+  /* Mobile layout: top-level rows take full width; anchors and label-buttons share the same styling */
+  .site-nav > ul > li { display: block; position: relative; padding: 0; }
+  /* Make the anchor and label button full-width rows with space between label and caret */
+  .site-nav > ul > li > a,
+  .site-nav > ul > li > .subnav-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--space-sm) var(--space-md);
+    text-decoration: none;
+    color: var(--clr-nav);
+    background: transparent;
+  }
+  /* make top-level rows visually consistent on mobile */
+  .site-nav > ul > li > a,
+  .site-nav > ul > li > .subnav-label { border-bottom: 1px solid var(--border); }
+  .site-nav > ul > li:last-child > a,
+  .site-nav > ul > li:last-child > .subnav-label { border-bottom: none; }
+  .site-nav ul li ul { width: 100%; }
+  .site-nav ul li ul li a { white-space: normal; }
+  .site-nav ul li .subnav-toggle {
+    display: none; /* not used when label button replaces top-level link */
+  }
+  /* caret inside label */
+  .site-nav .subnav-caret { font-size: 1.45rem; line-height: 1; }
+
+  /* Mobile: submenu should be hidden by default and revealed when parent has .open using max-height animation */
+  .site-nav ul li ul {
+    transform: none;
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .28s ease;
+  }
+  .site-nav ul li.open > ul { max-height: 2000px; }
+
+}
+
+/* Desktop: show submenu on hover as well */
+@media (min-width: 766px) {
+  .site-nav > ul > li:hover > ul { display: block; }
+  .site-nav > ul > li:hover > .subnav-toggle { color: var(--clr-action); }
+  .site-nav ul li ul { min-width: 180px; width: auto; }
+  .site-nav ul li ul li a { white-space: nowrap; }
+}
   .site-nav a {
     border-bottom: 1px solid var(--border);
   }
@@ -190,8 +367,6 @@ main h1 {
   .site-nav[hidden] {
     display: none;
   }
-}
-
 /* Search overlay styles */
 .search-overlay {
   position: fixed;
