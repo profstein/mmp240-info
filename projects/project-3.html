@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Projects | MMP 240</title>
+    <meta name="description" content="Projects for MMP 240 Web Design">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="../index.html">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+                        <li><a href="/topics/netlify.html">Netlify</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html" aria-current="page">Project 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <h1>Project 3: Responsive Web Site</h1>
+        <p>Overall, this project is to take Project 2 and redesign it to make it fully responsive, improve visual
+            design, and expand it into a multi-page site featuring individual landmark pages.</p>
+        <p>In order to do that we will:</p>
+        <ul>
+            <li>Add additional landmarks and pages for each landmark</li>
+            <li>Add a responsive navigation to the header so that we can navigate to pages.</li>
+            <li>Add media queries to get more complete control over how it looks across devices</li>
+        </ul>
+        <p>We will also:</p>
+        <ul>
+            <li>learn how to work with AI, and use this to help write the landmark pages and other parts.
+            </li>
+            <li>revisit some past skills</li>
+            <li>learn a new way to publish our sites.</li>
+        </ul>
+
+        <section  id="requirements">
+            <h2>Requirements</h2>
+            <p></p>
+            <ul>
+                <li>
+                    <h3>Responsive Design</h3>
+                    <ul>
+                        <li><span class="highlight">[new]</span> <strong>Media Queries</strong> Add media queries (at least 2 breakpoints: mobile +
+                            desktop; tablet optional) so they layout changes at the breakpoint(s).</li>
+                        <li>[from project 2] <strong>Flexible Media</strong> You have the CSS in place and HTML structure so
+                            that images and video can scale and fit within their containers.</li>
+                        <li>[from project 2] <strong>Fluid Grid</strong> Your layout is in fluid units (fr, %) so that
+                            content can adapt to screen size.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li>A <a href="/weeks/week-12.html#navigation">responsive navigation</a> that links to the home page and all six landmark pages.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Multi-Page Structure</h3>
+                    <ul>
+                        <li>Create individual landmark pages: 6 &mdash; one per landmark.</li>
+                        <li>Each landmark page must follow the same structure:
+                        <ul>
+                            <li>h1 landmark name</li>
+                            <li>Hero image (use the one provided). Bonus for using an art-directed picture element.</li>
+                            <li>The text provided in the markdown files</li>
+                            <li>Previous / Next buttons (these should lead you through all 6 pages)</li>
+                        </ul>
+                        </li>
+                        <li>All pages on the site have the same <b>header (including navigation)</b> and <b>footer</b>Reuse the same header, nav, and footer across all pages.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Visual Design</h3>
+                    <ul>
+                        <li>Typography is consistent and follows a typographic hierarchy</li>
+                        <li>Colors are harmonious and consistently used, including colors to represent links and buttons</li>
+                        <li>Layout and spacing allow for differentiation of page sections and content and easy scanning.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Accessibiity</h3>
+                    <ul>
+                        <li>All images should have alt attributes</li>
+                        <li>Text and background colors have sufficient contrast</li>
+                        <li>Semantic HTML elements are used</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <h2>Turning it in</h2>
+        <p>You turn it in by completing the Project 3 Assignment in bright space. </p>
+        <blockquote>Let me know if you do not have access to bright space and we can use an alternate method.</blockquote>
+        <p>When you turn it in, you'll be expected to submit the following:</p>
+        <ul>
+            <li><span class="highlight">[link to your GitHub Repository]</span> all of your changes, committed and synced roof to get hub repository on the main branch</li>
+            <li><span class="highlight">[link to your published site]</span> the state published and get hub pages.
+                <ul>
+                    <li>for bonus points publish on <a href="/topics/netlify.html">Netlify</a></li>
+                </ul></li>
+            <li><span class="highlight">Answer the following questions</span> in the comments of the submission:
+                <ul>
+                    <li>Did you use AI to help you create the site? If yes, how was the experience? If no, why not?</li>
+                    <li>What part of the process did you most enjoy?</li>
+                    <li>What part of the process was the most difficult and how did you overcome the difficulty?</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Due Date: Wednesday, November 19</h3>
+
+        <h2>Weekly Work</h2>
+
+        <ul>
+            <li><strong><a href="/weeks/week-9.html">Week 9: 10/21&mdash;10/26</a>: Wireframes and intro to RWD</strong>
+                Intro to Responsive Web Design
+                (RWD), creating wireframes with Figma, Copilot setup in VS Code, learning branching in Git and GitHub.
+                <ul>
+                    <li><strong>Assignment:</strong> Create wireframes in Figma</li>
+                </ul>
+            </li>
+            <li><strong>Week 10: 10/27&mdash;11/2: Week off.</strong> we took this week off to allow people time to
+                catch up.</li>
+            <li><strong><a href="/weeks/week-11.html">Week 11: 11/3-11/9</a>: Wireframes to HTML and Media
+                    Queries</strong>
+                <ul>
+                    <li><strong>Assignment:</strong> Do the following
+                        <ul>
+                            <li>Create the landmark-wonder.html file for that landmark page (remember to include next
+                                and previous links)</li>
+                            <li>Update the CSS file to include CSS variables</li>
+                            <li>Update the CSS file to include media queries for layout</li>
+                            <li>Commit and Push all changes to your GitHub repository</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong><a href="/weeks/week-12.html">Week 12: 11/10&mdash;11/16</a>: Finishing Project 3</strong> This
+                week we will finish the project.
+                <ul>
+                    <li>Create the remaining landmark pages</li>
+                    <li>Add in Navigation in the header</li>
+                    <li>Add Finishing Touches</li>
+                    <li>commit and push all changes to GitHub</li>
+                    <li>[optional] publish with Netlify</li>
+                    <li><strong>Assignment</strong>: Complete the steps then submit the project in the <strong>Project
+                            3</strong> Assignment in Brightspace.</li>
+                </ul>
+
+            </li>
+
+        </ul>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 MMP 240 Web Design</p>
+    </footer>
+    <script src="../js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="../js/search.js" defer></script>
+</body>
+
+</html>
