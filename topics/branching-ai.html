@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body class="week-page">
+<body class="topics-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="site-title" href="../index.html">MMP 240</a>
@@ -33,9 +33,16 @@
             <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
             <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
             <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+            <li><a href="/topics/netlify.html">Netlify</a></li>
           </ul>
         </li>
-        <li><a href="/projects/">Projects</a></li>
+        <li class="nav-projects">
+          <a href="/projects/">Projects</a>
+          <ul class="projects-dropdown">
+            <li><a href="/projects/project-2.html">Project 2</a></li>
+            <li><a href="/projects/project-3.html">Project 3</a></li>
+          </ul>
+        </li>
         <li><a href="/help/">Help</a></li>
       </ul>
     </nav>
@@ -46,15 +53,14 @@
     <div class="topic-content">
       <section class="intro" id="intro">
         <h2>Intro</h2>
-        <p>The video below shows an example of creating a new branch, using Copilot to assist with code changes, and then pushing and merging the branch back into main.</p>
-        <p>If you are behind on Project 2, note that the example demonstrates wrapping <code>&lt;figure&gt;</code> elements in containers and adding <code>&lt;h3&gt;</code> headings driven by the <code>alt</code> text. Watch the segment titled <strong>Turning Landmarks into Cards</strong> before you start working.</p>
+        <p>The video below shows an example of making a new branch. Then using Copilot to help with some code changes, commit the changes, push the new branch up to GitHub and merge the branch into main.</p>
+        <p>If you're behind in project 2 note that this example shows using Copilot to do the part of the project where we wrap the figure elements in divs and add h3 headings based on the text in the alt tag: Turning Landmarks into Cards.</p>
       </section>
       <section id="workflow">
         <h2>Video Walkthrough</h2>
         <div class="videoWrapper ratio-16-9">
-          <iframe src="/d2l/wcs/mp/mediaplayer.d2l?ou=6606&entryId=5d2a07e9-30a7-46d8-a8c9-6ada79dee2ce&captionsEdit=False" title="Workflow with Git Branching and Copilot Gen AI" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/DtjdAdAkJr8?si=PvzLdvHD4ZM_kKeY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <p>The narrator shows how to: create and switch to a branch, use Copilot to generate the HTML structure, review the AI suggestions, stage and commit the updates, and finally merge the branch back into <strong>main</strong>.</p>
       </section>
     </div>
   </main>
