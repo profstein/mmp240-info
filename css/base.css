@@ -20,7 +20,7 @@
   --line-height-headings: 1.15;
   
   /*   Font Families */
-  --ff-headings: "Montagu Slab", Georgia, "Times New Roman", Times, serif;
+  /* --ff-headings: "Montagu Slab", Georgia, "Times New Roman", Times, serif; */
   --ff-headings: "Bricolage Grotesque", sans-serif;
   --ff-base: "Lexend", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --ff-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
