@@ -449,7 +449,24 @@ main h1 {
 /* ----------------General Text Styles ----------------- */
 /* styles that can be used on any page */
 
+/* Blockquote Styles */
+blockquote {
+  margin: var(--space-lg) 0;
+  padding: var(--space-md) var(--space-lg);
+  border-left: 8px solid var(--clr-action);
+  background: var(--clr-secondary-bg);
+  border-radius: var(--radius);
+}
 
+blockquote p {
+  margin: 0;
+  font-style: italic;
+  color: var(--clr-primary-txt);
+}
+
+blockquote p:not(:last-child) {
+  margin-bottom: var(--space-sm);
+}
 
 .highlight{
   color: var(--clr-highlight-txt);
@@ -510,6 +527,7 @@ ul.compact li{
 .article-grid a:focus-visible {
   text-decoration: underline;
 }
+
 
 /* ----------------Home Page Styles ----------------- */
 .home-page main{
