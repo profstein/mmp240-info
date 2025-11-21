@@ -464,10 +464,19 @@ main h1 {
   font-style:italic;
 }
 
+ul.compact li{
+  margin-bottom: var(--space-xs);
+}
+
+.intro{
+  font-size: var(--text-size-xl);
+}
+
 .article-grid {
   display: grid;
   gap: var(--space-lg);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xl);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 

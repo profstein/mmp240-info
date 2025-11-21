@@ -1,5 +1,59 @@
 # Week 13: 11/17-11/23
 
+## Update
+
+As mentioned previously, the goal for this week is simply to choose your topic and start to gather the early materials you’ll need for planning.
+
+### Week 13 Assignment
+**Part 1: Complete the Project 4 Idea form **
+
+- [Project 4 Idea – Fill out form](https://forms.office.com/r/8z7WT9ggiS)
+
+** Part 2: Start a Brainstorming Document Using a Template **
+I have created templates in Google Doc and Word Format. Get as far as you can. These are designed to help you gather your thoughts and inspiration goign into next week.
+
+- Google Doc version: [Project 4 Brainstorming Google doc](https://docs.google.com/document/d/11Rgt7WoCWMwaNg35H7M39FkUvPODmwXjVlvo2SqdLWo/edit?usp=sharing)
+  - (Either click File > Make a Copy, OR, File > Download and download it in an editable format.)
+- MS Word version: [Project 4 Brainstorming Word Doc](https://cuny907-my.sharepoint.com/:w:/g/personal/christopher_stein48_login_cuny_edu/IQA3deB3E-uvRrjN2JkJM6gUAetlhCLxEu4PZxAxcfTXNWo?e=P5rktQ)
+  - (Click the down arrow at the top to Download the file to be able to edit it.)
+
+### More info on Brainstorming
+If the documents above are confusing or you just want more info on the Brainstorming process, read below.
+
+#### 1. Choose Your Topic
+Pick one of the approved project types:
+- Travel / Local Guide
+- Hobby Site
+- How-To Guide
+
+Choose something you enjoy, know about, and can support with real content (not AI-generated).
+
+#### 2. Gather Inspiration
+Browse websites connected to your topic. Save URLs for:
+- Layouts or designs you like
+- Color ideas
+- Typography styles
+- UI patterns or page structures
+
+You don’t need to build anything yet — just explore and collect.
+
+#### 3. Identify Legal Content Sources
+Find possible image, video, and text sources you can use. Examples include:
+- Unsplash, Pexels, Pixabay, Wikimedia Commons
+- YouTube or Vimeo (must allow embedding)
+- Wikipedia, Wikivoyage, Creative Commons text sources
+
+You must cite every source you use on your website. Keep track of URLs.
+
+#### 4. Record Everything in the Brainstorming Document
+Use the Google Doc/MS Word template to store:
+- Your topic choice
+- Inspiration links
+- Possible content sources
+- Notes on early design ideas
+
+This document will feed directly into next week’s planning file in Figma.
+
 ## Intro
 
 I'm going to continue to put things on the class site that is available at: https://mmp240-fa25.netlify.app There is also info on Brightspace. If you can't access Brightspace send me a message to let me know. I have feedback on assignments there and can send it to you in other ways if you can't access.
