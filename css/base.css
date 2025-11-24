@@ -144,8 +144,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Individual sizes (adjust as needed) */
 h1 { font-size: var(--text-size-4xl); }  
 h2 { font-size: var(--text-size-3xl); }    
-h3 { font-size: var(--text-size-2xl); }  
-h4 { font-size: var(--text-size-xl); }  
+h3 { font-size: var(--text-size-2xl); font-weight: 200;}  
+h4 { font-size: var(--text-size-xl); font-weight: 300; text-transform: uppercase;}  
 h5 { font-size: var(--text-size-lg); font-weight: 600; } 
 h6 {  font-size: calc(var(--text-size-lg) - 0.125rem) } 
 

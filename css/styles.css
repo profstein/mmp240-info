@@ -467,6 +467,15 @@ blockquote p {
 blockquote p:not(:last-child) {
   margin-bottom: var(--space-sm);
 }
+.note {
+    padding: var(--space-md) var(--space-lg);
+    background-color: #fff3cd;
+    border-top: 8px solid #ffc107;
+    border-top: 8px solid var(--clr-highlight-bg);
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
 
 .highlight{
   color: var(--clr-highlight-txt);
@@ -674,4 +683,18 @@ ul.compact li{
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* prevent code / pre blocks from expanding the page width */
+pre,
+pre > code,
+.code-block,
+.prompt-box pre,
+.prompt-box code {
+  max-width: 100%;
+  box-sizing: border-box; /* include padding in width calculation */
+  white-space: pre-wrap;  /* preserve line breaks but allow wrapping */
+  word-break: break-word; /* break long words/urls if needed */
+  overflow-wrap: anywhere; /* allow breaks anywhere for very long strings */
+  overflow-x: auto; /* keep horizontal scrollbar only if needed */
 }
