@@ -14,17 +14,18 @@
     { id: 4, title: 'Week 11: Wireframes to HTML and Media Queries', text: 'Week 11 wireframes HTML media queries responsive design.', url: '/weeks/week-11.html' },
     { id: 5, title: 'Week 12: Finishing Project 3', text: 'Week 12 finishing project 3.', url: '/weeks/week-12.html' },
     { id: 6, title: 'Week 13: Project 3 finish and Project 4 planning', text: 'Week 13 updates Project 3 finish and Project 4 planning brainstorming.', url: '/weeks/week-13.html' },
-    { id: 7, title: 'Projects', text: 'Project descriptions and submission information.', url: '/projects/index.html' },
-    { id: 8, title: 'Project 2', text: 'Project 2 assignment details requirements submission.', url: '/projects/project-2.html' },
-    { id: 9, title: 'Project 3', text: 'Project 3 assignment details requirements submission.', url: '/projects/project-3.html' },
-    { id: 10, title: 'Topics', text: 'Course topics, references, and reading materials.', url: '/topics/index.html' },
-    { id: 11, title: 'Branching in Git and GitHub', text: 'Guided walkthrough of branching workflows in Git and GitHub version control collaboration.', url: '/topics/branching.html' },
-    { id: 12, title: 'Example: Combining AI and Branching', text: 'Branching example that combines Git workflows with GitHub Copilot assistance AI.', url: '/topics/branching-ai.html' },
-    { id: 13, title: 'Copilot Setup to use AI in VS Code', text: 'Step-by-step Copilot setup guidance for MMP 240 students AI GitHub.', url: '/topics/copilot-setup.html' },
-    { id: 14, title: 'Introduction to Responsive Web Design', text: 'Overview of responsive web design principles RWD mobile viewport media queries.', url: '/topics/rwd-intro.html' },
-    { id: 15, title: 'Responsive Web Design Resources', text: 'Curated responsive web design resources RWD references links.', url: '/topics/rwd-resources.html' },
-    { id: 16, title: 'Netlify', text: 'Overview of using Netlify to deploy and host MMP 240 projects deployment hosting.', url: '/topics/netlify.html' },
-    { id: 17, title: 'Help', text: 'Help, resources and contact info for the course.', url: '/help/index.html' }
+    { id: 7, title: 'Week 14: Project 4 Creative Brief', text: 'Week 14 Project 4 creative brief and planning.', url: '/weeks/week-14.html' },
+    { id: 8, title: 'Projects', text: 'Project descriptions and submission information.', url: '/projects/index.html' },
+    { id: 9, title: 'Project 2', text: 'Project 2 assignment details requirements submission.', url: '/projects/project-2.html' },
+    { id: 10, title: 'Project 3', text: 'Project 3 assignment details requirements submission.', url: '/projects/project-3.html' },
+    { id: 11, title: 'Topics', text: 'Course topics, references, and reading materials.', url: '/topics/index.html' },
+    { id: 12, title: 'Branching in Git and GitHub', text: 'Guided walkthrough of branching workflows in Git and GitHub version control collaboration.', url: '/topics/branching.html' },
+    { id: 13, title: 'Example: Combining AI and Branching', text: 'Branching example that combines Git workflows with GitHub Copilot assistance AI.', url: '/topics/branching-ai.html' },
+    { id: 14, title: 'Copilot Setup to use AI in VS Code', text: 'Step-by-step Copilot setup guidance for MMP 240 students AI GitHub.', url: '/topics/copilot-setup.html' },
+    { id: 15, title: 'Introduction to Responsive Web Design', text: 'Overview of responsive web design principles RWD mobile viewport media queries.', url: '/topics/rwd-intro.html' },
+    { id: 16, title: 'Responsive Web Design Resources', text: 'Curated responsive web design resources RWD references links.', url: '/topics/rwd-resources.html' },
+    { id: 17, title: 'Netlify', text: 'Overview of using Netlify to deploy and host MMP 240 projects deployment hosting.', url: '/topics/netlify.html' },
+    { id: 18, title: 'Help', text: 'Help, resources and contact info for the course.', url: '/help/index.html' }
   ];
 
   // Create MiniSearch instance
