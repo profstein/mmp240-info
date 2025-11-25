@@ -483,6 +483,11 @@ blockquote p:not(:last-child) {
   padding: var(--space-xs)
 }
 
+.strikethrough{
+  text-decoration: line-through;
+  color: #888;
+}
+
 .date{
   font-size: var(--text-size-sm);
   font-family: var(--ff-mono);
