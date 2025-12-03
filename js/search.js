@@ -12,7 +12,7 @@
     { id: 2, title: 'Weeks', text: 'Weekly schedule and class topics by week.', url: '/weeks/index.html' },
     { id: 3, title: 'Week 9: Project 3 Start', text: 'Week 9 Project 3 introduction and kickoff.', url: '/weeks/week-9.html' },
     { id: 4, title: 'Week 11: Wireframes to HTML and Media Queries', text: 'Week 11 wireframes HTML media queries responsive design.', url: '/weeks/week-11.html' },
-    { id: 5, title: 'Week 12: Finishing Project 3', text: 'Week 12 finishing project 3.', url: '/weeks/week-12.html' },
+    { id: 5, title: 'Week 12: Finishing Project 3', text: 'Week 12 finishing project 3: Markdown conversion, landmark pages, navigation', url: '/weeks/week-12.html' },
     { id: 6, title: 'Week 13: Project 3 finish and Project 4 planning', text: 'Week 13 updates Project 3 finish and Project 4 planning brainstorming.', url: '/weeks/week-13.html' },
     { id: 7, title: 'Week 14: Project 4 Creative Brief', text: 'Week 14 Project 4 creative brief and planning.', url: '/weeks/week-14.html' },
     { id: 8, title: 'Projects', text: 'Project descriptions and submission information.', url: '/projects/index.html' },
