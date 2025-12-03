@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Copilot in VS Code: Quick Tips</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="topics-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="/">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html">Week 15</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+                        <li><a href="/topics/using-copilot.html" aria-current="page">Using Copilot in VS Code</a></li>
+                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+                        <li><a href="/topics/netlify.html">Netlify</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <h1>Using Copilot in VS Code: Quick Tips</h1>
+        <div class="topic-content">
+            <section class="intro" id="intro">
+                <h2>Using AI to Support Your Work</h2>
+                <p>You are encouraged to use AI tools to support (but not replace) your thinking. This page has ideas, tips, tricks and examples of how to use Copilot in VS Code.</p>
+            </section>
+
+            <section id="when">
+                <h2>When to use Copilot</h2>
+                <ul>
+                    <li><strong>For Questions:</strong> If you need help understanding something, you can ask Copilot.
+                        If, for example, there are parts of base.css from the base page template you don't understand,
+                        you can ask copilot to explain it.</li>
+                    <li><strong>For content:</strong> Describe the sections you want on a page and ask AI to generate
+                        draft text. You can also write some content in markdown and then have it convert it for you
+                        (like we did in projects 2 and 3). Edit what it gives you into your own voice.</li>
+                    <li><strong>For HTML:</strong> Write your content in plain text or Markdown and ask AI to convert it
+                        into semantic HTML structure.</li>
+                    <li><strong>For CSS:</strong> If you ask it for help with updating or applying styles, remind it to
+                        use the css variables you will</li>
+                    <li><strong>For debugging:</strong> Paste snippets of your HTML/CSS and ask AI to help you find and
+                        fix errors.</li>
+                </ul>
+                <p class="note">Remember: AI is there to handle busywork and help you experiment. You are still responsible for
+                    deciding what belongs on your site and how it should look and behave.</p>
+
+            </section>
+
+            <section id="copilot-modes">
+                <h2>Copilot Modes</h2>
+                <dl>
+                    <dt><strong>Ask</strong></dt>
+                    <dd>Use this when you want quick answers or code snippets. Great for clarifying syntax or asking
+                        "How do I…?" questions.<br><em>(Reminder: Switching modes deletes your current conversation and
+                            its context.)</em></dd>
+
+                    <dt><strong>Agent</strong></dt>
+                    <dd>Use this for more complex tasks where Copilot acts like a coding assistant. It can reason
+                        through steps, help debug, or guide you through building features.<br><em>(Reminder: Switching
+                            modes deletes your current conversation and its context.)</em></dd>
+
+                    <dt><strong>Edit</strong></dt>
+                    <dd>Use this when you want Copilot to modify existing code. Highlight the section, then tell Copilot
+                        what to change or improve.<br><em>(Reminder: Switching modes deletes your current conversation
+                            and its context.)</em></dd>
+                </dl>
+            </section>
+
+            <section id="prompt-ingredients">
+                <h2>Prompt Ingredients</h2>
+                <ul>
+                    <li><strong>Task</strong>: What you want Copilot to do (add, style, refactor, explain, debug, etc.)
+                        <ul>
+                            <li>Example: "Add a hero section to the homepage" or "Refactor this CSS to use utility
+                                classes"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Context</strong>: Where the work happens (which page, section, or file) and any relevant
+                        background
+                        <ul>
+                            <li>Example: "On the About page, in the main content area" or "This is for a travel site's
+                                gallery page"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Targets</strong>: Specific elements, classes, or areas to focus on (helps Copilot know
+                        exactly what to modify)
+                        <ul>
+                            <li>Example: "Only update the <code>.card</code> components" or "Focus on the navigation
+                                links in the header"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Specifics</strong>: Details about what you want included or how things should work (content, attributes, functionality)
+                        <ul>
+                            <li>Example: "Each card needs an image, h3 heading, short paragraph, and a 'Learn More' button" or "The image should have alt text and load lazily"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Constraints</strong>: Rules or limitations (use existing styles, keep it accessible,
+                        maintain responsive behavior)
+                        <ul>
+                            <li>Example: "Use existing CSS variables for all colors and spacing" or "Must work on mobile
+                                screens 320px wide"</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Complete Example Using All Ingredients</h3>
+                <p><strong>Prompt:</strong><br>
+                    <em>"<strong>Task:</strong> Style the project cards. <strong>Context:</strong> On the portfolio
+                        page, inside the <code>.projects-grid</code> section. <strong>Targets:</strong> Each
+                        <code>.card</code> element <strong>Specifics:</strong> should have an image, h3 title, description, and view more button.
+                        <strong>Constraints:</strong> Use existing CSS variables for colors, spacing, and fonts. The
+                        layout should be responsive—3 columns on desktop, 2 on tablet, 1 on mobile. Keep semantic
+                        HTML."</em>
+                </p>
+            </section>
+
+            <section id="follow-ups">
+                <h2>Follow-ups and Add-ons</h2>
+                <p>These are requests you can either use to follow up after it's responded to your prompt, or add on to
+                    a prompt to help make sure you get what you were going for</p>
+                <ul>
+                    <li><strong>Persona for tone/style:</strong> Act as a web design tutor. Explain how to
+                        <ul>
+                            <li>Act as a web design tutor. Explain how to refactor this CSS to use variables already
+                                defined.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Iterative loop:</strong> Propose a small improvement, show a diff, then wait for
+                        approval.
+                        <ul>
+                            <li>Propose an update to the card layout, show me, then wait for my approval before moving
+                                forward.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tell it to ask you if it needs more context:</strong>
+                        <ul>
+                            <li>If you need more context, ask me which files to include.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ask for an explanation:</strong>
+                        <ul>
+                            <li>Explain what changes you are proposing and why.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ask for comments:</strong>
+                        <ul>
+                            <li>Add comments to the code to explain what it is doing.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ask for simpler alternative</strong>
+                        <ul>
+                            <li>Is there a simpler way to have this element show on scroll?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Reminders:</strong>
+                        <ul>
+                            <li>Remember to use existing CSS variables and utility classes over hard-coded values.</li>
+                            <li>Remember to keep spacing, colors, and typography consistent with the stylesheet.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="be-specific">
+                <h2>Be Specific for Best Results</h2>
+                <ul>
+                    <li>The more detail you provide, the better Copilot can help.</li>
+                    <li>Instead of saying:<br>
+                        <em>"Give me three cards."</em><br>
+                        Say:<br>
+                        <em>"On the homepage, add three cards. Each card should have an image, an
+                            <code>&lt;h3&gt;</code> heading, a description paragraph, and a button that links to the
+                            related page."</em>
+                    </li>
+                    <li><strong>Include context:</strong> Mention the page or section you're working on.<br>
+                        <em>Note: copilot will automatically put the page that is currently showing in the editor in
+                            context. You can click the paperclip icon to add other pages or mention them by name in the
+                            prompt.</em>
+                    </li>
+                    <li><strong>Direct the design and content:</strong> You decide the look and feel; Copilot helps you
+                        implement it faster.</li>
+                    <li><strong>Work in small chunks:</strong> Ask for parts of a page (like a card component), not the
+                        entire page at once.</li>
+                </ul>
+            </section>
+
+            <section id="examples">
+                <h2>Examples of Good Prompts for Copilot in VS Code</h2>
+
+                <article>
+                    <h3>1. Adding Cards to a Homepage</h3>
+                    <p>❌ <strong>Bad Prompt:</strong><br>
+                        <em>"Add three cards."</em>
+                    </p>
+                    <p>✅ <strong>Better Prompt:</strong><br>
+                        <em>"On the homepage, create three cards inside the main content area. Each card should
+                            include:</em>
+                    </p>
+                    <ul>
+                        <li><em>An image at the top</em></li>
+                        <li><em>An <code>&lt;h3&gt;</code> heading for the title</em></li>
+                        <li><em>A short description paragraph</em></li>
+                        <li><em>A button labeled 'View Details' that links to the related page."</em></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>2. Styling a Navigation Bar</h3>
+                    <p>❌ <strong>Bad Prompt:</strong><br>
+                        <em>"Style the nav bar."</em>
+                    </p>
+                    <p>✅ <strong>Better Prompt:</strong><br>
+                        <em>"Style the top navigation bar using the CSS variables and utility classes that are already
+                            defined in our stylesheet:</em>
+                    </p>
+                    <ul>
+                        <li><em>Use a horizontal layout with evenly spaced links (prefer existing flex and gap
+                                utilities; if not available, use flex with a gap that references an existing spacing
+                                variable).</em></li>
+                        <li><em>Use existing variables for background and text colors (do not hard-code color
+                                values).</em></li>
+                        <li><em>Add a hover effect that uses the existing color variables for hover states.</em></li>
+                        <li><em>Use the site's font variable for typography, and make the active link bold via the
+                                existing active state class.</em></li>
+                        <li><em>Keep paddings and margins consistent by using the spacing variables already
+                                defined."</em></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>3. Adding a Hero Section</h3>
+                    <p>❌ <strong>Bad Prompt:</strong><br>
+                        <em>"Add a hero section."</em>
+                    </p>
+                    <p>✅ <strong>Better Prompt:</strong><br>
+                        <em>"On the homepage, add a hero section at the top with:</em>
+                    </p>
+                    <ul>
+                        <li><em>A full-width background image from <code>images/hero.jpg</code></em></li>
+                        <li><em>A centered headline in <code>&lt;h1&gt;</code> that says 'Explore Your Next
+                                Adventure'</em></li>
+                        <li><em>A subheading in <code>&lt;p&gt;</code> below the headline</em></li>
+                        <li><em>A button labeled 'Start Now' that links to the destinations page."</em></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>4. Creating a Responsive Grid</h3>
+                    <p>❌ <strong>Bad Prompt:</strong><br>
+                        <em>"Make a grid."</em>
+                    </p>
+                    <p>✅ <strong>Better Prompt:</strong><br>
+                        <em>"Create a responsive 3-column grid for the gallery page using CSS Grid. Each column should
+                            contain an image with a caption below it. On mobile, the grid should collapse to one
+                            column."</em>
+                    </p>
+                </article>
+
+                <article>
+                    <h3>5. Adding a Footer</h3>
+                    <p>❌ <strong>Bad Prompt:</strong><br>
+                        <em>"Add a footer."</em>
+                    </p>
+                    <p>✅ <strong>Better Prompt:</strong><br>
+                        <em>"Add a footer at the bottom of every page and use the CSS variables already defined in our
+                            stylesheet:</em>
+                    </p>
+                    <ul>
+                        <li><em>Site name in bold text</em></li>
+                        <li><em>Navigation links (Home, About, Contact)</em></li>
+                        <li><em>Social media icons aligned to the right using existing flex utilities and a gap that
+                                references spacing variables</em></li>
+                        <li><em>Background and text colors should come from the existing color variables</em></li>
+                        <li><em>Use the site's font variable; apply padding using existing spacing variables; use the
+                                existing border color variable for the top border."</em></li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="key-takeaways">
+                <h2>Key Takeaways</h2>
+
+                <h3>Key Pattern in All Examples</h3>
+                <ul>
+                    <li><strong>Context:</strong> Where the change applies (homepage, gallery page, footer).</li>
+                    <li><strong>Specific elements:</strong> Tags, content, colors, layout details.</li>
+                    <li><strong>Limited scope:</strong> One section or component at a time.</li>
+                    <li><strong>Consistent styling:</strong> Prefer the CSS variables and utility classes already
+                        defined in your stylesheet over hard-coded values.</li>
+                </ul>
+
+                <h3>Guiding Principle</h3>
+                <p>You're the designer. Copilot is your coding helper. The clearer and more focused your instructions,
+                    the better the results.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 MMP 240 Web Design</p>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+</body>
+
+</html>
