@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 15 | MMP 240</title>
+    <meta name="description" content="Week 15: Visualizations and Stub Pages">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/accordion.css">
+</head>
+
+<body class="week-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="/">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html" aria-current="page">Week 15</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+                        <li><a href="/topics/using-copilot.html">Using Copilot in VS Code</a></li>
+                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+                        <li><a href="/topics/netlify.html">Netlify</a></li>
+                        <li><a href="/topics/box-sizing.html">Box Sizing Resource</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <h1>Week 15: 12/1/25-12/7/25 <br>
+            <span>Site Visualizations &amp; Starting Your Build</span>
+        </h1>
+
+        <section class="week-outline">
+            <h2>Outline for the Week</h2>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#visualizations">Part 1: Site Visualizations</a></li>
+                <li><a href="#base-responsive">Part 2: Set Up Your Base Responsive Site</a></li>
+                <li><a href="#assignment">Assignment for the Week</a></li>
+            </ul>
+        </section>
+
+        <div class="week-content">
+            <section class="intro" id="intro">
+                <h2>Intro</h2>
+                <p>This week you’ll begin building your sites. Before you jump into code, you’ll create a set of
+                    visualizations that help you plan your structure and design, and that help me confirm you’re on the
+                    right track.</p>
+
+                <h3>Goals for This Week</h3>
+                <ul>
+                    <li>Create and refine site visualizations:
+                        <ul>
+                            <li>Sitemap</li>
+                            <li>Wireframes</li>
+                            <li>Color &amp; type styles</li>
+                        </ul>
+                    </li>
+                    <li>Set up your project using the base responsive repository.</li>
+                    <li>Build stub pages for all the pages in your sitemap.</li>
+                    <li>Get your navigation working between those pages.</li>
+                    <li>(If time) Start adding content to at least your home page.</li>
+                </ul>
+
+            </section>
+
+            <section id="visualizations">
+                <h2>Part 1: Site Visualizations</h2>
+
+                <p>Before writing code, you’ll create three visuals that professionals commonly use when planning
+                    websites. These
+                    will live in the Figma template I’ve shared with you.</p>
+
+                <h3>1. Sitemap</h3>
+                <ol>
+                    <li>Create your sitemap in FigJam.
+                        <ul>
+                            <li>Use simple boxes and arrows to show the pages of your site and how they connect.</li>
+                            <li>Focus on clarity: what are your main pages and what lives under each one?</li>
+                        </ul>
+                    </li>
+                    <li>When your sitemap is ready, copy it from FigJam into the <strong>Sitemap</strong> page of the
+                        Figma template
+                        for your site visualizations.</li>
+                </ol>
+
+                <p><strong>Resource:</strong> Watch the short sitemap video for a walkthrough.<br>
+                    <a href="https://youtu.be/vcSWCpL46WU" target="_blank" rel="noopener">▶ View Sitemap Video (FigJam to Figma) on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Site Map Video [6:58]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/vcSWCpL46WU?si=xIQnz73vqgs0KG22"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2. Wireframes</h3>
+                <p>On the <strong>Wireframes</strong> page of the Figma template, sketch out the basic layout of your
+                    key pages.
+                    You’ve done wireframing before, so reuse that knowledge here.</p>
+                <ul>
+                    <li>Focus on structure: headers, navigation, main content areas, footers.</li>
+                    <li>Don’t worry about detailed colors or typography yet—keep it low-fi.</li>
+                    <li>Use what you learned from previous wireframe assignments to save time.</li>
+                </ul>
+
+                <p><strong>Resource:</strong> Quick wireframe video reminder.<br>
+                    <a href="https://youtu.be/kvfVVvI-fZs" target="_blank" rel="noopener">▶ View Wireframes Refresher Video on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Wireframes Refresher Video [10:06]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/kvfVVvI-fZs?si=gDxDKqLSunXLa1xj"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3. Type &amp; Color Styles</h3>
+                <p>On the <strong>Type &amp; Color Styles</strong> page in Figma, define the visual language of your
+                    site:</p>
+                <ul>
+                    <li>Set up text styles for headings, body text, captions, etc.</li>
+                    <li>Set up color styles for backgrounds, text, accents, and interactive elements.</li>
+                    <li>You can build from previous assignments where you already explored color and typography.</li>
+                </ul>
+
+                <p><strong>Note:</strong> It’s completely fine if you adjust your sitemap, wireframes, or styles later
+                    as you start
+                    building. Design is iterative.</p>
+
+                <p><strong>Resource:</strong> Quick Type and Color video reminder.<br>
+                    <a href="https://youtu.be/BCa_ocrwgzc" target="_blank" rel="noopener">▶ View Type &amp; Color Video on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Type &amp; Color Styles Video [5:03]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/BCa_ocrwgzc?si=HMvs5WEo1Sb1NQdU"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="base-responsive">
+                <h2>Part 2: Set Up Your Base Responsive Site</h2>
+
+                <p>Once you’ve started your visualizations in Figma, it’s time to set up the code structure for your
+                    site using the
+                    base responsive repository I’ve provided.</p>
+
+                <h3>1. Get the Base Repository</h3>
+                <ul>
+                    <li>Open the link to the base responsive repository.</li>
+                    <li>Follow the instructions to use it as the starting point for your project (clone, fork, or
+                        download as
+                        appropriate for our workflow).</li>
+                    <li>Open the project in VS Code.</li>
+                </ul>
+
+                <p>This base project includes:</p>
+                <ul>
+                    <li>Starter HTML structure.</li>
+                    <li>Responsive CSS, including variables you can reuse.</li>
+                    <li>A layout that will help you focus on content and design instead of boilerplate setup.</li>
+                </ul>
+
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://baseline.is/tools/type-scale-generator/">Type Scale Generator</a>: This can be
+                        used to choose a different scale and get new type sizes that you can copy and paste into
+                        base.css</li>
+                </ul>
+
+                <p><strong>Resource:</strong> Video on how to use the base responsive template.<br>
+                    <a href="https://youtu.be/cDeL3220AxU" target="_blank" rel="noopener">▶ View Base Responsive Template Video on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Base Responsive Template Video [29:34]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/cDeL3220AxU?si=5TvmsSpg_cLk1PcY"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2. Build Stub Pages for Your Site</h3>
+                <p>Use the sitemap you created to decide which pages you need, then:</p>
+                <ol>
+                    <li>Set up your <strong>home page</strong> first using the base layout:
+                        <ul>
+                            <li>Include a clear <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and
+                                <code>&lt;footer&gt;</code>.
+                            </li>
+                            <li>Inside <code>&lt;main&gt;</code>, add a simple <code>&lt;h1&gt;</code> with the page
+                                title (for now
+                                you can leave it mostly empty).</li>
+                        </ul>
+                    </li>
+                    <li>Create additional HTML files for each page in your sitemap.
+                        <ul>
+                            <li>Copy over the same header and footer structure so they match across your site.</li>
+                            <li>In each page’s main area, add an <code>&lt;h1&gt;</code> title so you know which page
+                                you’re on.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Resources</h3>
+
+                <p><strong>Resource:</strong> Video on how to use the base template to make stub pages.<br>
+                    <a href="https://youtu.be/eAmamDoAL54" target="_blank" rel="noopener">▶ View Stub Pages Video on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Stub Pages Video [24:59]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/eAmamDoAL54?si=fcUKx1AX9sKVP88s"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <p class="note">The above video also shows getting the basic nav working.</p>
+
+                <h3>3. Get Your Navigation Working</h3>
+                <p>Once all your stub pages exist:</p>
+                <ul>
+                    <li>Set up navigation links in the header that point to each page.</li>
+                    <li>Test clicking around to be sure all links work and every page loads correctly.</li>
+                    <li>Make sure the pages in your navigation match the pages in your sitemap.</li>
+                </ul>
+            </section>
+
+            <section id="using-ai">
+                <h2>Using AI to Support Your Work</h2>
+                <p>You are encouraged to use AI tools to support (but not replace) your thinking.</p>
+                <p>Remember: AI is there to handle busywork and help you experiment. You are still responsible for
+                    deciding what
+                    belongs on your site and how it should look and behave.</p>
+                <h3>Copilot AI Resource</h3>
+                <p>I've created a page that helps with using Copilot in VS Code. <br> <a
+                        href="/topics/using-copilot.html">Using Copilot in VS Code</a></p>
+
+            </section>
+
+            <section class="assignment" id="assignment">
+                <h2>Assignment for the Week</h2>
+                <p>The assignment this week has two parts. Sitemap, Wireframs and Styles.</p>
+                <ul>
+                    <li><strong>Part 1: Create a Figma file with:</strong>
+                        <ul>
+                            <li>Sitemap on the <b>Website Sitemap</b> page. (draw in FigJam and paste onto the page)
+                            </li>
+                            <li>At least initial wireframes on the <b>Website Wireframes</b> page.</li>
+                            <li>Initial type and color styles on the <b>Type &amp; Color Styles</b> page.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Part 2: Create the GitHub repository with Stub pages:</strong>
+                        <ul>
+                            <li>Base responsive project set up and running.</li>
+                            <li>Stub HTML pages for each page in your sitemap.</li>
+                            <li>Working navigation links between all pages.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Part 3: Submit your work to the assignment Week 15: Project 4 Visualizations and Stub Pages</strong>
+                    <ul>
+                        <li>Upload the Figma file with the Site Map, Wireframes, Type and Color styles</li>
+                        <li>Paste in a link to your GitHub Repository. Remember to commit and sync your changes.</li>
+                    </ul>
+                    </li>
+                </ul>
+                <blockquote>This assignment is due on Sunday, December 8.</blockquote>
+            </section>
+
+            <section id="optional">
+                <h2>Part 3: Begin Adding Content (Optional This Week)</h2>
+                <p>If you finish the visualizations and stub pages with working navigation, start adding real content
+                    based on your
+                    wireframes and type/color styles.</p>
+
+                <ul>
+                    <li>Begin with your home page or another key page.</li>
+                    <li>Add headings, paragraphs, and sections that match your wireframe structure.</li>
+                    <li>Use your defined color and type styles from Figma as a guide while you style elements in CSS.
+                    </li>
+                </ul>
+
+                <p>If you don’t get to this step, that’s okay—next week will focus on filling out content and adding
+                    interactive
+                    elements.</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="/js/accordion.js"></script>
+    <script src="/js/copy-prompt.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+</body>
+
+</html>
