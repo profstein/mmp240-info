@@ -208,30 +208,51 @@
 
             <section id="base-responsive">
                 <h2>Part 2: Set Up Your Base Responsive Site</h2>
-
                 <p>Once you’ve started your visualizations in Figma, it’s time to set up the code structure for your
                     site using the
                     base responsive repository I’ve provided.</p>
-
-                <h3>1. Get the Base Repository</h3>
-                <ul>
-                    <li>Open the link to the base responsive repository.</li>
-                    <li>Follow the instructions to use it as the starting point for your project (clone, fork, or
-                        download as
-                        appropriate for our workflow).</li>
-                    <li>Open the project in VS Code.</li>
-                </ul>
-
                 <p>This base project includes:</p>
-                <ul>
+                <ul class="compact">
                     <li>Starter HTML structure.</li>
                     <li>Responsive CSS, including variables you can reuse.</li>
                     <li>A layout that will help you focus on content and design instead of boilerplate setup.</li>
                 </ul>
+                <p>There are three main steps below:</p>
+                <ol class="compact">
+                    <li><a href="#step1">Get the Base Repository</a></li>
+                    <li><a href="#step2">Build Stub Pages for Your Site</a></li>
+                    <li><a href="#step3">Get Your Navigation Working</a></li>
+                </ol>
 
-                <h4>Resources</h4>
                 
 
+                <h3 id="step1">1. Get the Base Repository</h3>
+                <ul class="compact">
+                    <li>Open the link to the base responsive repository. <br>
+                        <a href="https://github.com/profstein/Base-Responsive-Page" target="_blank">Base-Responsive-Page</a></li>
+                    <li>There are two basic ways in which you can use it.
+                        <ul class="compact">
+                            <li><b>No Repository Yet</b>: best if you don't yet have a repository. Click the green <i>Use this Template</i> button near the top of the page. It will start the process to create a new repository based on the base responsive page.</li>
+                            <li><b>You already started your repo</b>: use this if you just want to add the files or part of the files to your existing repo. 
+                            <ol class="compact">
+                                <li>Click on the gree <i>Code</i> button then click <i>Download Zip</i></li>
+                                <li>Unzip the file.</li>
+                                <li>open a separate window so you can copy files over</li>
+                                <li>copy over the files you need</li>
+                            </ol>
+                            <p>If you just need part of a file, you can copy from GitHub and paste into your files in VS Code. For example maybe you have index.html already and just want to get the script tags to include jQuery</p>
+                        <ul class="compact">
+                            <li>Click on the file in GitHub so you can see the code</li>
+                            <li>Copy what you need</li>
+                            <li>Go toVS Code and paste it in.</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </li>
+                    <li>Open the project in VS Code.</li>
+                </ul>
+
+                <h4>Resources</h4>
                 <p><strong>Resource:</strong> Video on how to use the base responsive template.<br>
                     <a href="https://youtu.be/cDeL3220AxU" target="_blank" rel="noopener">▶ View Base Responsive Template Video on YouTube</a>
                 </p>
@@ -256,7 +277,7 @@
                         base.css</li>
                 </ul>
 
-                <h3>2. Build Stub Pages for Your Site</h3>
+                <h3 id="step2">2. Build Stub Pages for Your Site</h3>
                 <p>Use the sitemap you created to decide which pages you need, then:</p>
                 <ol>
                     <li>Set up your <strong>home page</strong> first using the base layout:
@@ -279,7 +300,7 @@
                     </li>
                 </ol>
 
-                <h3>Resources</h3>
+                <h4>Resources</h4>
 
                 <p><strong>Resource:</strong> Video on how to use the base template to make stub pages.<br>
                     <a href="https://youtu.be/eAmamDoAL54" target="_blank" rel="noopener">▶ View Stub Pages Video on YouTube</a>
@@ -300,12 +321,16 @@
                 </div>
                 <p class="note">The above video also shows getting the basic nav working.</p>
 
-                <h3>3. Get Your Navigation Working</h3>
+                <h3 id="step3">3. Get Your Navigation Working</h3>
                 <p>Once all your stub pages exist:</p>
                 <ul>
                     <li>Set up navigation links in the header that point to each page.</li>
                     <li>Test clicking around to be sure all links work and every page loads correctly.</li>
                     <li>Make sure the pages in your navigation match the pages in your sitemap.</li>
+                </ul>
+                <h4>Resources for Navigation</h4>
+                <ul>
+                    <li>In the video above I use this CodePen for the navigation: <a href="https://codepen.io/profstein/pen/gbrpvNP" target="_blank">Hamburger Menu Responsive</a></li>
                 </ul>
             </section>
 

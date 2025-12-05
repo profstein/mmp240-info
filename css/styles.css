@@ -495,7 +495,7 @@ blockquote p:not(:last-child) {
   font-style:italic;
 }
 
-ul.compact li{
+ul.compact li, ol.compact li {
   margin-bottom: var(--space-xs);
 }
 
