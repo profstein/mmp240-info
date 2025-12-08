@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 16 | MMP 240</title>
+    <meta name="description" content="Week 16: Content and Interactive Element">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/accordion.css">
+</head>
+
+<body class="week-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="/">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html">Week 15</a></li>
+                        <li><a href="/weeks/week-16.html" aria-current="page">Week 16</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+                        <li><a href="/topics/using-copilot.html">Using Copilot in VS Code</a></li>
+                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+                        <li><a href="/topics/netlify.html">Netlify</a></li>
+                        <li><a href="/topics/box-sizing.html">Box Sizing Resource</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                        <li><a href="/projects/project-4.html">Project 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <h1>Week 16: 12/8/25-12/15/25 <br>
+            <span>Site Content and Interactive Element</span>
+        </h1>
+
+        <section class="week-outline">
+            <h2>Outline for the Week</h2>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#content">Add Site Content</a></li>
+                <li><a href="#assignment">Assignment</a></li>
+            </ul>
+        </section>
+
+        <div class="week-content">
+            <section class="intro" id="intro">
+                <h2>Intro</h2>
+                <p>This week you will continue working on your sites. We have two more weeks, including this one until the final project is due.</p>
+
+                <h3>Goals for This Week</h3>
+                <ul>
+                    <li>Complete the stub pages, if you didn't complete them from last week.
+                    </li>
+                    <li>Add content to your pages</li>
+                    <li>Work on your interactive element.</li>
+                </ul>
+            </section>
+
+            <section id="content">
+                <h2>Site Content</h2>
+
+                <p>Based off of your planning documents, start adding content to your pages.</p>
+                <p>Remember to use semantic elements. These are the main sectioning elements for pages</p>
+                <ul>
+                    <li><b>header | main | footer </b>on each page.</li>
+                    <li><b>section</b>:  for page sections with headings</li>
+                    <li><b>article</b>: a self-contained composition (this means it would make sense if only read that and none of the rest of the page).</li>
+                    <li><b>nav</b>: used in your site navigation in the header.</li>
+                    <li><b>div</b>: used if no other element makes sense, or if you're just grouping things for visual purposes or to add interactivity.</li>
+                </ul>
+
+                <h3>Where to find Media</h3>
+                <p>I've added a topic page that lists places you can find media that is properly licensed to use.</p>
+                <p class="note">Remember that you can't use any text, images, video or content other people made unless you are given explicit permission. This page helps you find that content.</p>
+                <ul>
+                    <li><a href="/topics/free-resources.html">Where to Find Free media</a></li>
+                </ul>
+
+                <h3>Interactive Element</h3>
+                <p>
+            </section>
+
+            <section class="assignment" id="assignment">
+                <h2>Assignment for the Week</h2>
+                <p>Build out your site on the repository you've already given me. Remember to sync your changes with GitHub.</p>
+                <p>There will be no more assignments besides submitting the final on 12/22</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="/js/accordion.js"></script>
+    <script src="/js/copy-prompt.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+</body>
+
+</html>
