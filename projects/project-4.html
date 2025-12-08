@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project 4: Responsive Showcase Site | MMP 240</title>
+    <meta name="description"
+        content="Project 4: Responsive Showcase Site for MMP 240 — requirements, rubric, and due date.">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/css/accordion.css">
+</head>
+
+<body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="../index.html">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html">Week 15</a></li>
+                        <li><a href="/weeks/week-16.html">Week 16</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
+                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
+                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
+                        <li><a href="/topics/using-copilot.html">Using Copilot in VS Code</a></li>
+                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
+                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
+                        <li><a href="/topics/netlify.html">Netlify</a></li>
+                        <li><a href="/topics/box-sizing.html">Box Sizing Resource</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                        <li><a href="/projects/project-4.html" aria-current="page">Project 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <h1>Project 4: Responsive Showcase Site</h1>
+
+        <p>In this project you get to show everything that you've learned in the class while also diving deeper into the
+            planning documents. The overarching goals here are for you to work on a site that is interesting to you,
+            shows what you can do in a multi-page side and hopefully have something that you can put in your portfolio.
+        </p>
+
+        <h2>Requirements</h2>
+        <ul>
+            <li><strong>TOPIC</strong> Choose from one of three: 1)Travel / Local Guide, 2) Hobby Site, 3) How-To Guide
+            </li>
+            <li><strong>PLANNING</strong> Complete the Creative Brief and Site Visualizations (note that these will be
+                graded separately from the final itself).</li>
+            <li><strong>Site Structure</strong> At least 4 pages (you can do more). One page should be about you or the
+                project.</li>
+            <li><strong>Design Requirements</strong>
+                <ul>
+                    <li>Scanability &amp; Visual Hierarchy - Content is structured so that sections are easy to
+                        distinguish at a glance and a clear hierarchy is established.</li>
+                    <li>Layout and Gestalt Principles - Use of spacing, grouping, alignment, and color to create a
+                        coherent layout. Pages feel intentional, balanced, and visually organized, applying Gestalt
+                        principles to structure the page.</li>
+                    <li>Typography choices match (or thoughtfully evolve from) planning doc. Heading and body text use
+                        appropriate fonts, sizes, weights, and spacing to establish a typographic hierarchy. Text is
+                        readable at all screen sizes with reasonable line lengths.</li>
+                    <li>Colors follow (or thoughtfully evolve from) the planned palette. Link/button colors are
+                        consistent. Overall palette is cohesive and supports the site's mood/vibe.</li>
+                </ul>
+            </li>
+            <li><strong>Media Requirements</strong> Includes images and at least <strong>one additional type of
+                    media</strong> (e.g., video embed, audio). Content is appropriate for the chosen topic and target
+                audience. All media credits the author.</li>
+            <li><strong>Interactive Requirements</strong> Your site must have at least one interactive element (not
+                including the navigation).
+                <ul>
+                    <li>Examples: Accordion; Lightbox image gallery; JavaScript-based UI pattern like interactive cards
+                        or filter buttons.</li>
+                </ul>
+            </li>
+            <li><strong>Accessibility Requirements</strong>
+                <ul>
+                    <li><strong>Alt Text</strong> | All non-decorative images include meaningful <code>alt</code>
+                        attributes. Media embeds include clear labels or titles where appropriate.</li>
+                    <li><strong>Color Contrast &amp; Legibility</strong> | All text and background color combinations
+                        (including links, nav and buttons) have greater than 4.5 contrast. Main body text/background is
+                        at least 7.0 contrast.</li>
+                </ul>
+            </li>
+            <li><strong>Technical Requirements</strong> RWD stands for Responsive Web Design
+                <ul>
+                    <li>HTML is valid, well-structured, and semantic. Proper elements are used (header, nav, main,
+                        section, article, footer, etc.)</li>
+                    <li>CSS has proper syntax. Uses consistent naming, selectors, and spacing. No major redundancy or
+                        obviously conflicting rules.</li>
+                    <li>CSS Variables are used for type, color and spacing properties.</li>
+                    <li>RWD: Multiple Layouts: Media Queries are used to change layout in a meaningfully way to adapt
+                        for mobile and desktop screens. Other techniques like R.A.M. for CSS grid can be used.</li>
+                    <li>RWD: Fluid Layout - Uses fluid units, grid and flexbox to create responsive, flexible layouts.
+                        Grid should be the primary layout for overall sections, Flex can be used in sections or for
+                        components. Avoids fixed widths.</li>
+                    <li>RWD: Responsive Media - Images and other media (video, audio, embeds) scale proportionally and
+                        never breaks or overflows the layout.</li>
+                    <li>Navigation &amp; UX - Navigation is clear, consistent across all pages, and fully responsive.
+                        Users can easily move through the site.</li>
+                </ul>
+            </li>
+            <li><strong>Published on Netlify via GitHub</strong> | Site is deployed successfully using
+                <strong>Netlify</strong> connected to a <strong>GitHub repo</strong>. All pages and assets load
+                correctly. Links used for navigation and content are working.</li>
+        </ul>
+
+        <h2>Due Date</h2>
+        <p>The project is due on Monday, December 22. It will be submitted to the Project 4 assignment on Brightspace. You
+            will submit both:</p>
+        <ul>
+            <li>The link to your GitHub repository</li>
+            <li>The link to Netlify</li>
+        </ul>
+
+        <h2>Grading Rubric</h2>
+        <div class="accordion">
+            <button class="accordion-button" type="button">
+                <span>View Grading Rubric</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Criteria Name</th>
+                    <th>Criteria Description</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Alignment with Planning Documents</strong></td>
+                    <td>The finished website reflects the decisions made in the creative brief and Figma planning file,
+                        including page structure, target audience, mood/vibe, color palette, typography, and overall
+                        concept. Small changes are acceptable, but the site should clearly follow the plan.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>HTML Syntax &amp; Semantics</strong></td>
+                    <td>HTML is valid, well-structured, and semantic. Proper elements are used (<code>header</code>,
+                        <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>,
+                        <code>footer</code>, etc.). Markup communicates meaningful structure beyond visual presentation.
+                    </td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>CSS Syntax &amp; Organization</strong></td>
+                    <td>CSS is well-written, readable, and organized. Uses consistent naming, selectors, and spacing. No
+                        major redundancy or obviously conflicting rules. CSS Variables are used for type, color and
+                        spacing properties. Selectors used demonstrates understanding of cascade and specificity.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>RWD: Multiple Layouts (Media Queries)</strong></td>
+                    <td>Layout changes in a meaningfully way to adapt for mobile and desktop screen sizes (tablet is
+                        bonus). Meida queries must be used. Other techniques like R.A.M. for CSS grid can be used.</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td><strong>RWD: Fluid Layout</strong></td>
+                    <td>Uses fluid units, grid and flexbox to create responsive, flexible layouts. Grid should be the
+                        primary layout for overall sections, Flex can be used in sections or for components. Avoids
+                        fixed widths. Within the range of sizes in each breakpoint, layout is fluid and flexible.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>RWD: Responsive Media</strong></td>
+                    <td>Images and other media (video, audio, embeds) behave responsively with proper HTML/CSS. Media
+                        scales proportionally and never breaks or overflows the layout.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Navigation &amp; UX</strong></td>
+                    <td>Navigation is clear, consistent across all pages, and fully responsive. Users can easily move
+                        through the site. Menu design is intuitive on both mobile and desktop.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Scanability &amp; Visual Hierarchy</strong></td>
+                    <td>Content is structured so that sections are easy to distinguish at a glance and a clear hierarchy
+                        is established.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Overall Layout &amp; Gestalt Principles</strong></td>
+                    <td>Use of spacing, grouping, alignment, and contrast to create a coherent layout. Pages feel
+                        intentional, balanced, and visually organized, applying Gestalt principles to structure the
+                        page.</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td><strong>Content – Pages &amp; Media Requirements</strong></td>
+                    <td>Site includes at least 4 pages consistent with the planning phase. Includes images and at least
+                        <strong>one additional type of media</strong> (e.g., video embed, audio). All media credits the
+                        author. Content is appropriate for the chosen topic and target audience.</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td><strong>Interactive Element</strong></td>
+                    <td>Includes at least <strong>one meaningful interactive feature</strong> (accordion, tabs,
+                        lightbox, filter, hover card, etc.). Interaction works smoothly on mobile and desktop and is
+                        relevant to the content (not just decorative).</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td><strong>Typography Implementation</strong></td>
+                    <td>Typography choices match (or thoughtfully evolve from) planning doc. Heading and body text use
+                        appropriate fonts, sizes, weights, and spacing to establish a typographic hierarchy. Text is
+                        readable at all screen sizes with reasonable line lengths.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Color Palette Implementation</strong></td>
+                    <td>Colors follow (or thoughtfully evolve from) the planned palette. Link/button colors are
+                        consistent. Overall palette is cohesive and supports the site's mood/vibe.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Accessibility – Alt Text</strong></td>
+                    <td>All non-decorative images include meaningful <code>alt</code> attributes. Media embeds include
+                        clear labels or titles where appropriate.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Accessibility – Color Contrast &amp; Legibility</strong></td>
+                    <td>All text and background color combinations (including links, nav and buttons) have greater than
+                        4.5 contrast. Main body text/background is at least 7.0 contrast.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Published on Netlify via GitHub</strong></td>
+                    <td>Site is deployed successfully using <strong>Netlify</strong> connected to a <strong>GitHub
+                            repo</strong>. All pages and assets load correctly. Links used for navigation and content
+                        are working.</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td></td>
+                    <td><strong>100</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Bonus</h3>
+        <div class="accordion">
+            <button class="accordion-button" type="button">
+                <span>View Bonus Options</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bonus Criteria</th>
+                            <th>Description</th>
+                            <th>Bonus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bonus: Extra Breakpoints</strong></td>
+                            <td>Additional breakpoints beyond the required two, implemented effectively and
+                                thoughtfully.</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bonus: Design Polish / Professionalism</strong></td>
+                            <td>Site demonstrates exceptional craft, personality, or attention to detail beyond the
+                                baseline requirements.</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bonus: Interactive Element</strong></td>
+                            <td>You went above and beyond in the interactive element either in the complexity of the
+                                interaction or the number of interactive elements.</td>
+                            <td>+5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 MMP 240 Web Design</p>
+    </footer>
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <script src="/js/accordion.js"></script>
+</body>
+
+</html>
