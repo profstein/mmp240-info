@@ -649,6 +649,46 @@ th {
   }
 }
 
+/* ----------------Topics index layout + sidebar ----------------- */
+@media (min-width: 700px) {
+  .topics-home main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-lg);
+    align-items: start;
+    max-width: calc(var(--text-width) + 300px);
+  }
+
+  .topics-home main .intro {
+    grid-column: 1 / -1; /* heading spans both columns */
+  }
+  .topics-home #rwd-layout{
+    grid-row: 2;
+  }
+
+  /* Put the outline on the right column and keep the rest on the left */
+  .topics-home #topic-outline {
+    grid-column: 2;
+    position: sticky;
+    top: calc(var(--space-md) + 0.25rem);
+    align-self: start;
+    border-left: 1px solid var(--border);
+    padding-left: var(--space-sm);
+    margin-left: var(--space-sm);
+    background: transparent;
+  }
+
+  /* Keep the topic sections in the main column */
+  .topics-home section.topic-category {
+    grid-column: 1;
+  }
+
+  .topics-home #topic-outline ul { margin: 0; padding-left: 0.75rem; }
+  .topics-home #topic-outline li { margin-bottom: var(--space-sm); }
+  .topics-home #topic-outline a { color: var(--clr-action); text-decoration: none; }
+  .topics-home #topic-outline a:hover, .topics-home #topic-outline a:focus { text-decoration: underline; }
+}
+
 /* --------------- Topics Page Styles ------------------ */
 
 #concept-summary table{
