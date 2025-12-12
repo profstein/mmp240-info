@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mastering Positioning: Sticky, Fixed, &amp; Absolute</title>
+    <meta name="description" content="Overview and examples of CSS position values: sticky, fixed, and absolute">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="topics-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="/index.html">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html">Week 15</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/rwd-layout.html">RWD + Layout</a></li>
+                        <li><a href="/topics/components.html">Components</a></li>
+                        <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
+                        <li><a href="/topics/ai.html">AI + Copilot</a></li>
+                        <li><a href="/topics/html.html">HTML</a></li>
+                        <li><a href="/topics/design.html">Design + Planning</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                        <li><a href="/projects/project-4.html">Project 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <h1>Mastering Positioning: Sticky, Fixed, &amp; Absolute</h1>
+        <div class="topic-content">
+            <section class="intro" id="intro">
+                <h2>Introduction</h2>
+                <p>This tutorial covers how to control an element's position using CSS <code>position</code> properties.
+                    There are three commonly used position values:</p>
+                <ol>
+                    <li><code>position: sticky;</code></li>
+                    <li><code>position: fixed;</code></li>
+                    <li><code>position: absolute;</code></li>
+                </ol>
+                <p><strong>FYI</strong>, <code>position: relative;</code> is the default position value. If you want to
+                    remove one of the above, set it back to this.</p>
+            </section>
+
+            <section id="sticky-positioning">
+                <h2>Sticky Positioning: Stay in Place</h2>
+                <p><code>position: sticky</code> allows an element to scroll normally until it reaches a position and
+                    then it "sticks" in that position (like <code>position: fixed</code>). Importantly, the element
+                    <em>must</em> be able to scroll out of its initial position for <code>sticky</code> to work.</p>
+                <p><strong>Example:</strong></p>
+                <figure>
+                    <img src="/images/position-sticy-fixed.gif"
+                        alt="animated gif showing a screen scrolling and the headings staying in place once they get to the top of the screen">
+                </figure>
+                <h3>Code Example</h3>
+                <p>When using <code>position: sticky</code> the two main things you have to do are 1) tell it to be
+                    sticky, and 2) tell it where to stick. Note that if the item you want to be sticky can't reach the
+                    place you want it to stick through normal scrolling, then this won't work. Often you have to set a
+                    background color as well.</p>
+                <pre><code class="language-css">.sticky-header {
+  position: sticky; /* This tells it to be sticky */
+  top: 0; /* This tells it where to stick (top of the viewport) */
+  background-color: white; /* Important: prevents transparency */
+}
+</code></pre>
+                <pre><code class="language-html">&lt;section&gt;
+    &lt;h2 class="sticky-header"&gt;This is a sticky header&lt;/h2&gt;
+    &lt;div style="height: 1000px;"&gt;Content longer than screen height&lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                <h3>Use Cases</h3>
+                <p>This is good for headings, navigation bars, or callouts that should remain visible while scrolling.
+                </p>
+            </section>
+
+            <section id="fixed-positioning">
+                <h2>Fixed Positioning: Locked in Place</h2>
+                <p><code>position: fixed</code> removes an element from the normal document flow and fixes its position
+                    relative to the viewport.</p>
+                <figure>
+                    <img src="/images/position-fixed.png"
+                        alt="screenshot of mobile view with nav links at the bottom showing fixed positioning">
+                </figure>
+                <h3>Code Example</h3>
+                <pre><code class="language-css">.nav ul{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightblue;
+}
+@media (min-width:700px){
+  .nav ul{
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: auto;
+  }
+}
+</code></pre>
+                <pre><code class="language-html">&lt;header&gt;
+  &lt;nav&gt;
+    &lt;div class="site-title"&gt;Site Title&lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+                <h3>Use Case</h3>
+                <p>Useful for persistent navigation bars, footers, or other UI elements that should always be in one
+                    fixed location where scrolling will not affect their position.</p>
+                <p>If you want your nav bar to be on the bottom for mobile but on the top for desktop you can use media
+                    queries to change the <code>position</code> shape—e.g., move only the <code>ul</code> while leaving
+                    the site title at the top.</p>
+            </section>
+
+            <section id="staggered-positioning">
+                <h2>Staggered Positioning: Multiple Elements</h2>
+                <p>You can combine <code>sticky</code> and <code>fixed</code> with different offsets to create layered
+                    effects.</p>
+                <pre><code class="language-css">.sticky-top {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+}
+</code></pre>
+                <pre><code class="language-html">&lt;div class="sticky-top"&gt;Sticky Top&lt;/div&gt;
+&lt;div style="height: 500px;"&gt;Content&lt;/div&gt;
+&lt;div class="sticky-bottom"&gt;Sticky Bottom&lt;/div&gt;
+&lt;div style="height: 500px;"&gt;Content&lt;/div&gt;
+</code></pre>
+            </section>
+
+            <section id="absolute-positioning">
+                <h2>Absolute Positioning: Context is Key</h2>
+                <p><code>position: absolute</code> positions an element relative to its <em>nearest positioned
+                        ancestor</em> (an ancestor with <code>position: relative</code>,
+                    <code>position: absolute</code>, or <code>position: fixed</code>). If no such ancestor exists, it’s
+                    positioned relative to the <code>&lt;html&gt;</code> element. It’s often used within layout
+                    containers.</p>
+                <h3>Example: Absolutely Positioned Figcaption Inside a Card</h3>
+                <pre><code class="language-css">.card {
+  position: relative;           /* Creates positioning context for elements inside the card */
+  width: 220px;
+  border: 1px solid #333;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.card figure {
+  position: relative;           /* Establishes a new positioning context for the figcaption */
+  margin: 0;                    /* Removes default figure margin */
+}
+
+.card figcaption {
+  position: absolute;           /* Allows caption to overlay the image */
+  bottom: 0;                    /* Places caption at the bottom edge of the figure */
+  left: 0;                      /* Aligns caption to the left edge of the figure */
+  width: 100%;                  /* Caption spans full width of the figure */
+  padding: 0.25rem 0.5rem;      /* Adds inner spacing for readability */
+  background-color: rgba(0,0,0,0.6); /* Semi-transparent dark background for contrast */
+  color: white;                 /* Ensures text is readable over the image */
+  font-size: 0.8rem;            /* Slightly smaller text typical for captions */
+}
+</code></pre>
+                <pre><code class="language-html">&lt;div class="card"&gt;
+  &lt;figure class="card-image"&gt;
+    &lt;img src="https://picsum.photos/id/1025/400/300" alt="placeholder image"&gt;
+    &lt;figcaption&gt;Photo by Lorem Ipsum Photographer&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;div class="card-description"&gt;
+    &lt;h2 class="card-title"&gt;Card Title&lt;/h2&gt;
+    &lt;p&gt;This example demonstrates how &lt;code&gt;position: absolute;&lt;/code&gt; enables placing a caption directly on top of an image.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </section>
+
+            <section id="fixed-vs-absolute">
+                <h2>Fixed vs Absolute Positioning</h2>
+                <p><code>position: fixed</code> and <code>position: absolute</code> are similar because they both remove
+                    an element from the normal document flow. The big difference is what they are pinned to and how they
+                    behave when the page scrolls.</p>
+                <ul>
+                    <li><code>position: fixed</code> is pinned to the <strong>viewport</strong> (the browser window).
+                        The element stays in the same place on the screen even when you scroll.</li>
+                    <li><code>position: absolute</code> is pinned to the <strong>nearest positioned ancestor</strong> (a
+                        parent with <code>position: relative</code>, <code>absolute</code>, or <code>fixed</code>). If
+                        there isn’t one, it is positioned relative to the whole page and will scroll away with the
+                        content.</li>
+                </ul>
+                <h3>When to use each</h3>
+                <ul>
+                    <li><strong>Use <code>fixed</code></strong> when you want something to always stay on screen, for
+                        example: a persistent header/footer, a “Back to Top” button, or a chat/help button.</li>
+                    <li><strong>Use <code>absolute</code></strong> when you want something inside a section or card, for
+                        example: a badge, caption, or input icon.</li>
+                </ul>
+                <h3>Common gotchas</h3>
+                <ul>
+                    <li>If you use <code>absolute</code> and don’t give a parent <code>position: relative</code>, the
+                        element may jump to a strange place (often the top-left of the page) because it’s using the
+                        whole page as its reference.</li>
+                    <li><code>fixed</code> elements can cover up content underneath; you may need extra margin or
+                        padding on surrounding sections so they don’t get hidden.</li>
+                    <li>Both <code>fixed</code> and <code>absolute</code> elements don’t take up space in the normal
+                        layout, so nearby content won’t “move out of the way” automatically; they’re not part of grid or
+                        flex flow.</li>
+                </ul>
+                <p>A quick way to understand the difference is to experiment: take one element in a simple page and
+                    toggle between <code>position: fixed</code> and <code>position: absolute</code> to see how it
+                    behaves when you scroll and how it relates to its parent elements.</p>
+            </section>
+
+            <section id="considerations">
+                <h2>Overall Important Considerations</h2>
+                <ul>
+                    <li><strong>Background Color:</strong> Always set a <code>background-color</code> for elements with
+                        <code>sticky</code> or <code>fixed</code> positioning to prevent them from appearing
+                        transparent.</li>
+                    <li><strong>Scrollable Content:</strong> <code>sticky</code> positioning requires sufficient
+                        scrollable content to trigger the “sticking” effect.</li>
+                    <li><strong>Experiment:</strong> The best way to understand these properties is to experiment with
+                        different values and scenarios.</li>
+                    <li><strong>Layout adjustments:</strong> Because <code>fixed</code> (and sometimes
+                        <code>absolute</code>) remove elements from the normal flow, you may need to add extra padding,
+                        margins, or a wrapper element so the rest of your content isn’t covered or shifted
+                        unexpectedly—plan for this when creating overall page layouts.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 MMP 240 Web Design</p>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+</body>
+
+</html>
