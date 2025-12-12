@@ -2,29 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CSS Box Sizing: content-box vs border-box</title>
-  <meta name="description" content="Branching example that combines Git workflows with GitHub Copilot assistance.">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/styles.css">
-   <style>
-    /* ===== Page framing (reference site chrome) ===== */
-    :root {
-      --bg: #f5f7fb;
-      --ink: #222;
-      --card: #fff;
-      --border: #d5d9e6;
-      --accent: #4f46e5;
-      --accent-soft: #e0e7ff;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS Box Sizing: content-box vs border-box</title>
+    <meta name="description" content="Branching example that combines Git workflows with GitHub Copilot assistance.">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* ===== Page framing (reference site chrome) ===== */
+        :root {
+            --bg: #f5f7fb;
+            --ink: #222;
+            --card: #fff;
+            --border: #d5d9e6;
+            --accent: #4f46e5;
+            --accent-soft: #e0e7ff;
+            --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
 
-    * {
-      box-sizing: border-box;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    /* body {
+        /* body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       background: var(--bg);
@@ -35,7 +35,7 @@
       justify-content: center;
     } */
 
-    /* main {
+        /* main {
       max-width: 960px;
       width: 100%;
       background: var(--card);
@@ -45,7 +45,7 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     } */
 
-    /* h1, h2, h3 {
+        /* h1, h2, h3 {
       line-height: 1.2;
       margin-top: 0;
     }
@@ -67,17 +67,17 @@
       margin-bottom: 0.35rem;
     } */
 
-    /* p {
+        /* p {
       margin-top: 0.4rem;
       margin-bottom: 0.75rem;
     } */
 
-    /* code, pre {
+        /* code, pre {
       font-family: var(--mono);
       font-size: 0.9rem;
     } */
 
-    /* pre {
+        /* pre {
       background: #050816;
       color: #e5e7eb;
       padding: 0.75rem 0.9rem;
@@ -87,292 +87,297 @@
       margin: 0.5rem 0 1rem;
     } */
 
-    /* pre code {
+        /* pre code {
       color: inherit;
     } */
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.8rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
 
-    .pill code {
-      font-size: 0.8rem;
-    }
+        .pill code {
+            font-size: 0.8rem;
+        }
 
-    ul {
-      padding-left: 1.25rem;
-      margin-top: 0.25rem;
-      margin-bottom: 0.75rem;
-    }
+        ul {
+            padding-left: 1.25rem;
+            margin-top: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
 
-    /* ===== Demo layout ===== */
+        /* ===== Demo layout ===== */
 
-    .demo-grid {
-      display: grid;
-      gap: 1.25rem;
-    }
+        .demo-grid {
+            display: grid;
+            gap: 1.25rem;
+        }
 
-    @media (min-width: 720px) {
-      .demo-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
+        @media (min-width: 720px) {
+            .demo-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
 
-    .demo-card {
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      padding: 0.9rem 1rem 1rem;
-      background: #f9fafb;
-    }
+        .demo-card {
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            padding: 0.9rem 1rem 1rem;
+            background: #f9fafb;
+        }
 
-    .demo-title {
-      font-weight: 600;
-      font-size: 0.98rem;
-      margin-bottom: 0.25rem;
-    }
+        .demo-title {
+            font-weight: 600;
+            font-size: 0.98rem;
+            margin-bottom: 0.25rem;
+        }
 
-    .demo-note {
-      font-size: 0.8rem;
-      color: #6b7280;
-      margin-bottom: 0.75rem;
-    }
+        .demo-note {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+        }
 
-    .outer-box {
-      /* This simulates a parent with a fixed content width */
-      background: #e5e7eb;
-      border-radius: 6px;
-      padding: 0.5rem;
-      margin-bottom: 0.5rem;
-      position: relative;
-    }
+        .outer-box {
+            /* This simulates a parent with a fixed content width */
+            background: #e5e7eb;
+            border-radius: 6px;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
 
-    .outer-label {
-      position: absolute;
-      top: 4px;
-      right: 8px;
-      font-size: 0.7rem;
-      color: #4b5563;
-      background: rgba(255,255,255,0.8);
-      padding: 0.05rem 0.4rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.8);
-    }
+        .outer-label {
+            position: absolute;
+            top: 4px;
+            right: 8px;
+            font-size: 0.7rem;
+            color: #4b5563;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.05rem 0.4rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.8);
+        }
 
-    .inner-box {
-      /* same declared width/padding/border for both demos */
-      width: 200px;
-      padding: 16px;
-      border: 8px solid #4f46e5;
-      background: #c7d2fe;
-      color: #111827;
-      font-size: 0.9rem;
-      border-radius: 4px;
-    }
+        .inner-box {
+            /* same declared width/padding/border for both demos */
+            width: 200px;
+            padding: 16px;
+            border: 8px solid #4f46e5;
+            background: #c7d2fe;
+            color: #111827;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
 
-    .inner-label {
-      font-size: 0.78rem;
-      margin-top: 0.25rem;
-      color: #374151;
-    }
+        .inner-label {
+            font-size: 0.78rem;
+            margin-top: 0.25rem;
+            color: #374151;
+        }
 
-    .inner-box.content-box {
-      box-sizing: content-box; /* default */
-    }
+        .inner-box.content-box {
+            box-sizing: content-box;
+            /* default */
+        }
 
-    .inner-box.border-box {
-      box-sizing: border-box;
-    }
+        .inner-box.border-box {
+            box-sizing: border-box;
+        }
 
-    .inline-meta {
-      font-size: 0.8rem;
-      color: #4b5563;
-      margin-top: 0.15rem;
-    }
+        .inline-meta {
+            font-size: 0.8rem;
+            color: #4b5563;
+            margin-top: 0.15rem;
+        }
 
-    .emphasis {
-      background: #fef3c7;
-      padding: 0 0.15rem;
-      border-radius: 3px;
-    }
+        .emphasis {
+            background: #fef3c7;
+            padding: 0 0.15rem;
+            border-radius: 3px;
+        }
 
-    .tip {
-      font-size: 0.9rem;
-      padding: 0.6rem 0.75rem;
-      border-radius: 8px;
-      background: #ecfdf5;
-      border: 1px solid #bbf7d0;
-      margin-top: 0.75rem;
-    }
+        .tip {
+            font-size: 0.9rem;
+            padding: 0.6rem 0.75rem;
+            border-radius: 8px;
+            background: #ecfdf5;
+            border: 1px solid #bbf7d0;
+            margin-top: 0.75rem;
+        }
 
-    figure{
-        margin-top:1rem;
-        padding: 1rem;
-        border: 1px solid #333;
-        border-radius: 8px;
-    }
-    figure img{
-        box-shadow: 8px 8px 15px #333;
-    }
-    figcaption{
-        margin-top: var(--space-md);
-    }
-  </style>
+        figure {
+            margin-top: 1rem;
+            padding: 1rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+
+        figure img {
+            box-shadow: 8px 8px 15px #333;
+        }
+
+        figcaption {
+            margin-top: var(--space-md);
+        }
+    </style>
 </head>
 
 <body class="topics-page">
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header class="site-header">
-    <a class="site-title" href="../index.html">MMP 240</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary">
-      <ul>
-        <li class="nav-weeks">
-          <a href="/weeks/">Weeks</a>
-          <ul class="weeks-dropdown">
-            <li><a href="/weeks/week-9.html">Week 9</a></li>
-            <li><a href="/weeks/week-11.html">Week 11</a></li>
-            <li><a href="/weeks/week-12.html">Week 12</a></li>
-            <li><a href="/weeks/week-13.html">Week 13</a></li>
-            <li><a href="/weeks/week-14.html">Week 14</a></li>
-            <li><a href="/weeks/week-15.html">Week 15</a></li>
-          </ul>
-        </li>
-        <li class="nav-topics">
-          <a href="/topics/">Topics</a>
-          <ul class="topics-dropdown">
-            <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
-            <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
-            <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
-            <li><a href="/topics/using-copilot.html">Using Copilot in VS Code</a></li>
-            <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
-            <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
-            <li><a href="/topics/netlify.html">Netlify</a></li>
-            <li><a href="/topics/box-sizing.html" aria-current="page">Box Sizing Resource</a></li>
-          </ul>
-        </li>
-        <li class="nav-projects">
-          <a href="/projects/">Projects</a>
-          <ul class="projects-dropdown">
-            <li><a href="/projects/project-2.html">Project 2</a></li>
-            <li><a href="/projects/project-3.html">Project 3</a></li>
-            <li><a href="/projects/project-4.html">Project 4</a></li>
-          </ul>
-        </li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-    </nav>
-    <button class="search-button" type="button" aria-label="Search">Search</button>
-  </header>
-  <main id="main-content" tabindex="-1">
-    <div class="pill">
-      <span>CSS layout reference</span>
-      <code>box-sizing</code>
-    </div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="../index.html">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html">Week 15</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/rwd-layout.html">RWD + Layout</a></li>
+                        <li><a href="/topics/components.html">Components</a></li>
+                        <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
+                        <li><a href="/topics/ai.html">AI + Copilot</a></li>
+                        <li><a href="/topics/html.html">HTML</a></li>
+                        <li><a href="/topics/design.html">Design + Planning</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                        <li><a href="/projects/project-4.html">Project 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <div class="pill">
+            <span>CSS layout reference</span>
+            <code>box-sizing</code>
+        </div>
 
-    <h1>Box Sizing: <code>content-box</code> vs <code>border-box</code></h1>
-    <p>
-      By default, browsers use <code>content-box</code> sizing: the
-      <strong>width</strong> you set applies only to the content area.
-      Padding and border are <em>added on top</em>, making the element bigger than you might expect.
-    </p>
-    <p>
-      With <code>border-box</code>, the width you set includes the content,
-      padding, and border. This usually makes layout math simpler and more intuitive,
-      so many designers set <code>border-box</code> as the global default.
-    </p>
+        <h1>Box Sizing: <code>content-box</code> vs <code>border-box</code></h1>
+        <p>
+            By default, browsers use <code>content-box</code> sizing: the
+            <strong>width</strong> you set applies only to the content area.
+            Padding and border are <em>added on top</em>, making the element bigger than you might expect.
+        </p>
+        <p>
+            With <code>border-box</code>, the width you set includes the content,
+            padding, and border. This usually makes layout math simpler and more intuitive,
+            so many designers set <code>border-box</code> as the global default.
+        </p>
 
-    <h2>Visual Comparison</h2>
-    <p>
-      Both boxes below have the <strong>same declared CSS</strong>:</p>
-      <pre><code>width: 200px;
+        <h2>Visual Comparison</h2>
+        <p>
+            Both boxes below have the <strong>same declared CSS</strong>:</p>
+        <pre><code>width: 200px;
 padding: 16px;
 border: 8px solid;</code></pre>
-      <p>Only <code>box-sizing</code> is different.
-    </p>
-
-    <div class="demo-grid">
-      <!-- content-box demo -->
-      <section class="demo-card">
-        <div class="demo-title">Default behavior: <code>content-box</code></div>
-        <div class="demo-note">
-          The content area is 200px wide. Padding and border are <b>NOT</b> included in that width. Total width calculated by adding left and right padding and border amounts to the width.
-        </div>
-
-        <div class="outer-box">
-          <span class="outer-label">parent</span>
-          <div class="inner-box content-box">
-            <strong>content-box</strong><br>
-            Declared width: 200px<br>
-            + 16px padding each side<br>
-            + 8px border each side
-          </div>
-        </div>
-        <p class="inner-label">
-          ➜ Total rendered width = <span class="emphasis">200 + 2×16 + 2×8 = 248px</span> <br>
-          ➜ Content width = <span class="emphasis">200px</span>
-        </p>
-      </section>
-
-      <!-- border-box demo -->
-      <section class="demo-card">
-        <div class="demo-title">Global reset: <code>border-box</code></div>
-        <div class="demo-note">
-          The total width is 200px. Padding and border are included inside that width. Content area is calculated by subtracting left and right padding and border amounts from the width.
-        </div>
-
-        <div class="outer-box">
-          <span class="outer-label">parent</span>
-          <div class="inner-box border-box">
-            <strong>border-box</strong><br>
-            Declared width: 200px<br>
-            Padding + border are included<br>
-            in that 200px total. <br>
-            Content width = 200 -
-          </div>
-        </div>
-        <p class="inner-label">
-          ➜ Total rendered width = <span class="emphasis">200px</span> (easier layout math) <br>
-          ➜ Content width = <span class="emphasis">200 - 2×16 - 2×8 = 154px</span>
+        <p>Only <code>box-sizing</code> is different.
         </p>
 
-      </section>
-    </div>
-    <figure>
-        <img src="/images/content-border-box.png" alt="diagram of two elements, one content-box the other border-box showing measurements described earlier.">
-        <figcaption>Diagram showing how content-box is calculated and border-box is calculated. Orange is the declared width, grey is padding and border. Yellow is calculated width.</figcaption>
-    </figure>
+        <div class="demo-grid">
+            <!-- content-box demo -->
+            <section class="demo-card">
+                <div class="demo-title">Default behavior: <code>content-box</code></div>
+                <div class="demo-note">
+                    The content area is 200px wide. Padding and border are <b>NOT</b> included in that width. Total
+                    width calculated by adding left and right padding and border amounts to the width.
+                </div>
 
-    <h2>Common Global Pattern</h2>
-    <p>
-      A simple, modern pattern for most projects is to set
-      <code>border-box</code> for everything:
-    </p>
+                <div class="outer-box">
+                    <span class="outer-label">parent</span>
+                    <div class="inner-box content-box">
+                        <strong>content-box</strong><br>
+                        Declared width: 200px<br>
+                        + 16px padding each side<br>
+                        + 8px border each side
+                    </div>
+                </div>
+                <p class="inner-label">
+                    ➜ Total rendered width = <span class="emphasis">200 + 2×16 + 2×8 = 248px</span> <br>
+                    ➜ Content width = <span class="emphasis">200px</span>
+                </p>
+            </section>
 
-    <pre><code>/* Most common modern reset */
+            <!-- border-box demo -->
+            <section class="demo-card">
+                <div class="demo-title">Global reset: <code>border-box</code></div>
+                <div class="demo-note">
+                    The total width is 200px. Padding and border are included inside that width. Content area is
+                    calculated by subtracting left and right padding and border amounts from the width.
+                </div>
+
+                <div class="outer-box">
+                    <span class="outer-label">parent</span>
+                    <div class="inner-box border-box">
+                        <strong>border-box</strong><br>
+                        Declared width: 200px<br>
+                        Padding + border are included<br>
+                        in that 200px total. <br>
+                        Content width = 200 -
+                    </div>
+                </div>
+                <p class="inner-label">
+                    ➜ Total rendered width = <span class="emphasis">200px</span> (easier layout math) <br>
+                    ➜ Content width = <span class="emphasis">200 - 2×16 - 2×8 = 154px</span>
+                </p>
+
+            </section>
+        </div>
+        <figure>
+            <img src="/images/content-border-box.png"
+                alt="diagram of two elements, one content-box the other border-box showing measurements described earlier.">
+            <figcaption>Diagram showing how content-box is calculated and border-box is calculated. Orange is the
+                declared width, grey is padding and border. Yellow is calculated width.</figcaption>
+        </figure>
+
+        <h2>Common Global Pattern</h2>
+        <p>
+            A simple, modern pattern for most projects is to set
+            <code>border-box</code> for everything:
+        </p>
+
+        <pre><code>/* Most common modern reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }</code></pre>
 
-    <p class="inline-meta">
-      This is easy to understand and matches what many tutorials, frameworks, and CodePen examples use.
-    </p>
+        <p class="inline-meta">
+            This is easy to understand and matches what many tutorials, frameworks, and CodePen examples use.
+        </p>
 
-    <h3>Alternative “inherit” pattern (more advanced)</h3>
-    <p>
-      Some developers prefer to set <code>box-sizing</code> on
-      <code>html</code> and then inherit it everywhere. This makes it
-      easier to change box sizing for components if needed:
-    </p>
+        <h3>Alternative “inherit” pattern (more advanced)</h3>
+        <p>
+            Some developers prefer to set <code>box-sizing</code> on
+            <code>html</code> and then inherit it everywhere. This makes it
+            easier to change box sizing for components if needed:
+        </p>
 
-    <pre><code>html {
+        <pre><code>html {
   box-sizing: border-box;
 }
 
@@ -380,16 +385,17 @@ border: 8px solid;</code></pre>
   box-sizing: inherit;
 }</code></pre>
 
-    <p>
-      For most beginners, the simple version is enough. The “inherit” version is useful
-      if you ever need a specific component to behave differently.
-    </p>
+        <p>
+            For most beginners, the simple version is enough. The “inherit” version is useful
+            if you ever need a specific component to behave differently.
+        </p>
 
-    <div class="tip">
-      <strong>Rule of thumb for this course:</strong><br>
-      Use <code>border-box</code> as your default. It makes widths more predictable,
-      especially when you start adding padding and borders around cards, buttons, and layout columns.
-    </div>
-  </main>
+        <div class="tip">
+            <strong>Rule of thumb for this course:</strong><br>
+            Use <code>border-box</code> as your default. It makes widths more predictable,
+            especially when you start adding padding and borders around cards, buttons, and layout columns.
+        </div>
+    </main>
 </body>
+
 </html>

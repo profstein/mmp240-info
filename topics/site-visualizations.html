@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mastering Positioning: Sticky, Fixed, &amp; Absolute</title>
+    <meta name="description" content="Overview and examples of CSS position values: sticky, fixed, and absolute">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="topics-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="/index.html">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html">Week 15</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/rwd-layout.html">RWD + Layout</a></li>
+                        <li><a href="/topics/components.html">Components</a></li>
+                        <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
+                        <li><a href="/topics/ai.html">AI + Copilot</a></li>
+                        <li><a href="/topics/html.html">HTML</a></li>
+                        <li><a href="/topics/design.html">Design + Planning</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                        <li><a href="/projects/project-4.html">Project 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <h1>Site Visualizations</h1>
+        <div class="topic-content">
+            <section class="intro">
+                <p>Before writing code, you’ll create three visuals that professionals commonly use when planning
+                    websites.</p>
+            </section>
+            <section id="visualizations">
+                <h2>Creating the Site Visualizations</h2>
+
+                <p> We did this work in <a href="/weeks/week-15.html">Week 15</a>. This page has the same information as
+                    shared in that week.</p>
+
+                <h3>Using the Project 4 Site Planning Figma File</h3>
+                <p>The file below has space and templates for you to create a Sitemap, Wireframes and Type and Colors
+                    styles for your project. Download it, open it in Figma and then follow along.</p>
+                <p>Download <a href="/files/Project 4 Site Planning.fig">Project 4 Site Planning.fig</a></p>
+
+                <h3>1. Sitemap</h3>
+                <ol>
+                    <li>Create your sitemap in FigJam.
+                        <ul>
+                            <li>Use simple boxes and arrows to show the pages of your site and how they connect.</li>
+                            <li>Focus on clarity: what are your main pages and what lives under each one?</li>
+                        </ul>
+                    </li>
+                    <li>When your sitemap is ready, copy it from FigJam into the <strong>Sitemap</strong> page of the
+                        Figma template
+                        for your site visualizations.</li>
+                </ol>
+
+                <p><strong>Resource:</strong> Watch the short sitemap video for a walkthrough.<br>
+                    <a href="https://youtu.be/vcSWCpL46WU" target="_blank" rel="noopener">▶ View Sitemap Video (FigJam
+                        to Figma) on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Site Map Video [6:58]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/vcSWCpL46WU?si=xIQnz73vqgs0KG22"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2. Wireframes</h3>
+                <p>On the <strong>Wireframes</strong> page of the Figma template, sketch out the basic layout of your
+                    key pages.
+                    You’ve done wireframing before, so reuse that knowledge here.</p>
+                <ul>
+                    <li>Focus on structure: headers, navigation, main content areas, footers.</li>
+                    <li>Don’t worry about detailed colors or typography yet—keep it low-fi.</li>
+                    <li>Use what you learned from previous wireframe assignments to save time.</li>
+                </ul>
+
+                <p><strong>Resource:</strong> Quick wireframe video reminder.<br>
+                    <a href="https://youtu.be/kvfVVvI-fZs" target="_blank" rel="noopener">▶ View Wireframes Refresher
+                        Video on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Wireframes Refresher Video [10:06]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/kvfVVvI-fZs?si=gDxDKqLSunXLa1xj"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3. Type &amp; Color Styles</h3>
+                <p>On the <strong>Type &amp; Color Styles</strong> page in Figma, define the visual language of your
+                    site:</p>
+                <ul>
+                    <li>Set up text styles for headings, body text, captions, etc.</li>
+                    <li>Set up color styles for backgrounds, text, accents, and interactive elements.</li>
+                    <li>You can build from previous assignments where you already explored color and typography.</li>
+                </ul>
+
+                <p><strong>Note:</strong> It’s completely fine if you adjust your sitemap, wireframes, or styles later
+                    as you start
+                    building. Design is iterative.</p>
+                <h3>Resources</h3>
+
+                <p><strong>Resource:</strong> Quick Type and Color video reminder.<br>
+                    <a href="https://youtu.be/BCa_ocrwgzc" target="_blank" rel="noopener">▶ View Type &amp; Color Video
+                        on YouTube</a>
+                </p>
+                <div class="accordion">
+                    <button class="accordion-button" type="button">
+                        <span>Type &amp; Color Styles Video [5:03]</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="videoWrapper ratio-16-9">
+                            <iframe src="https://www.youtube.com/embed/BCa_ocrwgzc?si=HMvs5WEo1Sb1NQdU"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="https://palettemaker.com/app" target="_blank">Palettemaker App</a>: helps to choose
+                        colors</li>
+                    <li><a href="https://color.adobe.com" target="_blank">Adobe Color</a>: has a number of tools
+                        including palette generators based on color theory and accessibilty toools.</li>
+                    <li><a href="https://colourcontrast.cc" target="_blank">Colour Contrast Checker</a>: Checks if text
+                        and background color contrast meets accessibility guidelines. </li>
+                    <li><a href="https://www.realtimecolors.com" target="_blank">Realtime Colors</a>: Helps to visualize
+                        how a palette will look on a page and can also show typography pairings and scale.</li>
+                </ul>
+
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 MMP 240 Web Design</p>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+</body>
+
+</html>

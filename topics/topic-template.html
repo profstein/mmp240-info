@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body class="topics-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header class="site-header">
-  <a class="site-title" href="/">MMP 240</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <header class="site-header">
+        <a class="site-title" href="/">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" class="site-nav" aria-label="Primary">
             <ul>
                 <li class="nav-weeks">
@@ -28,14 +30,12 @@
                 <li class="nav-topics">
                     <a href="/topics/">Topics</a>
                     <ul class="topics-dropdown">
-                        <li><a href="/topics/branching.html">Branching in Git and GitHub</a></li>
-                        <li><a href="/topics/branching-ai.html">Example: Combining AI and Branching</a></li>
-                        <li><a href="/topics/copilot-setup.html">Copilot Setup to use AI in VS Code</a></li>
-                        <li><a href="/topics/using-copilot.html">Using Copilot in VS Code</a></li>
-                        <li><a href="/topics/rwd-intro.html">Introduction to Responsive Web Design</a></li>
-                        <li><a href="/topics/rwd-resources.html">Responsive Web Design Resources</a></li>
-                        <li><a href="/topics/netlify.html">Netlify</a></li>
-                        <li><a href="/topics/box-sizing.html">Box Sizing Resource</a></li>
+                        <li><a href="/topics/rwd-layout.html">RWD + Layout</a></li>
+                        <li><a href="/topics/components.html">Components</a></li>
+                        <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
+                        <li><a href="/topics/ai.html">AI + Copilot</a></li>
+                        <li><a href="/topics/html.html">HTML</a></li>
+                        <li><a href="/topics/design.html">Design + Planning</a></li>
                     </ul>
                 </li>
                 <li class="nav-projects">
@@ -49,30 +49,44 @@
                 <li><a href="/help/">Help</a></li>
             </ul>
         </nav>
-    <button class="search-button" type="button" aria-label="Search">Search</button>
-  </header>
-  <main id="main-content" tabindex="-1">
-    <h1>Topic: [topic title]</h1>
-    <div class="topic-content">
-        <section class="intro" id="intro">
-            <h2>Introduction</h2>
-            <p>Week intro content here</p>
-        </section>
-        <section id="section-1">
-            <h2>Another section title</h2>
-            <div class="videoWrapper ratio-16-9">
-                <iframe src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-    </div>
-  </main>
-  <footer class="site-footer">
-    <p>&copy; 2025 MMP 240 Web Design</p>
-  </footer>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <h1>Topic: [topic title]</h1>
+        <div class="topic-content">
+            <section class="intro" id="intro">
+                <h2>Introduction</h2>
+                <p>Week intro content here</p>
+            </section>
+            <section>
+                <h2>Potential Topics</h2>
+                <h3>Adobe Fonts</h3>
+                <p>Show them how to use adobe fonts in their projects. Would need to do a video and provide lins</p>
+                <h3>Position</h3>
+                <p>I already have most of this and some codepens</p>
+                <h3>Accordion</h3>
+                <p>Done with text, need to add video tutorial</p>
+                <h3></h3>
+            </section>
+            <section id="section-1">
+                <h2>Another section title</h2>
+                <div class="videoWrapper ratio-16-9">
+                    <iframe src="https://www.youtube.com/embed/TUT8o24Xx-E?si=jfpPNyFzYn_ilkrW"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 MMP 240 Web Design</p>
+    </footer>
 
 
-<script src="js/main.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
-  <script src="js/search.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="js/search.js" defer></script>
 </body>
+
 </html>
