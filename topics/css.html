@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CSS | Topics</title>
+  <meta name="description" content="CSS reference and patterns, including fluid typography with clamp()">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="topics-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="site-title" href="../index.html">MMP 240</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li class="nav-weeks">
+          <a href="/weeks/">Weeks</a>
+          <ul class="weeks-dropdown">
+            <li><a href="/weeks/week-9.html">Week 9</a></li>
+            <li><a href="/weeks/week-11.html">Week 11</a></li>
+            <li><a href="/weeks/week-12.html">Week 12</a></li>
+            <li><a href="/weeks/week-13.html">Week 13</a></li>
+            <li><a href="/weeks/week-14.html">Week 14</a></li>
+            <li><a href="/weeks/week-15.html">Week 15</a></li>
+          </ul>
+        </li>
+        <li class="nav-topics">
+          <a href="/topics/">Topics</a>
+          <ul class="topics-dropdown">
+            <li><a href="/topics/rwd-layout.html">RWD + Layout</a></li>
+            <li><a href="/topics/components.html">Components</a></li>
+            <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
+            <li><a href="/topics/ai.html">AI + Copilot</a></li>
+            <li><a href="/topics/html.html">HTML</a></li>
+            <li><a href="/topics/css.html" aria-current="page">CSS</a></li>
+            <li><a href="/topics/design.html">Design + Planning</a></li>
+          </ul>
+        </li>
+        <li class="nav-projects">
+          <a href="/projects/">Projects</a>
+          <ul class="projects-dropdown">
+            <li><a href="/projects/project-2.html">Project 2</a></li>
+            <li><a href="/projects/project-3.html">Project 3</a></li>
+            <li><a href="/projects/project-4.html">Project 4</a></li>
+          </ul>
+        </li>
+        <li><a href="/help/">Help</a></li>
+      </ul>
+    </nav>
+    <button class="search-button" type="button" aria-label="Search">Search</button>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section class="intro" id="intro">
+      <h1>CSS</h1>
+      <p>Reference and patterns for CSS.</p>
+    </section>
+
+    <section>
+      <div class="article-grid">
+        <article>
+          <h3><a href="clamp.html">Fluid Font Scaling with clamp()</a></h3>
+          <p>Explains how to use <code>clamp()</code> for fluid, accessible typography and includes a pixel→rem reference table.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 MMP 240 Web Design</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+  <script src="../js/search.js" defer></script>
+</body>
+</html>
