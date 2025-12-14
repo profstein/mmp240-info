@@ -25,7 +25,25 @@
     { id: 15, title: 'Introduction to Responsive Web Design', text: 'Overview of responsive web design principles RWD mobile viewport media queries.', url: '/topics/rwd-intro.html' },
     { id: 16, title: 'Responsive Web Design Resources', text: 'Curated responsive web design resources RWD references links.', url: '/topics/rwd-resources.html' },
     { id: 17, title: 'Netlify', text: 'Overview of using Netlify to deploy and host MMP 240 projects deployment hosting.', url: '/topics/netlify.html' },
-    { id: 18, title: 'Help', text: 'Help, resources and contact info for the course.', url: '/help/index.html' }
+    { id: 18, title: 'Help', text: 'Help, resources and contact info for the course.', url: '/help/index.html' },
+    { id: 19, title: 'Clamp: Fluid Font Scaling', text: 'Using clamp() for fluid typography and a pixel→rem reference table.', url: '/topics/clamp.html' },
+    { id: 20, title: 'CSS Variables', text: 'Reference and how to use CSS variables for spacing, typography, and site-wide consistency.', url: '/topics/css-variables.html' },
+    { id: 21, title: 'Font Service', text: 'Guidance on using web font services for efficient font loading and best practices.', url: '/topics/font-service.html' },
+    { id: 22, title: 'CSS', text: 'CSS reference and patterns, including clamp() and custom properties.', url: '/topics/css.html' },
+    { id: 23, title: 'Box Sizing', text: 'Explains differences between content-box and border-box and their effects on layout.', url: '/topics/box-sizing.html' },
+    { id: 24, title: 'Positioning', text: 'Walks through position: sticky, position: fixed, and position: absolute with examples.', url: '/topics/position.html' },
+    { id: 25, title: 'Site Visualizations', text: 'Planning techniques, wireframe examples, and visual tools for designing content-first pages.', url: '/topics/site-visualizations.html' },
+    { id: 26, title: 'Free Resources', text: 'Curated list of free images, icons, fonts, and media resources with licensing notes.', url: '/topics/free-resources.html' },
+    { id: 27, title: 'Accordion Component', text: 'How to build accessible accordions with semantic HTML, minimal CSS, and progressive enhancement.', url: '/topics/accordion.html' },
+    { id: 28, title: 'Components', text: 'Component patterns and examples used in class.', url: '/topics/components.html' },
+    { id: 29, title: 'Project 4 Review (AI-assisted)', text: 'Notes and suggestions on using Copilot to review Project 4.', url: '/topics/project-4-review.html' },
+    { id: 30, title: 'HTML', text: 'Short guides covering semantic HTML, forms, and accessibility-friendly markup.', url: '/topics/html.html' },
+    { id: 31, title: 'Design + Planning', text: 'Design and planning resources, wireframes, and visualization techniques.', url: '/topics/design.html' },
+    { id: 32, title: 'Using Copilot', text: 'Practical examples of using Copilot to speed up HTML/CSS tasks and how to validate suggestions.', url: '/topics/using-copilot.html' },
+    { id: 33, title: 'RWD Layout', text: 'Responsive layout patterns and guiding principles used in class.', url: '/topics/rwd-layout.html' },
+    { id: 34, title: 'Project 4', text: 'Project 4 assignment details, requirements, and submission instructions.', url: '/projects/project-4.html' },
+    { id: 35, title: 'Week 15', text: 'Week 15 materials and assignments.', url: '/weeks/week-15.html' },
+    { id: 36, title: 'Week 16', text: 'Week 16 materials and assignments.', url: '/weeks/week-16.html' }
   ];
 
   // Create MiniSearch instance
