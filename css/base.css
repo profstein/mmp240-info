@@ -3,7 +3,7 @@
 
 :root {
   /* Base Font Size */
-  --base-font-size: 16px;
+  --base-font-size: clamp(1rem, 0.4vw + .875rem, 1.5rem);
 
   /* Font Sizes */
   --text-size-xs: 0.69rem;
@@ -76,7 +76,7 @@
 /*   RESPONSIVE SIZE CHANGES */
 @media (min-width: 640px) {
   :root {
-    --base-font-size: 18px;
+    /* --base-font-size: 18px; */
     /* increase Base Font Size */
     --space-unit: 1.15rem;
     /* increase spacing */
@@ -89,7 +89,7 @@
 
 @media (min-width: 1200px) {
   :root {
-    --base-font-size: 20px;
+    /* --base-font-size: 20px; */
     /* increase Base Font Size */
     --space-unit: 1.25rem;
     /* increase spacing */
