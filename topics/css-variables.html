@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS | Topics</title>
+    <meta name="description" content="CSS reference and patterns, including fluid typography with clamp()">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="topics-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="site-title" href="../index.html">MMP 240</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li class="nav-weeks">
+                    <a href="/weeks/">Weeks</a>
+                    <ul class="weeks-dropdown">
+                        <li><a href="/weeks/week-9.html">Week 9</a></li>
+                        <li><a href="/weeks/week-11.html">Week 11</a></li>
+                        <li><a href="/weeks/week-12.html">Week 12</a></li>
+                        <li><a href="/weeks/week-13.html">Week 13</a></li>
+                        <li><a href="/weeks/week-14.html">Week 14</a></li>
+                        <li><a href="/weeks/week-15.html">Week 15</a></li>
+                    </ul>
+                </li>
+                <li class="nav-topics">
+                    <a href="/topics/">Topics</a>
+                    <ul class="topics-dropdown">
+                        <li><a href="/topics/rwd-layout.html">RWD + Layout</a></li>
+                        <li><a href="/topics/components.html">Components</a></li>
+                        <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
+                        <li><a href="/topics/ai.html">AI + Copilot</a></li>
+                        <li><a href="/topics/html.html">HTML</a></li>
+                        <li><a href="/topics/css.html">CSS</a></li>
+                        <li><a href="/topics/design.html">Design + Planning</a></li>
+                    </ul>
+                </li>
+                <li class="nav-projects">
+                    <a href="/projects/">Projects</a>
+                    <ul class="projects-dropdown">
+                        <li><a href="/projects/project-2.html">Project 2</a></li>
+                        <li><a href="/projects/project-3.html">Project 3</a></li>
+                        <li><a href="/projects/project-4.html">Project 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/help/">Help</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" type="button" aria-label="Search">Search</button>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <section class="intro" id="intro">
+            <h1>CSS Variables</h1>
+            <p>Reference and how to use CSS variables.</p>
+        </section>
+        <section id="description" class="description">
+            <p>CSS Custom Properties, commonly known as CSS Variables allow you to create consistency in your site and
+                more easily change property values (colors, fonts, font sizes etc) quickly.&nbsp;</p>
+            <p>These are very helpful to use, especially as your site gets larger and you have more styles to keep track
+                of and keep consistent.</p>
+            <p>On a responsive site, you often want to adjust the spacing used to fit the screen size. For example
+                smaller screens are usually held closer to people's faces and can have smaller spacing. As screens get
+                larger spacing can increase.</p>
+            <p>To avoid rewriting a lot of spacing rules in our media queries, we can use CSS variables to define the
+                spacing and then change one variable to change all of our spacing. This will be accomplished with a
+                combination of&nbsp;</p>
+            <ul style="list-style-type: circle;">
+                <li>CSS CSS Custom Properties aka Variables</li>
+                <li>Calc function: <a rel="noopener"
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">https://developer.mozilla.org/en-US/docs/Web/CSS/calc</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="setting" class="setting">
+            <h2>SETTING CSS CUSTOM PROPERTIES (Variables)</h2>
+            <p>Variables are set by defining a name and giving it a value.</p>
+            <ul style="list-style-type: circle;">
+                <li>The name always starts with --
+                    <ul style="list-style-type: disc;">
+                        <li>There can't be any spaces in it</li>
+                    </ul>
+                </li>
+                <li>Then there is a :</li>
+                <li>Then the value.&nbsp;
+                    <ul style="list-style-type: disc;">
+                        <li>You can use a lot of things here from numbers to text to other CSS variables</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Generic format</p>
+            <p>--name : value;</p>
+            <h3>SETTING SPACE PROPERTIES</h3>
+            <p>Let's try this and start with defining a base space unit</p>
+            <pre class="line-numbers d2l-code"><code class="language-css">:root{
+	--space-unit: 1rem;
+}</code></pre>
+            <p></p>
+            <p>Then you can add in multiples of that using calc. Calc allows you to do math in CSS and here we will use
+                it to multiply the space unit.</p>
+            <pre class="line-numbers d2l-code"><code class="language-css">:root{
+	--space-unit: 1rem;
+	--space-xs: calc(var(--space-unit) * 0.25);
+	--space-sm: calc(var(--space-unit) * 0.5);
+	--space-md: calc(var(--space-unit) * 1);
+	--space-lg: calc(var(--space-unit) * 1.5);
+	--space-xl: calc(var(--space-unit) * 2);
+	--space-xxl: calc(var(--space-unit) * 3);
+}</code></pre>
+            <p>so now we have CSS variables for spaces that range from a fourth of the base font (-- space-xs) to 3
+                times the base font (--space-xxl)</p>
+            <p>Remember that rem is based on the base font size for the html element, so we can set the rem value like
+                this:</p>
+            <pre class="line-numbers d2l-code"><code class="language-css">html{font-size:16px;}</code></pre>
+        </section>
+
+        <section id="using" class="using">
+            <h2>USING CSS CUSTOM PROPERTIES (VARIABLES)</h2>
+            <p>Most of the time you will use the variable in place of a value in one of your CSS properties. To use a
+                variable you write var() wit the name of the variable in the parentheses.</p>
+            <p>Generic: var(--name, fallbackValue)</p>
+            <pre
+                class="line-numbers d2l-code"><code class="language-css">margin-bottom: var(--space-md, 1rem);</code></pre>
+            <p>The fallback value is optional so this works too: var(--name)</p>
+            <pre class="line-numbers d2l-code"><code class="language-css">margin-bottom: var(--space-md);</code></pre>
+            <p>Let's use some of our space variables</p>
+            <pre class="line-numbers d2l-code"><code class="language-css">section{ margin-top: var(--space-xl);}
+
+p{ section{ margin-bottom: var(--space-md);}
+
+images{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--space-sm);
+}</code></pre>
+            <p></p>
+            <p>Now use the spacing units throughout your page to keep spacing consistent and easily changeable.</p>
+            <p></p>
+        </section>
+
+        <section id="examples" class="examples">
+            <h2>EXAMPLES</h2>
+            <h3>Spacing Example</h3>
+<p>Here is an example codepen that uses CSS Custom Properties for spacing. This example also integrates Media Queries to change the base spacing unit.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yyeQQbw" data-pen-title="Responsive Spacing with CSS Variables" data-user="profstein" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/profstein/pen/yyeQQbw">
+  Responsive Spacing with CSS Variables</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+<p><a rel="noopener" href="https://codepen.io/profstein/pen/yyeQQbw" target="_blank">https://codepen.io/profstein/pen/yyeQQbw</a></p>
+            
+<h3>Full Site Example</h3>
+<p>This example shows a full set of css variables for typography, color and spacing. </p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="EaKzoWg" data-pen-title="CSS Variables Full Site" data-user="profstein" data-token="f8381aaedbc0600dd2e261b4b0940494" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/profstein/pen/EaKzoWg/f8381aaedbc0600dd2e261b4b0940494">
+  CSS Variables Full Site</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+<p><a rel="noopener" href="https://codepen.io/profstein/pen/EaKzoWg/f8381aaedbc0600dd2e261b4b0940494" target="_blank">Open CSS Variables Full Site CodePen</a></p>
+</section>
+
+        <section id="reference" class="reference">
+            <h2>Tutorials and Resources:</h2>
+            <ul>
+                <li><a rel="noopener"
+                        href="https://www.freecodecamp.org/news/learn-css-variables-in-5-minutes-80cf63b4025d/"
+                        target="_blank">Learn CSS Variables in 5 minutes</a> [article - freeCodeCamp]
+                    <ul>
+                        <li>Fast, quick intro.</li>
+                    </ul>
+                </li>
+                <li><a rel="noopener" href="https://youtu.be/5wLrz_zUwoU?si=VYZvuBTSryz1HUZu" target="_blank">Learn CSS
+                        Variables in 7 minutes</a> [YouTube Video - Slaying the Dragon]</li>
+                <li><a rel="noopener"
+                        href="https://www.youtube.com/watch?v=PHO6TBq_auI&amp;list=PL4-IK0AVhVjOT2KBB5TSbD77OmfHvtqUi"
+                        target="_blank">CSS Custom Properties</a> [YouTube Playlist - Kevin Powell]
+                    <ul>
+                        <li>There are 6 videos in this mini course. Each video is 4-13 minutes long. I'm linking below
+                            to the first two:</li>
+                        <li><a rel="noopener" href="https://youtu.be/PHO6TBq_auI?si=X2KZ6mvqj0X4dGkG"
+                                target="_blank">CSS Variables - An introduction to CSS custom properties</a> [12min]
+                        </li>
+                        <li><a rel="noopener" href="https://youtu.be/V9yP0QG0NWI?si=DYASZbumx-uFc1cX"
+                                target="_blank">CSS Variables - Using them in the real world and a cool trick</a> [8min]
+                        </li>
+                    </ul>
+                </li>
+                <li><a rel="noopener" href="https://ishadeed.com/article/css-vars-101/" target="_blank"><span>CSS
+                            Variables 101</span></a>&lt;\!-- notionvc: c8bdc785-db26-4b8a-ab2a-51149940659f --&gt;
+                    <ul>
+                        <li>This is a deep dive into CSS Variables with a lot of diagrams to explain what is going on
+                            and examples.</li>
+                    </ul>
+                </li>
+                <li><span><a rel="noopener" href="https://tech.timonwa.com/blog/using-css-variables-like-a-pro"
+                            target="_blank">Using CSS Variables like a Pro:</a> A Beginners Guide to the var() CSS
+                        Function</span>&lt;\!-- notionvc: 622c6af8-8b74-44ce-9d40-ac39e182fff6 --&gt;
+                    <ul>
+                        <li><span>This is a pretty comprehensive article on CSS variables with a lot of examples that
+                                can be copied. There is also a FAQ at the end that answers a lot of the basic
+                                questions.</span></li>
+                    </ul>
+                </li>
+                <li><span><a rel="noopener"
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties"
+                            target="_blank">Using CSS custom properties</a> (variables) [MDN tutorial]</span>&lt;\!--
+                    notionvc: 902146fd-0e47-4f13-b98b-bada0ad336de --&gt;</li>
+                <li><span><a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/var"
+                            target="_blank">var () Reference</a> [MDN reference]&lt;\!-- notionvc:
+                        d7c58423-5d82-46da-9efe-1ca4a87901a9 --&gt;</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 MMP 240 Web Design</p>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="../js/search.js" defer></script>
+</body>
+
+</html>
