@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body class="topics-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
@@ -24,6 +26,8 @@
             <li><a href="/weeks/week-13.html">Week 13</a></li>
             <li><a href="/weeks/week-14.html">Week 14</a></li>
             <li><a href="/weeks/week-15.html">Week 15</a></li>
+            <li><a href="/weeks/week-16.html">Week 16</a></li>
+            <li><a href="/weeks/week-17.html">Week 17</a></li>
           </ul>
         </li>
         <li class="nav-topics">
@@ -34,6 +38,7 @@
             <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
             <li><a href="/topics/ai.html">AI + Copilot</a></li>
             <li><a href="/topics/html.html">HTML</a></li>
+            <li><a href="/topics/css.html">CSS</a></li>
             <li><a href="/topics/design.html">Design + Planning</a></li>
           </ul>
         </li>
@@ -55,11 +60,15 @@
     <div class="topic-content">
       <section class="intro" id="intro">
         <h2>Intro</h2>
-        <p>Traditionally, web designers used media queries to change font sizes at different screen widths. For example, you might set smaller text on phones and larger text on desktops. This works, but it creates sudden “jumps” in size and requires writing media queries for each change.</p>
-        <p>Modern CSS provides the clamp() function, which lets font sizes grow fluidly with the viewport while still respecting minimum and maximum limits. Clamp function takes three values, separated by commas:</p>
+        <p>Traditionally, web designers used media queries to change font sizes at different screen widths. For example,
+          you might set smaller text on phones and larger text on desktops. This works, but it creates sudden “jumps” in
+          size and requires writing media queries for each change.</p>
+        <p>Modern CSS provides the clamp() function, which lets font sizes grow fluidly with the viewport while still
+          respecting minimum and maximum limits. Clamp function takes three values, separated by commas:</p>
         <ol>
           <li><strong>Minimum</strong>: ensures text never gets too small to read.</li>
-          <li><strong>Preferred</strong> (fluid): ties the size to the viewport width, so it grows smoothly as the screen gets wider.</li>
+          <li><strong>Preferred</strong> (fluid): ties the size to the viewport width, so it grows smoothly as the
+            screen gets wider.</li>
           <li><strong>Maximum</strong>: prevents text from becoming too large on very wide screens.</li>
         </ol>
         <p>Example:</p>
@@ -75,13 +84,15 @@
         </ul>
         <p>This approach gives consistent readability across devices without multiple breakpoints.</p>
         <figure>
-          <img src="/images/clamp.png" alt="chart with font-size on y and viewport on x axis. At 400px viewport the font size is 16 then steadily increases until font-size hits 20px just before 1400px viewport and then stays at 20">
+          <img src="/images/clamp.png"
+            alt="chart with font-size on y and viewport on x axis. At 400px viewport the font size is 16 then steadily increases until font-size hits 20px just before 1400px viewport and then stays at 20">
         </figure>
       </section>
 
       <section id="using-with-variables">
         <h2>Using it with CSS Variables</h2>
-        <p>We us CSS variables to set our font sizes. This means we can quickly and easily create fluid scaling by using clamp for our base font size:</p>
+        <p>We us CSS variables to set our font sizes. This means we can quickly and easily create fluid scaling by using
+          clamp for our base font size:</p>
         <pre><code class="language-css"> --base-font-size: clamp(1rem, 0.4vw + .88rem, 1.25rem);
 </code></pre>
         <p>You can adjust the min (1rem) and max (1.25rem) values to fit your design.</p>
@@ -89,40 +100,51 @@
 
       <section id="why-base-only">
         <h2>Why do we only need to use <code>clamp()</code> for the base font size?</h2>
-        <p>Because all other font sizes are defined in <code>rem</code>, they are calculated relative to the base (root) font size. When the base font size changes, everything that uses <code>rem</code> scales automatically.</p>
-        <p>By applying <code>clamp()</code> only to the base font size, we create a single fluid “dial” that controls the entire type system. Headings, paragraphs, and UI text all scale together without needing separate <code>clamp()</code> formulas.</p>
+        <p>Because all other font sizes are defined in <code>rem</code>, they are calculated relative to the base (root)
+          font size. When the base font size changes, everything that uses <code>rem</code> scales automatically.</p>
+        <p>By applying <code>clamp()</code> only to the base font size, we create a single fluid “dial” that controls
+          the entire type system. Headings, paragraphs, and UI text all scale together without needing separate
+          <code>clamp()</code> formulas.</p>
         <p><strong>In short:</strong></p>
         <blockquote>
-          <p>One fluid base size + <code>rem</code> everywhere else = consistent, scalable typography with less code.</p>
+          <p>One fluid base size + <code>rem</code> everywhere else = consistent, scalable typography with less code.
+          </p>
         </blockquote>
       </section>
 
       <section id="code-pen">
         <h2>CodePen Example</h2>
         <p>Here is a CodePen you can use to see it in action</p>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dPMEJRV" data-pen-title="CSS Variables Full Site" data-user="profstein" data-token="51f282fd9f77372a264deb97e5f070c8" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-      <span>See the Pen <a href="https://codepen.io/profstein/pen/dPMEJRV/51f282fd9f77372a264deb97e5f070c8">
-  CSS Variables Full Site</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-      <script async src="https://public.codepenassets.com/embed/index.js"></script>
-        <p><a href="https://codepen.io/profstein/pen/dPMEJRV/51f282fd9f77372a264deb97e5f070c8" target="_blank">View on CodePen</a></p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dPMEJRV"
+          data-pen-title="CSS Variables Full Site" data-user="profstein" data-token="51f282fd9f77372a264deb97e5f070c8"
+          style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/profstein/pen/dPMEJRV/51f282fd9f77372a264deb97e5f070c8">
+              CSS Variables Full Site</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://public.codepenassets.com/embed/index.js"></script>
+        <p><a href="https://codepen.io/profstein/pen/dPMEJRV/51f282fd9f77372a264deb97e5f070c8" target="_blank">View on
+            CodePen</a></p>
       </section>
 
       <section id="other-info">
         <h2>Other Info</h2>
         <h3>Why use <code>rem</code> instead of <code>px</code> for fluid font sizes?</h3>
-        <p>Some users increase their browser’s <strong>default base font size</strong> to make text easier to read. This is a common and important <strong>accessibility setting</strong>.</p>
+        <p>Some users increase their browser’s <strong>default base font size</strong> to make text easier to read. This
+          is a common and important <strong>accessibility setting</strong>.</p>
         <ul>
           <li><strong><code>rem</code> respects the user’s default font size</strong></li>
           <li><strong><code>px</code> ignores it</strong></li>
         </ul>
-        <p>When minimum and maximum font sizes are set in <code>px</code>, the text is locked into a fixed range—even if the user has explicitly asked for larger text. Using <code>rem</code> allows the entire typography system to scale along with the user’s preference.</p>
+        <p>When minimum and maximum font sizes are set in <code>px</code>, the text is locked into a fixed range—even if
+          the user has explicitly asked for larger text. Using <code>rem</code> allows the entire typography system to
+          scale along with the user’s preference.</p>
       </section>
 
       <section id="best-practice">
         <h2>Best practice for this course</h2>
-        <p>Use <code>rem</code> for minimum and maximum values in fluid typography so your design adapts to both screen size <strong>and</strong> user accessibility settings.</p>
+        <p>Use <code>rem</code> for minimum and maximum values in fluid typography so your design adapts to both screen
+          size <strong>and</strong> user accessibility settings.</p>
         <p><strong>Takeaway:</strong></p>
         <blockquote>
           <p>Using <code>rem</code> supports user choice and accessibility; using <code>px</code> limits it.</p>
@@ -140,7 +162,9 @@ html{
 
       <section id="pixel-reference">
         <h2>Pixel to <code>rem</code> Font Size Reference (Base = 16px)</h2>
-        <p>You don't have to use 16px and 20px as your min and max.The table below shows pixel values in rems. use these rems to adjust the min and max as you see fit. This table assumes the browser default base font size is <strong>16px</strong>. I don't recommend going much below 16px for your min font size value.</p>
+        <p>You don't have to use 16px and 20px as your min and max.The table below shows pixel values in rems. use these
+          rems to adjust the min and max as you see fit. This table assumes the browser default base font size is
+          <strong>16px</strong>. I don't recommend going much below 16px for your min font size value.</p>
         <table>
           <thead>
             <tr>
@@ -149,21 +173,55 @@ html{
             </tr>
           </thead>
           <tbody>
-            <tr><td>16px</td><td>1rem</td></tr>
-            <tr><td>17px</td><td>1.0625rem</td></tr>
-            <tr><td>18px</td><td>1.125rem</td></tr>
-            <tr><td>19px</td><td>1.1875rem</td></tr>
-            <tr><td>20px</td><td>1.25rem</td></tr>
-            <tr><td>21px</td><td>1.3125rem</td></tr>
-            <tr><td>22px</td><td>1.375rem</td></tr>
-            <tr><td>23px</td><td>1.4375rem</td></tr>
-            <tr><td>24px</td><td>1.5rem</td></tr>
-            <tr><td>25px</td><td>1.5625rem</td></tr>
-            <tr><td>26px</td><td>1.625rem</td></tr>
+            <tr>
+              <td>16px</td>
+              <td>1rem</td>
+            </tr>
+            <tr>
+              <td>17px</td>
+              <td>1.0625rem</td>
+            </tr>
+            <tr>
+              <td>18px</td>
+              <td>1.125rem</td>
+            </tr>
+            <tr>
+              <td>19px</td>
+              <td>1.1875rem</td>
+            </tr>
+            <tr>
+              <td>20px</td>
+              <td>1.25rem</td>
+            </tr>
+            <tr>
+              <td>21px</td>
+              <td>1.3125rem</td>
+            </tr>
+            <tr>
+              <td>22px</td>
+              <td>1.375rem</td>
+            </tr>
+            <tr>
+              <td>23px</td>
+              <td>1.4375rem</td>
+            </tr>
+            <tr>
+              <td>24px</td>
+              <td>1.5rem</td>
+            </tr>
+            <tr>
+              <td>25px</td>
+              <td>1.5625rem</td>
+            </tr>
+            <tr>
+              <td>26px</td>
+              <td>1.625rem</td>
+            </tr>
           </tbody>
         </table>
         <p><strong>Note:</strong></p>
-        <p>If a user increases their browser’s default font size, <code>rem</code> values scale automatically—this is why <code>rem</code> is preferred for accessible typography.</p>
+        <p>If a user increases their browser’s default font size, <code>rem</code> values scale automatically—this is
+          why <code>rem</code> is preferred for accessible typography.</p>
       </section>
 
     </div>
@@ -175,4 +233,5 @@ html{
   <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
   <script src="../js/search.js" defer></script>
 </body>
+
 </html>

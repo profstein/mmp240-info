@@ -26,6 +26,8 @@
                         <li><a href="/weeks/week-13.html">Week 13</a></li>
                         <li><a href="/weeks/week-14.html">Week 14</a></li>
                         <li><a href="/weeks/week-15.html">Week 15</a></li>
+                        <li><a href="/weeks/week-16.html">Week 16</a></li>
+                        <li><a href="/weeks/week-17.html">Week 17</a></li>
                     </ul>
                 </li>
                 <li class="nav-topics">
@@ -36,6 +38,7 @@
                         <li><a href="/topics/git.html">Git, GitHub + Deployment</a></li>
                         <li><a href="/topics/ai.html">AI + Copilot</a></li>
                         <li><a href="/topics/html.html">HTML</a></li>
+                        <li><a href="/topics/css.html">CSS</a></li>
                         <li><a href="/topics/design.html">Design + Planning</a></li>
                     </ul>
                 </li>
@@ -72,7 +75,8 @@
                 <h2>Sticky Positioning: Stay in Place</h2>
                 <p><code>position: sticky</code> allows an element to scroll normally until it reaches a position and
                     then it "sticks" in that position (like <code>position: fixed</code>). Importantly, the element
-                    <em>must</em> be able to scroll out of its initial position for <code>sticky</code> to work.</p>
+                    <em>must</em> be able to scroll out of its initial position for <code>sticky</code> to work.
+                </p>
                 <p><strong>Example:</strong></p>
                 <figure>
                     <img src="/images/position-sticy-fixed.gif"
@@ -172,7 +176,8 @@
                         ancestor</em> (an ancestor with <code>position: relative</code>,
                     <code>position: absolute</code>, or <code>position: fixed</code>). If no such ancestor exists, it’s
                     positioned relative to the <code>&lt;html&gt;</code> element. It’s often used within layout
-                    containers.</p>
+                    containers.
+                </p>
                 <h3>Example: Absolutely Positioned Figcaption Inside a Card</h3>
                 <pre><code class="language-css">.card {
   position: relative;           /* Creates positioning context for elements inside the card */
@@ -252,7 +257,8 @@
                 <ul>
                     <li><strong>Background Color:</strong> Always set a <code>background-color</code> for elements with
                         <code>sticky</code> or <code>fixed</code> positioning to prevent them from appearing
-                        transparent.</li>
+                        transparent.
+                    </li>
                     <li><strong>Scrollable Content:</strong> <code>sticky</code> positioning requires sufficient
                         scrollable content to trigger the “sticking” effect.</li>
                     <li><strong>Experiment:</strong> The best way to understand these properties is to experiment with
@@ -260,7 +266,8 @@
                     <li><strong>Layout adjustments:</strong> Because <code>fixed</code> (and sometimes
                         <code>absolute</code>) remove elements from the normal flow, you may need to add extra padding,
                         margins, or a wrapper element so the rest of your content isn’t covered or shifted
-                        unexpectedly—plan for this when creating overall page layouts.</li>
+                        unexpectedly—plan for this when creating overall page layouts.
+                    </li>
                 </ul>
             </section>
         </div>

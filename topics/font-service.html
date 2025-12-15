@@ -27,6 +27,8 @@
                         <li><a href="/weeks/week-13.html">Week 13</a></li>
                         <li><a href="/weeks/week-14.html">Week 14</a></li>
                         <li><a href="/weeks/week-15.html">Week 15</a></li>
+                        <li><a href="/weeks/week-16.html">Week 16</a></li>
+                        <li><a href="/weeks/week-17.html">Week 17</a></li>
                     </ul>
                 </li>
                 <li class="nav-topics">
@@ -68,158 +70,169 @@
             <p>Remember that you will need to add the &lt;link&gt; element to <strong>every page of your web
                     site.</strong></p>
             <div class="accordion">
-                    <button class="accordion-button" type="button">
-                        <span>CLick to view full link method</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                <ol start="1">
-                    <li>
-                        <p>Go to <a rel="noopener" href="https://fonts.google.com">https://fonts.google.com</a>.</p>
-                    </li>
-                    <li>
-                        <p>Choose a font and click <strong>Get Font</strong> or the <strong>+</strong> icon. Do this for
-                            all of the fonts you will use (try no more than 3).</p>
-                    </li>
-                    <li>
-                        <p>Under <strong>“Use on the web” → &lt;link&gt;</strong>, copy the code.</p>
-                        <p>It will look something like this:</p>
-                    </li>
-                </ol>
-                <pre
-                    class="line-numbers d2l-code"><code class="language-markup">&lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"&gt;</code></pre>
-                <ol start="4">
-                    <li>
-                        <p>Paste that line <strong>inside the &lt;head&gt;</strong> of your HTML document,
-                            <strong>BEFORE</strong> your own CSS file link:</p>
-                    </li>
-                </ol>
-                <pre class="line-numbers d2l-code"><code class="language-markup">&lt;head&gt;
+                <button class="accordion-button" type="button">
+                    <span>CLick to view full link method</span>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ol start="1">
+                        <li>
+                            <p>Go to <a rel="noopener" href="https://fonts.google.com">https://fonts.google.com</a>.</p>
+                        </li>
+                        <li>
+                            <p>Choose a font and click <strong>Get Font</strong> or the <strong>+</strong> icon. Do this
+                                for
+                                all of the fonts you will use (try no more than 3).</p>
+                        </li>
+                        <li>
+                            <p>Under <strong>“Use on the web” → &lt;link&gt;</strong>, copy the code.</p>
+                            <p>It will look something like this:</p>
+                        </li>
+                    </ol>
+                    <pre
+                        class="line-numbers d2l-code"><code class="language-markup">&lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"&gt;</code></pre>
+                    <ol start="4">
+                        <li>
+                            <p>Paste that line <strong>inside the &lt;head&gt;</strong> of your HTML document,
+                                <strong>BEFORE</strong> your own CSS file link:
+                            </p>
+                        </li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-markup">&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;My Project&lt;/title&gt;
   &lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
   &lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;</code></pre>
-                <p></p>
-                <ol start="5">
-                    <li>
-                        <p>Copy the font-family declaration on the Google Fonts page and then, in your CSS file, paste
-                            it in where you need it:</p>
-                    </li>
-                </ol>
-                <pre class="line-numbers d2l-code"><code class="language-markup">body {
+                    <p></p>
+                    <ol start="5">
+                        <li>
+                            <p>Copy the font-family declaration on the Google Fonts page and then, in your CSS file,
+                                paste
+                                it in where you need it:</p>
+                        </li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-markup">body {
   font-family: "Lato", sans-serif;
 }</code></pre>
-</div>
-</div>
-            
+                </div>
+            </div>
+
 
 
             <h3>@import Method</h3>
             <p>This is a bit simpler but can be longer to load.</p>
             <div class="accordion">
-                    <button class="accordion-button" type="button">
-                        <span>Click to view full @import method.</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                <ol>
-                    <li>
-                        <p>On Google Fonts, copy the code under <strong>“Use on the web” → @import</strong>.</p>
-                        <p>Do NOT copy the &lt;script&gt; tags, jus the @import. It looks like this:</p>
-                    </li>
-                </ol>
-                <pre
-                    class="line-numbers d2l-code"><code class="language-css">@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap');</code></pre>
-                <p></p>
-                <ol start="2">
-                    <li>
-                        <p>Paste that line <strong>at the very top</strong> of your style.css file — it must come
-                            <strong>before any other CSS rules</strong>.</p>
-                    </li>
-                </ol>
-                <pre class="line-numbers d2l-code"><code class="language-css">@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap');
+                <button class="accordion-button" type="button">
+                    <span>Click to view full @import method.</span>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ol>
+                        <li>
+                            <p>On Google Fonts, copy the code under <strong>“Use on the web” → @import</strong>.</p>
+                            <p>Do NOT copy the &lt;script&gt; tags, jus the @import. It looks like this:</p>
+                        </li>
+                    </ol>
+                    <pre
+                        class="line-numbers d2l-code"><code class="language-css">@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap');</code></pre>
+                    <p></p>
+                    <ol start="2">
+                        <li>
+                            <p>Paste that line <strong>at the very top</strong> of your style.css file — it must come
+                                <strong>before any other CSS rules</strong>.
+                            </p>
+                        </li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-css">@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap');
 
 body {
   font-family: "Lato", sans-serif;
 }</code></pre>
-                <ol start="3">
-                    <li>
-                        <p>Copy the font-family declaration on the Google Fonts page and then, in your CSS file, paste
-                            it in where you need it:</p>
-                    </li>
-                </ol>
-                <pre class="line-numbers d2l-code"><code class="language-markup">body {
+                    <ol start="3">
+                        <li>
+                            <p>Copy the font-family declaration on the Google Fonts page and then, in your CSS file,
+                                paste
+                                it in where you need it:</p>
+                        </li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-markup">body {
   font-family: "Lato", sans-serif;
 }</code></pre>
-            </div>
+                </div>
             </div>
         </section>
 
         <section id="adobe" class="adobe">
-<h2>Adobe Fonts</h2>
-<p>Adobe Fonts (formerly Typekit) lets you use high-quality fonts on your website.</p>
-<p>To use them, you’ll need to create a <strong>web project</strong> on <a rel="noopener"
-        href="https://fonts.adobe.com">https://fonts.adobe.com</a> and then connect it to your site with either a
-    &lt;link&gt; tag or an @import rule.</p>
-<h3>Link Method Adobe</h3>
-<div class="accordion">
-                    <button class="accordion-button" type="button">
-                        <span>Click to view full Adobe link method.</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-<h4><strong>✅ Create and Publish Your Web Project</strong></h4>
-    <ol start="1">
-        <li>
-            <p>Go to <a rel="noopener" href="https://fonts.adobe.com">https://fonts.adobe.com</a>.</p>
-        </li>
-        <li>
-            <p>Sign in with your Adobe ID (same as Creative Cloud).</p>
-        </li>
-        <li>
-            <p>Find a font and click either the &lt;/&gt; icon which is&nbsp; <strong>“Add to Web Project”</strong></p>
-            <ol>
-                <li>
-                    <p><strong></strong>If this is the first font you're adding type in a name (e.g.,&nbsp;<em>240
-                            project 2</em>) and to<strong> “+Create a new project”</strong></p>
-                </li>
-                <li>If you already added a project for a previous font then choose that project from the dropdown.</li>
-            </ol>
-        </li>
-        <li>
-            <p>click&nbsp;<strong>Create </strong>(if new)<strong> or Save </strong>(if adding)</p>
-        </li>
-        <li>
-            <p>A dialog box will appear. This has what you need for the link element and your CSS.</p>
-        </li>
-        <li>Copy the &lt;link&gt; code shown. It will look like this: <strong>NOTE do not use this exact code, yours
-                will be specific to your project.</strong></li>
-    </ol>
-    <pre
-        class="line-numbers d2l-code"><code class="language-markup">&lt;link rel="stylesheet" href="https://use.typekit.net/hfc8hnn.css"&gt;</code></pre>
-    <p></p>
-    <ol start="7">
-        <li>
-            <p>Paste that line inside the &lt;head&gt; of your HTML file, above your stylesheet link:</p>
-        </li>
-    </ol>
-    <pre class="line-numbers d2l-code"><code class="language-markup">&lt;head&gt;
+            <h2>Adobe Fonts</h2>
+            <p>Adobe Fonts (formerly Typekit) lets you use high-quality fonts on your website.</p>
+            <p>To use them, you’ll need to create a <strong>web project</strong> on <a rel="noopener"
+                    href="https://fonts.adobe.com">https://fonts.adobe.com</a> and then connect it to your site with
+                either a
+                &lt;link&gt; tag or an @import rule.</p>
+            <h3>Link Method Adobe</h3>
+            <div class="accordion">
+                <button class="accordion-button" type="button">
+                    <span>Click to view full Adobe link method.</span>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <h4><strong>✅ Create and Publish Your Web Project</strong></h4>
+                    <ol start="1">
+                        <li>
+                            <p>Go to <a rel="noopener" href="https://fonts.adobe.com">https://fonts.adobe.com</a>.</p>
+                        </li>
+                        <li>
+                            <p>Sign in with your Adobe ID (same as Creative Cloud).</p>
+                        </li>
+                        <li>
+                            <p>Find a font and click either the &lt;/&gt; icon which is&nbsp; <strong>“Add to Web
+                                    Project”</strong></p>
+                            <ol>
+                                <li>
+                                    <p><strong></strong>If this is the first font you're adding type in a name
+                                        (e.g.,&nbsp;<em>240
+                                            project 2</em>) and to<strong> “+Create a new project”</strong></p>
+                                </li>
+                                <li>If you already added a project for a previous font then choose that project from the
+                                    dropdown.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>click&nbsp;<strong>Create </strong>(if new)<strong> or Save </strong>(if adding)</p>
+                        </li>
+                        <li>
+                            <p>A dialog box will appear. This has what you need for the link element and your CSS.</p>
+                        </li>
+                        <li>Copy the &lt;link&gt; code shown. It will look like this: <strong>NOTE do not use this exact
+                                code, yours
+                                will be specific to your project.</strong></li>
+                    </ol>
+                    <pre
+                        class="line-numbers d2l-code"><code class="language-markup">&lt;link rel="stylesheet" href="https://use.typekit.net/hfc8hnn.css"&gt;</code></pre>
+                    <p></p>
+                    <ol start="7">
+                        <li>
+                            <p>Paste that line inside the &lt;head&gt; of your HTML file, above your stylesheet link:
+                            </p>
+                        </li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-markup">&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;My Project&lt;/title&gt;
   &lt;link rel="stylesheet" href="https://use.typekit.net/abcd123.css"&gt;
   &lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;</code></pre>
-<ol start="8">
-        <li>Copy the font-family rules and paste them into your CSS file as needed.</li>
-    </ol>
-    <pre class="line-numbers d2l-code"><code class="language-css">--font-heading: "bely-display", sans-serif;
+                    <ol start="8">
+                        <li>Copy the font-family rules and paste them into your CSS file as needed.</li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-css">--font-heading: "bely-display", sans-serif;
 </code></pre>
-    <ol start="9">
-        <li>If you're not sure where you will
-            need them right away, then paste them in and comment them out like this:</li>
-    </ol>
-    <pre class="line-numbers d2l-code"><code class="language-css">/* Fonts from Adobe ---------------
+                    <ol start="9">
+                        <li>If you're not sure where you will
+                            need them right away, then paste them in and comment them out like this:</li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-css">/* Fonts from Adobe ---------------
 font-family: "bely-display", sans-serif;
 font-weight: 400;
 font-style: normal;
@@ -228,67 +241,72 @@ font-family: "bely", serif;
 font-weight: 400;
 font-style: normal;
 ------------------ */</code></pre>
-    <p></p>
-                    </div>
+                    <p></p>
                 </div>
-<h3>@import Method Adobe</h3>
-<p>This also needs a web project.</p>
-<div class="accordion">
-                    <button class="accordion-button" type="button">
-                        <span>Click to view @import Adobe Method.</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-<h4><strong>✅ Create and Publish Your Web Project</strong></h4>
-    <ol start="1">
-        <li>
-            <p>Go to <a rel="noopener" href="https://fonts.adobe.com">https://fonts.adobe.com</a>.</p>
-        </li>
-        <li>
-            <p>Sign in with your Adobe ID (same as Creative Cloud).</p>
-        </li>
-        <li>
-            <p>Find a font and click either the &lt;/&gt; icon which is&nbsp; <strong>“Add to Web Project”</strong></p>
-            <ol>
-                <li>
-                    <p><strong></strong>If this is the first font you're adding type in a name (e.g.,&nbsp;<em>240
-                            project 2</em>) and to<strong> “+Create a new project”</strong></p>
-                </li>
-                <li>If you already added a project for a previous font then choose that project from the dropdown.</li>
-            </ol>
-        </li>
-        <li>
-            <p>click&nbsp;<strong>Create </strong>(if new)<strong> or Save </strong>(if adding)</p>
-        </li>
-        <li>
-            <p>A dialog box will appear. Click @import in this sentence "If you'd like to use fonts in HTML email, use
-                the&nbsp;@import link."</p>
-        </li>
-        <li>Copy the @import statement.
-            <p>Do NOT copy the &lt;script&gt; tags, jus the @import. It looks like this:</p>
-            <pre
-                class="line-numbers d2l-code"><code class="language-css">@import url("https://use.typekit.net/abc134.css");</code></pre>
-        </li>
-    </ol>
-    <ol start="7">
-        <li>
-            <p>Paste that line <strong>at the very top</strong> of your style.css file — it must come <strong>before any
-                    other CSS rules</strong>.</p>
-        </li>
-    </ol>
-    <pre class="line-numbers d2l-code"><code class="language-css">@import url("https://use.typekit.net/abc134.css");
+            </div>
+            <h3>@import Method Adobe</h3>
+            <p>This also needs a web project.</p>
+            <div class="accordion">
+                <button class="accordion-button" type="button">
+                    <span>Click to view @import Adobe Method.</span>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <h4><strong>✅ Create and Publish Your Web Project</strong></h4>
+                    <ol start="1">
+                        <li>
+                            <p>Go to <a rel="noopener" href="https://fonts.adobe.com">https://fonts.adobe.com</a>.</p>
+                        </li>
+                        <li>
+                            <p>Sign in with your Adobe ID (same as Creative Cloud).</p>
+                        </li>
+                        <li>
+                            <p>Find a font and click either the &lt;/&gt; icon which is&nbsp; <strong>“Add to Web
+                                    Project”</strong></p>
+                            <ol>
+                                <li>
+                                    <p><strong></strong>If this is the first font you're adding type in a name
+                                        (e.g.,&nbsp;<em>240
+                                            project 2</em>) and to<strong> “+Create a new project”</strong></p>
+                                </li>
+                                <li>If you already added a project for a previous font then choose that project from the
+                                    dropdown.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>click&nbsp;<strong>Create </strong>(if new)<strong> or Save </strong>(if adding)</p>
+                        </li>
+                        <li>
+                            <p>A dialog box will appear. Click @import in this sentence "If you'd like to use fonts in
+                                HTML email, use
+                                the&nbsp;@import link."</p>
+                        </li>
+                        <li>Copy the @import statement.
+                            <p>Do NOT copy the &lt;script&gt; tags, jus the @import. It looks like this:</p>
+                            <pre
+                                class="line-numbers d2l-code"><code class="language-css">@import url("https://use.typekit.net/abc134.css");</code></pre>
+                        </li>
+                    </ol>
+                    <ol start="7">
+                        <li>
+                            <p>Paste that line <strong>at the very top</strong> of your style.css file — it must come
+                                <strong>before any
+                                    other CSS rules</strong>.</p>
+                        </li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-css">@import url("https://use.typekit.net/abc134.css");
 /*other css goes below */
     </code></pre>
-    <ol start="8">
-        <li>
-            <p>Copy the font-family declaration and then, in your CSS file, paste it in where
-                you need it (Usually in a CSS variable):</p>
-        </li>
-    </ol>
-    <pre class="line-numbers d2l-code"><code class="language-css">--font-heading: "bely-display", sans-serif;
+                    <ol start="8">
+                        <li>
+                            <p>Copy the font-family declaration and then, in your CSS file, paste it in where
+                                you need it (Usually in a CSS variable):</p>
+                        </li>
+                    </ol>
+                    <pre class="line-numbers d2l-code"><code class="language-css">--font-heading: "bely-display", sans-serif;
 </code></pre>
-                    </div>
                 </div>
+            </div>
         </section>
 
     </main>
