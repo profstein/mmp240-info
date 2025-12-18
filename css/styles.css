@@ -499,6 +499,12 @@ ul.compact li, ol.compact li {
   margin-bottom: var(--space-xs);
 }
 
+ol.heading-list li::marker {
+  font-family: var(--ff-headings);
+  font-size: var(--text-size-2xl);
+  font-weight: 200;
+}
+
 /* ----------------Table Styles ----------------- */
 table {
   width: 100%;
