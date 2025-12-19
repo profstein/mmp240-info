@@ -771,3 +771,29 @@ pre > code,
   overflow-wrap: anywhere; /* allow breaks anywhere for very long strings */
   overflow-x: auto; /* keep horizontal scrollbar only if needed */
 }
+
+
+/* ----------------Example Box Styles ----------------- */
+.example-grid {
+  display: grid;
+  /* gap: var(--space-lg); */
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xl);
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+}
+@media (min-width: 700px) {
+  .example-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+  
+}
+.example-info {
+  font-size: var(--text-size-md);
+  background-color: #fdfadc;
+  /* margin-top: var(--space-xs); */
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-lg);
+}
+
+.example-info.note{
+  margin-top:0;
+}
