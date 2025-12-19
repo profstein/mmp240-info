@@ -43,7 +43,9 @@
     { id: 33, title: 'RWD Layout', text: 'Responsive layout patterns and guiding principles used in class.', url: '/topics/rwd-layout.html' },
     { id: 34, title: 'Project 4', text: 'Project 4 assignment details, requirements, and submission instructions.', url: '/projects/project-4.html' },
     { id: 35, title: 'Week 15', text: 'Week 15 materials and assignments.', url: '/weeks/week-15.html' },
-    { id: 36, title: 'Week 16', text: 'Week 16 materials and assignments.', url: '/weeks/week-16.html' }
+    { id: 36, title: 'Week 16', text: 'Week 16 materials and assignments.', url: '/weeks/week-16.html' },
+    { id: 37, title: 'Lightbox Gallery', text: 'How to create a lightbox gallery using GLightbox JavaScript library with captions and credits.', url: '/topics/lightbox.html' },
+    { id: 38, title: 'Navigation', text: 'How to add responsive navigation to web sites with hamburger menu and dropdown menus.', url: '/topics/navigation.html' }
   ];
 
   // Create MiniSearch instance
