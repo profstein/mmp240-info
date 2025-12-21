@@ -45,7 +45,9 @@
     { id: 35, title: 'Week 15', text: 'Week 15 materials and assignments.', url: '/weeks/week-15.html' },
     { id: 36, title: 'Week 16', text: 'Week 16 materials and assignments.', url: '/weeks/week-16.html' },
     { id: 37, title: 'Lightbox Gallery', text: 'How to create a lightbox gallery using GLightbox JavaScript library with captions and credits.', url: '/topics/lightbox.html' },
-    { id: 38, title: 'Navigation', text: 'How to add responsive navigation to web sites with hamburger menu and dropdown menus.', url: '/topics/navigation.html' }
+    { id: 38, title: 'Navigation', text: 'How to add responsive navigation to web sites with hamburger menu and dropdown menus.', url: '/topics/navigation.html' },
+    { id: 39, title: 'Flexbox', text: 'Flexbox overview, differences from Grid, when to use it, and CodePen social icons walkthrough.', url: '/topics/css-flex.html' },
+    { id: 40, title: 'Cards', text: 'Card component patterns, structure, video walkthrough, and CodePen examples.', url: '/topics/cards.html' }
   ];
 
   // Create MiniSearch instance
