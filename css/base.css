@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Montagu+Slab:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Lexend:wght@100..900&display=swap');
 @import url("https://use.typekit.net/vws1ahp.css");
+
 :root {
   /* Base Font Size */
   --base-font-size: clamp(1rem, 0.4vw + .875rem, 1.5rem);
@@ -29,12 +30,13 @@
 
   /* Spacings */
   --space-unit: 1rem;
-  --space-xs: calc(var(--space-unit) * 0.25);
-  --space-sm: calc(var(--space-unit) * 0.5);
+  --space-2xs: calc(var(--space-unit) * 0.25);
+  --space-xs: calc(var(--space-unit) * 0.5);
+  --space-sm: calc(var(--space-unit) * 0.75);
   --space-md: calc(var(--space-unit) * 1);
   --space-lg: calc(var(--space-unit) * 1.5);
   --space-xl: calc(var(--space-unit) * 2);
-  --space-xxl: calc(var(--space-unit) * 3);
+  --space-2xl: calc(var(--space-unit) * 3);
 
   /*   Max width of content with text */
   --text-width: 30rem;
@@ -68,6 +70,11 @@
   /* color on hover */
   --clr-nav-hover-bg: #992727;
   /* background color on hover */
+
+  /* colors for tip boxes */
+  --clr-tip: #333;
+  --clr-tip-bg: #ecfdf5;
+  --clr-tip-border: #bbf7d0;
 
 }
 

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>CSS Box Sizing: content-box vs border-box</title>
     <meta name="description" content="Branching example that combines Git workflows with GitHub Copilot assistance.">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/css/vendor/prism.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vws1ahp.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/accordion.css">
     <style>
         /* ===== Page framing (reference site chrome) ===== */
         :root {
@@ -90,22 +93,6 @@
         /* pre code {
       color: inherit;
     } */
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-size: 0.8rem;
-            padding: 0.2rem 0.55rem;
-            border-radius: 999px;
-            background: var(--accent-soft);
-            color: var(--accent);
-            margin-bottom: 0.6rem;
-        }
-
-        .pill code {
-            font-size: 0.8rem;
-        }
 
         ul {
             padding-left: 1.25rem;
@@ -204,14 +191,14 @@
             border-radius: 3px;
         }
 
-        .tip {
+        /* .tip {
             font-size: 0.9rem;
             padding: 0.6rem 0.75rem;
             border-radius: 8px;
             background: #ecfdf5;
             border: 1px solid #bbf7d0;
             margin-top: 0.75rem;
-        }
+        } */
 
         figure {
             margin-top: 1rem;
@@ -296,7 +283,7 @@
         <h2>Visual Comparison</h2>
         <p>
             Both boxes below have the <strong>same declared CSS</strong>:</p>
-        <pre><code>width: 200px;
+        <pre class="line-numbers"><code class="language-css" >width: 200px;
 padding: 16px;
 border: 8px solid;</code></pre>
         <p>Only <code>box-sizing</code> is different.
@@ -364,7 +351,7 @@ border: 8px solid;</code></pre>
             <code>border-box</code> for everything:
         </p>
 
-        <pre><code>/* Most common modern reset */
+        <pre class="line-numbers"><code class="language-css" >/* Most common modern reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }</code></pre>
@@ -380,7 +367,7 @@ border: 8px solid;</code></pre>
             easier to change box sizing for components if needed:
         </p>
 
-        <pre><code>html {
+        <pre class="line-numbers"><code class="language-css" >html {
   box-sizing: border-box;
 }
 
@@ -399,6 +386,11 @@ border: 8px solid;</code></pre>
             especially when you start adding padding and borders around cards, buttons, and layout columns.
         </div>
     </main>
+    <script src="/js/vendor/prism.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <script src="/js/accordion.js"></script>
 </body>
 
 </html>

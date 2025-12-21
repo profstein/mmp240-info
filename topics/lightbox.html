@@ -7,7 +7,8 @@
   <title>Lightbox Gallery | MMP 240 Topics</title>
   <meta name="description" content="Step-by-step lightbox setup guidance for MMP 240 students.">
   <link rel="stylesheet" href="/css/vendor/prism.css">
-  <link rel="stylesheet" href="https://use.typekit.net/vws1ahp.css"><link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="https://use.typekit.net/vws1ahp.css">
+  <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 
@@ -113,7 +114,8 @@
           </li>
           <li>Replace the demo images with your own
             <ul>
-              <li>You will have to replace the demo images with your own images and add captions and image credits. </li>
+              <li>You will have to replace the demo images with your own images and add captions and image credits.
+              </li>
             </ul>
           </li>
           <li>Add the GLightbox Initialize script</li>
@@ -126,18 +128,24 @@
         <p>The following Codepen is an example of the lightbox in action.</p>
         <div class="example-grid">
           <div class="example-info note">
-            <p>Note that GLightbox requires its own CSS and JS files. In the CodePen these are included through settings. In the step-by-step below I outline how you would add them to your pages. Also, on smaller screen sizes the next and previous arrows don't show. Use the keyboard arrows. This setting is changeable.</p>
+            <p>Note that GLightbox requires its own CSS and JS files. In the CodePen these are included through
+              settings. In the step-by-step below I outline how you would add them to your pages. Also, on smaller
+              screen sizes the next and previous arrows don't show. Use the keyboard arrows. This setting is changeable.
+            </p>
             <p><a href="https://codepen.io/profstein/pen/raegExZ" target="_blank">View on CodePen</a></p>
           </div>
           <div class="example">
-            <p class="codepen" data-height="450" data-default-tab="result" data-slug-hash="raegExZ" data-pen-title="Lightbox with Glightbox" data-editable="true" data-user="profstein" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                  <span>See the Pen <a href="https://codepen.io/profstein/pen/raegExZ">
-              Lightbox with Glightbox</a> by Christopher Stein (<a href="https://codepen.io/profstein">@profstein</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://public.codepenassets.com/embed/index.js"></script>
+            <p class="codepen" data-height="450" data-default-tab="result" data-slug-hash="raegExZ"
+              data-pen-title="Lightbox with Glightbox" data-editable="true" data-user="profstein"
+              style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/profstein/pen/raegExZ">
+                  Lightbox with Glightbox</a> by Christopher Stein (<a
+                  href="https://codepen.io/profstein">@profstein</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://public.codepenassets.com/embed/index.js"></script>
           </div>
-          
+
         </div>
 
 
@@ -219,10 +227,11 @@
 </code></pre>
           </li>
           <li>
-            <p>Then paste it into the .html page before the closing <code>&lt;/body&gt;</code> tag of any .html page you want to use the lightbox.
+            <p>Then paste it into the .html page before the closing <code>&lt;/body&gt;</code> tag of any .html page you
+              want to use the lightbox.
               You can add it right <b>BEFORE</b> the main.js script if you use my <a
                 href="https://github.com/profstein/Base-Responsive-Page">base reponsive page</a> example.</p>
-            
+
           </li>
         </ol>
         <hr>
@@ -232,8 +241,29 @@
           Inside the link is a thumbnail image (<code>&lt;img&gt;</code>).
           The link is what GLightbox turns into the lightbox interaction.
         </p>
+        <p>Technically you can use just the following but it would not be a gallery and not have credits/description.
+        </p>
+        <pre><code>&lt;!-- Simple image --&gt;
+&lt;a href="large.jpg" class="glightbox"&gt;
+  &lt;img src="small.jpg" alt="image" /&gt;
+&lt;/a&gt;</code></pre>
+        <p>Here is a more complete example with the galleryn added. <code>data-gallery</code> tells it there is a
+          gallery. All of the elements with the same exact data-gallery value will show with next and previous arrows
+        </p>
+        <pre class="line-numbers"><code class="language-html">&lt;a
+  href="images/photo-01-large.jpg"
+  class="glightbox"
+  data-gallery="my-gallery"
+  data-description="Photo by Jane Doe (CC BY 4.0)"
+&gt;
+  &lt;img
+    src="images/photo-01-thumb.jpg"
+    alt="Sun setting over a river with orange light reflecting on the water"
+  &gt;
+&lt;/a&gt;</code></pre>
+          <p>Here is a robust example that uses a list for organization and figure element for each image.</p>
         <p class="note">
-          The HTML below only has one image. For more images, copy and paste just the &lt;li&gt; inside of the list.
+          The HTML below only has one image. For more images, copy and paste the &lt;li&gt; inside of the list (include the content inside of the li).
         </p>
         <pre class="line-numbers"><code class="language-html">&lt;ul class="gallery" role="list"&gt;
   &lt;li&gt;
@@ -268,13 +298,16 @@
           This ensures GLightbox correctly treats the link as an image, even if the
           image URL does not end with <code>.jpg</code>.
         </p>
-        <p>GLightbox can show video as well. this has data type of video.</p>
+        <p>GLightbox can show video as well. For video use a data type of video: <code>data-type="video"</code>.</p>
         <hr>
         <h3>4. Replace the Demo Images with Your Own</h3>
         <p>
           To use your own images, update the following for each gallery item:
         </p>
-        <p class="note">It's very important to note that this asks for <b>two versions</b> of each image. the image in the <b>href</b> of that <b>a</b> is the large version people will see when they open the lightbox. the image in the <b>src</b> of the img is the thumbnail they will see before the gallery is opened. You can use your batch processing skills we learned for the landmarks project.</p>
+        <p class="note">It's very important to note that this asks for <b>two versions</b> of each image. the image in
+          the <b>href</b> of that <b>a</b> is the large version people will see when they open the lightbox. the image
+          in the <b>src</b> of the img is the thumbnail they will see before the gallery is opened. You can use your
+          batch processing skills we learned for the landmarks project.</p>
         <ul class="compact">
           <li>
             <p>in <b>a</b></p>
@@ -282,8 +315,9 @@
               <li><code>href</code> → path to the large image</li>
               <li><code>data-title</code> → image caption shown in the lightbox</li>
               <li><code>data-description</code> and <code>&lt;figcaption&gt;</code> → image credit</li>
-              <li><code>aria-label</code> keep "Open larger view:" and → change the rest to the same thing you have in
-                data-title</li>
+              <li><code>aria-label</code> → keep "Open larger view:" and change the rest to the same thing you have in
+                <code>data-title</code>
+              </li>
             </ul>
           </li>
           <li>
@@ -295,12 +329,24 @@
           </li>
           <li>
             <p>in <b>figcaption</b></p>
-            change the entire content of the caption to match your image.
+            <ul class="compact">
+              <li>change the entire content of the caption. The first part should match <code>data-title</code> and then
+                in the span match <code>data-description</code> to match the credits and description for your image.
+              </li>
+              <li>note that the <code>data-title</code> and <code>data-description</code> will be what people see when
+                the image is enlarged.
+                <figure><img src="/images/lightbox-desc-credits.png"
+                    alt="screenshot showing image with description in one font and the content in span.credit in a separate line with different type treatment.">
+                </figure>
+              </li>
+            </ul>
+
           </li>
         </ul>
         <p>
           The <code>alt</code> attribute should describe what is visible in the image.
-          Credits should appear in the caption, not in <code>alt</code> text.
+          Credits should appear in the <code>data-description</code> and <code>figcaption</code>, not in
+          <code>alt</code> text.
         </p>
         <hr>
 
@@ -309,7 +355,8 @@
           After the GLightbox script is loaded, it needs to be initialized with a small configuration
           object. This controls how users interact with the gallery.
         </p>
-        <p>Copy and paste the code below into the .html file <b>AFTER</b> the glightbox.min.js file script you already have and <b>BEFORE</b> the closing /body tag.</p>
+        <p>Copy and paste the code below into the .html file <b>AFTER</b> the glightbox.min.js file script you already
+          have and <b>BEFORE</b> the closing /body tag.</p>
         <pre class="line-numbers"><code class="language-html">&lt;script&gt;
   // Initialize GLightbox.
   const lightbox = GLightbox({
@@ -337,10 +384,11 @@
 </code></p>
         </blockquote> -->
         <hr>
-        
+
         <h3>6. Custom Gallery CSS</h3>
         <p>To add the finishing touches, you will want to add some of your own custom styles to the gallery.</p>
-        <p>Below is an example of that. To start you can copy this and paste it into your main .css file. If you prefer to keep things separate, then put them in a new .css file, just remember to also link that to the page.</p>
+        <p>Below is an example of that. To start you can copy this and paste it into your main .css file. If you prefer
+          to keep things separate, then put them in a new .css file, just remember to also link that to the page.</p>
 
         <pre class="line-numbers"><code class="language-css">
 /*
