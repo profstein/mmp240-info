@@ -49,7 +49,7 @@
 }
 
 .accordion-content.active {
-    max-height: 2000px;
+    max-height: 3000px;
     transition: max-height 0.5s ease;
 }
 
